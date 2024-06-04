@@ -1,0 +1,73 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    MakeFile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/04 22:53:17 by kyumkim           #+#    #+#              #
+#    Updated: 2024/06/04 23:05:24 by kyumkim          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+LIBFT = libft.a
+GNL = get_next_line.a
+LIBFTSRCS = libraries/libft/ft_atoi.c \
+			libraries/libft/ft_bzero.c \
+			libraries/libft/ft_calloc.c \
+			libraries/libft/ft_isalnum.c \
+			libraries/libft/ft_isalpha.c \
+			libraries/libft/ft_isascii.c \
+			libraries/libft/ft_isdigit.c \
+			libraries/libft/ft_isprint.c \
+			libraries/libft/ft_itoa.c \
+			libraries/libft/ft_memcpy.c \
+			libraries/libft/ft_memchr.c \
+			libraries/libft/ft_memcmp.c \
+			libraries/libft/ft_memcpy.c \
+			libraries/libft/ft_memmove.c \
+			libraries/libft/ft_memset.c \
+			libraries/libft/ft_putchar_fd.c \
+			libraries/libft/ft_putendl_fd.c \
+			libraries/libft/ft_putnbr_fd.c \
+			libraries/libft/ft_putstr_fd.c \
+			libraries/libft/ft_split.c \
+			libraries/libft/ft_strchr.c \
+			libraries/libft/ft_strdup.c \
+			libraries/libft/ft_strjoin.c \
+			libraries/libft/ft_strlcat.c \
+			libraries/libft/ft_strlcpy.c \
+			libraries/libft/ft_strlen.c \
+			libraries/libft/ft_strmapi.c \
+			libraries/libft/ft_strncmp.c \
+			libraries/libft/ft_strnstr.c \
+			libraries/libft/ft_strrchr.c \
+			libraries/libft/ft_strtrim.c \
+			libraries/libft/ft_substr.c \
+			libraries/libft/ft_tolower.c \
+			libraries/libft/ft_toupper.c
+LIBFTOBJS = $(LIBFTSRCS:.c=.o)
+GNLSRCS = libraries/get_next_line/get_next_line.c \
+		 libraries/get_next_line/get_next_line_utils.c
+GNLOBJS = $(GNLSRCS:.c=.o)
+
+all: $(LIBFT) $(GNL)
+
+$(GNL): $(GNLOBJS)
+	ar rscv $(GNL) $(GNLOBJS)
+
+$(LIBFT): $(LIBFTOBJS)
+	ar rscv $(LIBFT) $(LIBFTOBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(LIBFTOBJS) $(GNLOBJS)
+
+fclean: clean
+	rm -f $(LIBFT) $(GNL)
+
+re: fclean all
