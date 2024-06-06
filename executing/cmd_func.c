@@ -1,14 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mainheader.h                                       :+:      :+:    :+:   */
+/*   cmd_func.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 19:01:02 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/05 20:36:10 by kyumkim          ###   ########.fr       */
+/*   Created: 2024/06/06 18:58:53 by kyumkim           #+#    #+#             */
+/*   Updated: 2024/06/06 18:59:17 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs/libft/libft.h"
-#include "libs/get_next_line/get_next_line.h"
+#include "executing.h"
+
+int	cmd_size(char **cmdlist)
+{
+	int	i;
+
+	i = 0;
+	while (cmdlist[i] != NULL)
+		i++;
+	return (i);
+}

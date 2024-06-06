@@ -1,14 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mainheader.h                                       :+:      :+:    :+:   */
+/*   pwd.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 19:01:02 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/05 20:36:10 by kyumkim          ###   ########.fr       */
+/*   Created: 2024/06/06 15:24:22 by kyumkim           #+#    #+#             */
+/*   Updated: 2024/06/06 18:48:49 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs/libft/libft.h"
-#include "libs/get_next_line/get_next_line.h"
+#include "executing.h"
+
+void	pwd(t_data *data)
+{
+	t_env	*env;
+	char	**pwd;
+
+	env = data->env;
+	pwd = find_value("PWD", data);
+	if (pwd != NULL)
+		ft_putstr_fd(pwd[0], 1);
+	ft_putstr_fd("\n", 1);
+	return ;
+}
