@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:12:05 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/08 02:49:21 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/08 03:53:55 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void signal_handler(int signo)
             rl_on_new_line();
             rl_replace_line("", 0);
             rl_redisplay();
+            printf(" \b\b"); 
         }
         else
             ft_putchar_fd('\n', 1);

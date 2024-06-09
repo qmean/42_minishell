@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:11:55 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/08 01:42:38 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/08 03:28:14 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,5 @@ int	main(int argc, char *argv[], char *envp[])
 		if ((line[0] != '\0')&& (!iswhitespace(line)))
 		{
 			add_history(line);
-			printf("%s\n", line);
-			free(line);
 		}
 }
