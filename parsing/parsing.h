@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/09 22:46:39 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/10 05:06:22 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,6 @@
 # include <sys/wait.h>
 # include <termios.h>
 
-typedef struct	s_line
-{
-	char			*cmd;
-	char			redir_flag;
-}				t_line;
-
 typedef struct s_env
 {
 	char			*key;
@@ -38,25 +32,27 @@ typedef struct s_env
 
 typedef struct	s_token
 {
-	int				isredir; // 0: 아님 1: 리다이렉션
+	int				redir; // 0: 아님 1: >, 2: <, 3: >>, 4: <<
+	
+	char			*redir_args[2]; // 리다이렉션 파일
 	char			*data; // 명령어
+	
 	
 	struct s_token	*next;
 }				t_token;
 
 typedef struct	s_cmd
 {
-	t_line			*next_token;
-	
-	int				pipe_flag; // 0 : 세미 콜론 or NULL, 1 : pipe
+	char			*buf; // 명령어를 저장할 버퍼
+	int				pipe_flag; // 0 : NULL, 1 : pipe, 2: semicolon
 	int				redirect; // 0: >, 1: <, 2: >>, 3: <<;
 	int				exit_flag;
 	char			quote; // 따옴표를 저장(' or "), 같은 따옴표가 나오면 다시 0으로 복귀
-	t_token			*tokens; // 명령어를 저장할 연결리스트
+	t_token			*first_token; // 토큰의 첫번째 노드;
 	
-
-	struct s_env	*env;
-	struct s_cmd			*next;
+	t_token			*tokens; // 명령어를 저장할 연결리스트
+	struct s_env	*env; // 환경 변수를 저장할 연결리스트
+	struct s_cmd	*next; // 다음 명령어 뭉치
 }				t_cmd;
 
 
@@ -66,5 +62,17 @@ void	signal_handler(int signo);
 void    sigint_printc_off(void);
 void    sigint_printc_on(void);
 void    sig_term_handler(void);
+t_cmd	*make_cmd(void);
+t_token	*make_token(void);
+void	init(t_cmd *cmd);
+void	do_sigterm(void);
+void	tokenize_main(char *line, t_cmd *cmd);
+void	check_quote(char *line, t_cmd *cmd, int i);
+void	check_smallquote(char *line, t_cmd *cmd, int i);
+void	check_bigquote(char *line, t_cmd *cmd, int i);
+void	add_buf(char c, t_cmd *cmd);
+int		check_pipe(char *line, t_cmd *cmd, int i);
+void	invalid_quote_error(void);
+void	add_token(t_cmd *cmd, char *buf);
 
 #endif
