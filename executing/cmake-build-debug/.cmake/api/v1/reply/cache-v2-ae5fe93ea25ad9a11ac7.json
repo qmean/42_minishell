@@ -1022,18 +1022,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "READLINE_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libreadline.tbd"
-		},
-		{
 			"name" : "minishell_BINARY_DIR",
 			"properties" : 
 			[

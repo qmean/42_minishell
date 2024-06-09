@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:37:52 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/06 20:05:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/08 21:28:03 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	cd(t_data *data, char **cmdlist)
 	}
 	else
 	{
+		newpwd = getcwd(NULL, 0);
 		set_value("OLDPWD", oldpwd, data);
 		set_value("PWD", newpwd, data);
 		free(oldpwd);

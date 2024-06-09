@@ -13,7 +13,22 @@ set(LIBRARIES "${CMAKE_SOURCE_DIR}/libft.a;${CMAKE_SOURCE_DIR}/get_next_line.a")
 add_executable(minishell ${SOURCES}
         env_parsing_func.c
         executing.c
-        cmd_func.c)
+        cmd_func.c
+        export.c
+        export_print_utils.c
+        export_with_no_args.c
+        free_env.c
+        print_error.c
+        ft_strcmp.c
+        ../libs/libft/libft.h
+        export_sort_utils.c
+        export_copy_utils.c
+        export_add_env.c
+        export_check_validated.c
+        export_plus.c
+        export_change_value.c
+        export_add_no_value.c
+)
 
 # Link the library
 target_link_libraries(minishell ${LIBRARIES})

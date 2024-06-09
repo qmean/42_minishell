@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
+/*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 20:48:05 by kyuminkim         #+#    #+#             */
-/*   Updated: 2024/06/06 20:11:46 by kyumkim          ###   ########.fr       */
+/*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
+/*   Updated: 2024/06/09 23:19:09 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ int	main(int argc, char **argv, char **envp)
 	data = parse_envp(envp);
 	while (1)
 	{
-		input = readline("mini_shell$ ");
+		input = readline("mini_shell$> ");
 		args = ft_split(input, ' ');
 		cmd = args[0];
 		args++;
 		pid = fork();
 		if (pid == 0)
 		{
-			execute(data, cmd, args, envp);
+			execute(data, cmd, args);
 		}
 		else if (pid < 0)
-			ft_putstr_fd("Error: fork failed\n", 2);
+			ft_putstr_fd("Error: fork failed\n", 2); // todo : 에러처리 추가
 		else
 			waitpid(pid, NULL, 0);
 	}
