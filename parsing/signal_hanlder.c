@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:12:05 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/10 00:25:23 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:53:37 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ void    sigint_printc_on(void)
 void    sig_term_handler(void) // ctrl + D 처리용
 {
     ft_putstr_fd("\033[1A", 2); // 현재 커서의 위치를 한칸 위로 올려줌 
-	ft_putstr_fd("\033[12C", 2); // 현재 커서의 위치를 12번째칸으로 이동
-	ft_putstr_fd("\bexit\n", 2);
+	ft_putstr_fd("\033[11C", 2); // 현재 커서의 위치를 11번째칸으로 이동
+	ft_putstr_fd("exit\n", 2);
 }
