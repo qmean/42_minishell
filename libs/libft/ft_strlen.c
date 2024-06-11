@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.seoul.kr>      +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 21:53:53 by kyumkim           #+#    #+#             */
-/*   Updated: 2023/12/07 14:47:28 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/12 03:49:27 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	ret;
 
 	ret = 0;
+	if (s == NULL)
+		return (0);
 	while (*s != 0)
 	{
 		ret++;

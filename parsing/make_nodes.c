@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:55:18 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/10 00:21:51 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/12 03:48:39 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ t_cmd	*make_cmd(void)
     new->buf = NULL;
     new->pipe_flag = 0;
     new->redirect = 0;
-    new->exit_flag = 0;
     new->quote = '\0';
     new->tokens = NULL;
     new->env = NULL;

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_print.c                                      :+:      :+:    :+:   */
+/*   linked_list_handler.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 04:23:46 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 02:04:33 by jaemikim         ###   ########.fr       */
+/*   Created: 2024/06/12 00:33:40 by jaemikim          #+#    #+#             */
+/*   Updated: 2024/06/12 04:15:11 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parsing.h"
 
-void	error_invalid_quote(void)
+void add_token(t_cmd *cmd)
 {
-    ft_putstr_fd("minishell: syntax error: unexpected end of file\n", 2);
-    exit(EXIT_FAILURE);
+    cmd->tokens->data = cmd->buf; // 토큰 저장
+    cmd->tokens->next = make_token();
+    cmd->tokens = cmd->tokens->next; // 새로운 토큰 생성 후 이동
+    cmd->buf = NULL;
 }
 
-void    error_syntax(char *c)
+void add_cmd(t_cmd *cmd)
 {
-    ft_putstr_fd("minishell: syntax error near unexpected token `", 2);
-    if (c == NULL)
-        ft_putstr_fd("newline'\n", 2);
-    else
-        ft_putstr_fd(c, 2);
-    ft_putstr_fd("'\n", 2);
-    exit(EXIT_FAILURE);
+	cmd->next = make_cmd();
+	cmd = cmd->next;
+	cmd->tokens = make_token();
+	cmd->first_token = cmd->tokens;
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   paring_utils.c                                     :+:      :+:    :+:   */
+/*   parsing_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:17:21 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/10 04:46:17 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/12 03:48:10 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,30 @@ int    iswhitespace(char *c)
 
 }
 
-char	*ft_strjoin_free(const char *s1, char s2)
+char	*ft_strjoin_free(char *s1, char s2)
 {
 	char	*ret;
 	int		idx;
-
-	idx = 0;
-	ret = malloc(ft_strlen(s1)+ 2);
+	char	*tmp;
+	
+	ret = malloc(ft_strlen(s1) * 2);
 	if (ret == NULL)
 		return (NULL);
+    if (s1 == NULL)
+    {
+        ret[0] = s2;
+        ret[1] = 0;
+        return (ret);
+    }
+	tmp = s1;
+	idx = 0;
 	while (*s1 != 0)
 	{
 		ret[idx++] = *s1;
 		s1++;
 	}
-    ret[idx++] = s2;
+	ret[idx++] = s2;
 	ret[idx] = 0;
-    free(s1);
+	free(tmp);
 	return (ret);
 }
