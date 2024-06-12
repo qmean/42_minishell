@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 04:15:19 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:57:37 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,7 @@ void    add_cmd(t_cmd *cmd);
 void    print_cmd(t_cmd *cmd);
 void    print_token(t_token *token);
 char	*ft_strjoin_free(char *s1, char s2);
+void	free_cmd(t_cmd *cmd);
+void    free_token(t_token *token);
 
 #endif

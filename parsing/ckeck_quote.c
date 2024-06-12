@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:31:32 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 04:16:00 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/12 12:10:36 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int check_quote(char *line, t_cmd *cmd, int *i)
 {
-    if (check_smallquote(line, cmd, i) || check_bigquote(line, cmd, i))
-        return (1);
-    return 0;
+    check_smallquote(line, cmd, i);
+    check_bigquote(line, cmd, i);
+    return (1);
 }
 
 int check_smallquote(char *line, t_cmd *cmd, int *i)
