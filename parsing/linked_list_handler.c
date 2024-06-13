@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   linked_list_handler.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:33:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 12:01:45 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/14 03:59:42 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,25 @@ void	add_token(t_cmd *cmd)
     cmd->buf = NULL;
 }
 
-void	add_cmd(t_cmd *cmd)
+void	add_cmd(t_line *lines)
 {
-	cmd->next = make_cmd();
-	cmd = cmd->next;
-	cmd->tokens = make_token();
-	cmd->first_token = cmd->tokens;
+	lines->cmds->next = make_cmd();
+	lines->cmds = lines->cmds->next;
+	lines->cmds->tokens = make_token();
+	lines->cmds->first_token = lines->cmds->tokens;
 }
 
-void	free_cmd(t_cmd *cmd)
+void	free_cmd(t_line *lines)
 {
     t_cmd	*tmp;
 
-    while (cmd)
+    lines->cmds = lines->first_cmd;
+    while (lines->cmds)
     {
-        tmp = cmd->next;
-        free_token(cmd->first_token);
-        free(cmd);
-        cmd = tmp;
+        tmp = lines->cmds->next;
+        free_token(lines->cmds->first_token);
+        free(lines->cmds);
+        lines->cmds = tmp;
     }
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 11:57:37 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/14 03:44:32 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_env
 typedef struct	s_token
 {
 	int				redir; // 0: 아님 1: >, 2: <, 3: >>, 4: <<
-	
+	int				isspace; // 마지막에 space로 토큰을 나누었는지 아닌지 -> 0: 아님 1: 공백
 	char			*redir_args[2]; // 리다이렉션 파일
 	char			*data; // 명령어
 	
@@ -49,13 +49,18 @@ typedef struct	s_cmd
 	char			quote; // 따옴표를 저장(' or "), 같은 따옴표가 나오면 다시 0으로 복귀
 
 	t_token			*first_token; // 토큰의 첫번째 노드;
-	struct s_cmd	*first_cmd; // 명령어 뭉치의 첫번째 노드
 	
 	t_token			*tokens; // 명령어를 저장할 연결리스트
 	struct s_env	*env; // 환경 변수를 저장할 연결리스트
 	struct s_cmd	*next; // 다음 명령어 뭉치
 }				t_cmd;
 
+typedef struct s_line
+{
+	t_cmd	*first_cmd; // 명령어 뭉치의 첫번째 노드
+
+	t_cmd	*cmds; // 명령어 뭉치를 저장할 연결리스트
+} t_line;
 
 int		iswhitespace(char *c);
 void    set_signal(void);
@@ -65,10 +70,10 @@ void    sigint_printc_on(void);
 void    sig_term_handler(void);
 t_cmd	*make_cmd(void);
 t_token	*make_token(void);
-void    init(t_cmd *cmd);
-void    tokenize_main(char *line, t_cmd *cmd);
+void    init(t_line *lines);
+void	tokenize_main(char *line, t_line *lines);
 void    add_token(t_cmd *cmd);
-int     check_pipe(char *line, t_cmd *cmd, int *i);
+int 	check_pipe(char *line, t_line *lines, int *i);
 int     check_quote(char *line, t_cmd *cmd, int *i);
 int     check_smallquote(char *line, t_cmd *cmd, int *i);
 int     check_bigquote(char *line, t_cmd *cmd, int *i);
@@ -76,11 +81,12 @@ void    error_syntax(char *c);
 void    error_invalid_quote(void);
 int     check_escape(char *line, t_cmd *cmd, int *i);
 int     check_semicolon(char *line, t_cmd *cmd, int *i);
-void    add_cmd(t_cmd *cmd);
+void	add_cmd(t_line *lines);
 void    print_cmd(t_cmd *cmd);
 void    print_token(t_token *token);
 char	*ft_strjoin_free(char *s1, char s2);
-void	free_cmd(t_cmd *cmd);
+void	free_cmd(t_line *lines);
 void    free_token(t_token *token);
+int		check_space(char *line, t_cmd *cmd, int *i);
 
 #endif

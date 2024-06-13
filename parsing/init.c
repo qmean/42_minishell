@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:57:28 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 03:02:27 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/14 03:32:59 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parsing.h"
 
-void    init(t_cmd *cmd)
+void    init(t_line *lines)
 {
-    cmd->first_cmd = cmd;
-    cmd->tokens = make_token();
-    cmd->first_token = cmd->tokens;
+    lines->cmds = make_cmd();
+    lines->first_cmd = lines->cmds;
+    lines->cmds->tokens = make_token();
+    lines->cmds->first_token = lines->cmds->tokens;
 }
