@@ -1,17 +1,19 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mainheader.h                                       :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 19:01:02 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/05 20:36:10 by kyumkim          ###   ########.fr       */
+/*   Created: 2024/06/09 23:57:28 by jaemikim          #+#    #+#             */
+/*   Updated: 2024/06/09 23:59:51 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-=======
->>>>>>> main
-#include "libs/libft/libft.h"
-#include "libs/get_next_line/get_next_line.h"
+#include "parsing.h"
+
+void    init(t_cmd *cmd)
+{
+    cmd = make_cmd();
+    cmd->tokens = make_token();
+}
