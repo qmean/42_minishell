@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.seoul.kr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:47:37 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/05 19:31:57 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/06 15:28:40 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	readfile(char **buffer, int fd)
 			return (-1);
 		else if (read_size == 0)
 		{
-			if (ft_strlen(*buffer) == 0)
+			if (libft_strlen(*buffer) == 0)
 				return (-1);
 			break ;
 		}
@@ -41,17 +41,17 @@ int	ft_strcat(char **dest, char *src)
 {
 	char	*tmp;
 
-	tmp = malloc(ft_strlen(*dest) + ft_strlen(src) + 1);
+	tmp = malloc(libft_strlen(*dest) + libft_strlen(src) + 1);
 	if (tmp == NULL)
 		return (-1);
-	str_ncpy(tmp, *dest, ft_strlen(*dest));
-	str_ncpy(tmp + ft_strlen(*dest), src, ft_strlen(src));
+	str_ncpy(tmp, *dest, libft_strlen(*dest));
+	str_ncpy(tmp + libft_strlen(*dest), src, libft_strlen(src));
 	free(*dest);
 	*dest = tmp;
 	return (0);
 }
 
-int	ft_strlen(char *str)
+int	libft_strlen(char *str)
 {
 	int	ret;
 

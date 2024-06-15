@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.seoul.kr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:43:30 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/05 19:31:48 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/06 15:27:14 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ char	*make_return(char	**buffer)
 		return (NULL);
 	lineidx = newline_idx(*buffer);
 	if (lineidx == -1)
-		return (ft_substr(buffer, ft_strlen(*buffer) - 1));
+		return (libft_substr(buffer, libft_strlen(*buffer) - 1));
 	else
-		return (ft_substr(buffer, lineidx));
+		return (libft_substr(buffer, lineidx));
 }
 
-char	*ft_strdup(char *str)
+char	*libft_strdup(char *str)
 {
 	char	*ret;
 	int		retidx;
 
 	if (str == NULL)
 		return (NULL);
-	ret = malloc(ft_strlen(str) + 1);
+	ret = malloc(libft_strlen(str) + 1);
 	if (ret == NULL)
 		return (NULL);
 	retidx = 0;
@@ -61,15 +61,15 @@ char	*ft_strdup(char *str)
 	return (ret);
 }
 
-char	*ft_substr(char **str, int endidx)
+char	*libft_substr(char **str, int endidx)
 {
 	char	*ret;
 	char	*tmp;
 
-	if ((ft_strlen(*str) - endidx) == 0)
+	if ((libft_strlen(*str) - endidx) == 0)
 	{
 		free_buffer(str, NULL);
-		return (ft_strdup(*str));
+		return (libft_strdup(*str));
 	}
 	ret = malloc(endidx + 2);
 	if (ret == NULL)
@@ -77,7 +77,7 @@ char	*ft_substr(char **str, int endidx)
 		free_buffer(str, NULL);
 		return (NULL);
 	}
-	tmp = malloc(ft_strlen(*str) - endidx);
+	tmp = malloc(libft_strlen(*str) - endidx);
 	if (tmp == NULL)
 	{
 		free(ret);
@@ -85,7 +85,7 @@ char	*ft_substr(char **str, int endidx)
 		return (NULL);
 	}
 	str_ncpy(ret, *str, endidx + 1);
-	str_ncpy(tmp, (*str) + endidx + 1, ft_strlen(*str) - endidx - 1);
+	str_ncpy(tmp, (*str) + endidx + 1, libft_strlen(*str) - endidx - 1);
 	free_buffer(str, tmp);
 	return (ret);
 }
