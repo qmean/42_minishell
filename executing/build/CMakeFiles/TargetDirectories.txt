@@ -1,0 +1,3 @@
+/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles/minishell.dir
+/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles/edit_cache.dir
+/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles/rebuild_cache.dir
