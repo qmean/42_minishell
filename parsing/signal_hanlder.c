@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   signal_hanlder.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:12:05 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/10 00:53:37 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/14 01:34:56 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void signal_handler(int signo)
 {
     pid_t   pid;
     
-    pid = waitpid(-1, NULL, WNOHANG);
     sigint_printc_off();
+    pid = waitpid(-1, NULL, WNOHANG);
         
     if (signo == SIGINT)
     {

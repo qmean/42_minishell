@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   make_nodes.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:55:18 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 03:48:39 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/14 02:47:46 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ t_token	*make_token(void)
     new->redir_args[1] = NULL;
     new->data = NULL;
     new->next = NULL;
+    new->isspace = 0;
     return (new);
 }

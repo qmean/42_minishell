@@ -3,29 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+         #
+#    By: jammin <jammin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 22:53:17 by kyumkim           #+#    #+#              #
-#    Updated: 2024/06/12 03:38:46 by jaemikim         ###   ########.fr        #
+#    Updated: 2024/06/14 01:47:55 by jammin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 LIBS = -lreadline
 NAME = mini_shell
 
 # Parsing source files
-PARSING_SRCS = parsing/error_print.c \
-               parsing/init.c \
-               parsing/linked_list_handler.c \
-               parsing/make_nodes.c \
-               parsing/parsing_main.c \
-               parsing/parsing_utils.c \
-               parsing/signal_hanlder.c \
-               parsing/test.c \
-               parsing/tokeniz.c \
-               $(wildcard parsing/c*)
+PARSING_SRCS = $(wildcard parsing/*.c)
 
 # Libft source files
 LIBFT_SRCS = libs/libft/ft_putstr_fd.c \
@@ -42,10 +33,10 @@ OBJS = $(PARSING_OBJS) $(LIBFT_OBJS)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L/opt/homebrew/opt/readline/lib $(LIBS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c -I/opt/homebrew/opt/readline/include $< -o $@
 
 clean:
 	rm -f $(OBJS)
