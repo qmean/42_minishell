@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   executing.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/10 03:45:50 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/16 00:46:52 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "stdio.h"
 # include "string.h"
 # include "errno.h"
+# include "fcntl.h"
+# include "sys/stat.h"
 # include "readline/readline.h"
 
 typedef struct s_env
@@ -29,15 +31,23 @@ typedef struct s_data
 {
 	t_env	*env;
 }	t_data;
+void	execute(t_data *data, char *cmd, char **args);
 
+/* ================================== ENV ==================================*/
+
+// env.c
 void	env(t_data *data);
+void	env_print(t_env *env);
+
+/* ================================== ENV ==================================*/
+
 void	cd(t_data *data, char **cmdlist);
-void	pwd(t_data *data);
+void	pwd(void);
 
 /* ================================== EXPORT ==================================*/
 
 // export.c
-void	export(t_data *data, char **args);
+int		export(t_data *data, char **args);
 
 // export_with_no_args.c
 void	export_with_no_args(t_data *data);
@@ -57,6 +67,7 @@ size_t	value_len(char **value);
 
 // export_add_env.c
 int		add_env(t_data *data, char *arg);
+void	do_keys(t_data *data, char *arg);
 
 // export_check_validated.c
 int		export_check_validated(char *arg);
@@ -67,15 +78,18 @@ int		check_valid_underbar_char(char *arg);
 // export_plus.c
 char	**plus_split(char *arg);
 void	do_plus(t_data *data, char *arg);
-void	add_env_value(t_data *data, char *key, char *value);
 void	add_env_node(t_data *data, char *key, char **values);
 int		check_plus(char *arg);
 
 // export_change_value.c
 int		check_change(char *arg);
 void	do_change(t_data *data, char *arg);
-void	change_env_value(t_data *data, char *key, char *value);
 char	**change_split(char *arg);
+
+// export_add_no_value.c
+void	do_no_value(t_data *data, char *arg);
+int		check_no_value(char *arg);
+
 
 /* ================================== EXPORT ==================================*/
 
@@ -83,14 +97,35 @@ char	**change_split(char *arg);
 // free_env
 void	free_env(t_env *env);
 void	free_values(char **values);
+void	delete_values(t_env *env);
 
 /* ================================== FREE ==================================*/
+
+/* ================================== STRING UTILS ==================================*/
 
 // ft_strcmp
 int		ft_strcmp(const char *s1, const char *s2);
 
-char	**find_value(char *key, t_data *data);
-void	execute(t_data *data, char *cmd, char **args);
+// value_split.c
+char	**value_split(char *str);
 
+/* ================================== STRING UTILS ==================================*/
+
+/* ================================== ENV_UTILS ==================================*/
+
+// env_parsing_func.c
+char	**find_value(char *key, t_data *data);
+t_env	*find_env_with_key(t_data *data, char *key);
+void	new_env(t_data *data, char *key, char *value);
+
+// env_add_env_value.c
+void	add_env_value(t_data *data, char *key, char *value);
+
+/* ================================== ENV_UTILS ==================================*/
+
+/* ================================== SIZE_UTILS ==================================*/
 int		cmd_size(char **cmdlist);
+int		env_size(t_data data);
+int		value_size(t_env *env);
+/* ================================== SIZE_UTILS ==================================*/
 #endif

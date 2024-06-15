@@ -6,21 +6,19 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 15:24:22 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/06 18:48:49 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/11 23:36:35 by kyuminkim        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-void	pwd(t_data *data)
+void	pwd(void)
 {
-	t_env	*env;
-	char	**pwd;
+	char	*pwd;
 
-	env = data->env;
-	pwd = find_value("PWD", data);
-	if (pwd != NULL)
-		ft_putstr_fd(pwd[0], 1);
+	pwd = getcwd(NULL, 0);
+	ft_putstr_fd(pwd, 1);
 	ft_putstr_fd("\n", 1);
+	free(pwd);
 	return ;
 }

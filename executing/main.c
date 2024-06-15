@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/09 23:19:09 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/12 03:47:39 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,7 @@ int	main(int argc, char **argv, char **envp)
 		args = ft_split(input, ' ');
 		cmd = args[0];
 		args++;
-		pid = fork();
-		if (pid == 0)
-		{
-			execute(data, cmd, args);
-		}
-		else if (pid < 0)
-			ft_putstr_fd("Error: fork failed\n", 2); // todo : 에러처리 추가
-		else
-			waitpid(pid, NULL, 0);
+		execute(data, cmd, args);
 	}
 	return (0);
 }

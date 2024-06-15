@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 22:38:26 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/09 22:38:46 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/12 04:08:38 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	if (!s1 || !s2)
-		return (0);
+		return (1);
 	while (*s1 && *s2)
 	{
 		if (*s1 != *s2)

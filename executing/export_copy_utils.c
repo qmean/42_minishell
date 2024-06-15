@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:16:07 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/09 23:24:19 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/15 23:15:32 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,13 @@ t_env	*copy_env(t_env *env)
 	{
 		ret->key = ft_strdup(env->key);
 		ret->value = copy_value(env->value);
-		ret->next = (t_env *)malloc(sizeof(t_env));
-		if (ret->next == NULL)
-			return (NULL);
-		ret = ret->next;
+		if (env->next != NULL)
+		{
+			ret->next = (t_env *)malloc(sizeof(t_env));
+			if (ret->next == NULL)
+				return (NULL);
+			ret = ret->next;
+		}
 		env = env->next;
 	}
 	ret->next = NULL;
@@ -40,6 +43,8 @@ char	**copy_value(char **value)
 	char	**ret;
 	int		i;
 
+	if (value == NULL)
+		return (NULL);
 	ret = (char **)malloc(sizeof(char *) * (value_len(value) + 1));
 	if (ret == NULL)
 		return (NULL);
