@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:17:21 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 01:40:49 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/16 02:56:38 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,16 @@ char	*ft_strjoin_free(char *s1, char s2)
 	if (tmp != NULL)
 		free(tmp);
 	return (ret);
+}
+
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	while (*s1 != 0 && *s2 != 0)
+	{
+		if (*s1 != *s2)
+			break ;
+		s1++;
+		s2++;
+	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

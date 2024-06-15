@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 02:50:38 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/16 02:57:12 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	check_env(char *line, t_line *lines, int *i)
                 get_env_value(key, lines->cmds);
             }
             else
-                error_invalid_quote();
+                return(0);
             
             return (1);
         }
@@ -64,7 +64,7 @@ void    get_env_value(char *key, t_cmd *cmd)
     env = cmd->env;
     while (env)
     {
-        if (ft_strncmp(env->key, key, strlen(key)) == 0)
+        if (ft_strcmp(env->key, key) == 0)
         {
             if (cmd->env->value != NULL)
             {
