@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 02:57:12 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/16 03:11:35 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,6 @@ int	check_env(char *line, t_line *lines, int *i)
                 lines->cmds->buf = ft_strcat(lines->cmds->buf, ft_itoa(lines->exit_flag));
                 *i += 1;
             }
-            else if ((line[*i] == '\0') || (line[*i] == ' ') || (line[*i] == ';') || (line[*i] == '|') || (line[*i] == '<'))
-            {
-                lines->cmds->buf = ft_strjoin_free(lines->cmds->buf, '$');
-                return (0);
-            }
             else if (isalnum(line[*i]) || line[*i] == '_')
             {
                 while (isalnum(line[*i]) || line[*i] == '_')
@@ -47,7 +42,10 @@ int	check_env(char *line, t_line *lines, int *i)
                 get_env_value(key, lines->cmds);
             }
             else
-                return(0);
+            {
+                lines->cmds->buf = ft_strcat(lines->cmds->buf, "$");
+                return (0);
+            }
             
             return (1);
         }
@@ -59,6 +57,7 @@ void    get_env_value(char *key, t_cmd *cmd)
 {
     t_env   *env;
     int     is_env;
+    int     i;
 
     is_env = 0;
     env = cmd->env;
@@ -68,7 +67,12 @@ void    get_env_value(char *key, t_cmd *cmd)
         {
             if (cmd->env->value != NULL)
             {
-                cmd->buf = ft_strcat(cmd->buf, env->value[0]);
+                i = 0;
+                while (cmd->env->value[i] != NULL)
+                {
+                    cmd->buf = ft_strcat(cmd->buf, env->value[i]);
+                    i++;
+                }
                 is_env = 1;
             }
         }

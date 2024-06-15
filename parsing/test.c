@@ -32,8 +32,9 @@ void    set_env(t_env *env)
 
     i = 1;
     (env)->key = ft_strdup("key");
-    env->value = malloc(sizeof(char *) * 2);
+    env->value = malloc(sizeof(char *) * 3);
     env->value[0] = ft_strcat(ft_strdup("value "), ft_itoa(i));
+    env->value[1] = ft_strcat(ft_strdup("value "), ft_itoa(2));
     (env)->next = NULL;
 
     tmp = env;

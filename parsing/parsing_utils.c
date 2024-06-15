@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:17:21 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 02:56:38 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/16 03:14:25 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,32 @@ int	ft_strcmp(const char *s1, const char *s2)
 		s2++;
 	}
 	return ((unsigned char)*s1 - (unsigned char)*s2);
+}
+
+char	*ft_strcat_env(char *dst, const char *src)
+{
+	size_t				srclen;
+	size_t				dstlen;
+	unsigned long long	i;
+	char				*tmp;
+
+	i = 0;
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	tmp = (char *) malloc(sizeof(char) * (dstlen + srclen + 1));
+	if (!tmp)
+		return (NULL);
+	while (i < dstlen)
+	{
+		tmp[i] = dst[i];
+		i++;
+	}
+	while (i < srclen + dstlen)
+	{
+		tmp[i] = src[i - dstlen];
+		i++;
+	}
+	tmp[i] = '\0';
+	free(dst);
+	return (tmp);
 }
