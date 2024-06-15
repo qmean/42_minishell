@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/14 03:44:32 by jammin           ###   ########.fr       */
+/*   Updated: 2024/06/16 02:30:36 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,17 @@ typedef struct	s_cmd
 	char			quote; // 따옴표를 저장(' or "), 같은 따옴표가 나오면 다시 0으로 복귀
 
 	t_token			*first_token; // 토큰의 첫번째 노드;
-	
 	t_token			*tokens; // 명령어를 저장할 연결리스트
-	struct s_env	*env; // 환경 변수를 저장할 연결리스트
+	t_env	*env; // 환경 변수를 저장할 연결리스트
 	struct s_cmd	*next; // 다음 명령어 뭉치
 }				t_cmd;
 
 typedef struct s_line
 {
 	t_cmd	*first_cmd; // 명령어 뭉치의 첫번째 노드
-
 	t_cmd	*cmds; // 명령어 뭉치를 저장할 연결리스트
+
+	int				exit_flag; // exit 상태 저장
 } t_line;
 
 int		iswhitespace(char *c);
@@ -77,16 +77,20 @@ int 	check_pipe(char *line, t_line *lines, int *i);
 int     check_quote(char *line, t_cmd *cmd, int *i);
 int     check_smallquote(char *line, t_cmd *cmd, int *i);
 int     check_bigquote(char *line, t_cmd *cmd, int *i);
-void    error_syntax(char *c);
-void    error_invalid_quote(void);
-int     check_escape(char *line, t_cmd *cmd, int *i);
-int     check_semicolon(char *line, t_cmd *cmd, int *i);
+int		error_syntax(char *c);
+int		error_invalid_quote(void);
+int     check_escape(char *line, t_line *lines, int *i);
+int     check_semicolon(char *line, t_line *lines, int *i);
 void	add_cmd(t_line *lines);
-void    print_cmd(t_cmd *cmd);
-void    print_token(t_token *token);
 char	*ft_strjoin_free(char *s1, char s2);
 void	free_cmd(t_line *lines);
 void    free_token(t_token *token);
 int		check_space(char *line, t_cmd *cmd, int *i);
+int		check_env(char *line, t_line *lines, int *i);
+void    get_env_value(char *key, t_cmd *cmd);
+
+
+void    print_cmd(t_cmd *cmd);
+void    set_env(t_env *env);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:17:21 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/12 11:53:09 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/16 01:40:49 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strjoin_free(char *s1, char s2)
 	}
 	ret[idx++] = s2;
 	ret[idx] = 0;
-	free(tmp);
+	if (tmp != NULL)
+		free(tmp);
 	return (ret);
 }

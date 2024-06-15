@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.seoul.kr>      +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 20:14:08 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/05 19:33:59 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/16 02:29:49 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char	*ft_itoa(int n)
 			return (NULL);
 	}
 	push_num(ret, inp, len);
+	ret[len - 1] = '\0';
 	return (ret);
 }
 

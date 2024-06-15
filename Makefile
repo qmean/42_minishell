@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jammin <jammin@student.42.fr>              +#+  +:+       +#+         #
+#    By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 22:53:17 by kyumkim           #+#    #+#              #
-#    Updated: 2024/06/14 01:47:55 by jammin           ###   ########.fr        #
+#    Updated: 2024/06/16 02:37:48 by jaemikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CC = cc
+CFLAGS = -g -Wall -Wextra -Werror
 LIBS = -lreadline
 NAME = mini_shell
 
@@ -19,10 +19,7 @@ NAME = mini_shell
 PARSING_SRCS = $(wildcard parsing/*.c)
 
 # Libft source files
-LIBFT_SRCS = libs/libft/ft_putstr_fd.c \
-             libs/libft/ft_strlen.c \
-             libs/libft/ft_putchar_fd.c \
-             libs/libft/ft_strlcpy.c
+LIBFT_SRCS = $(wildcard libs/libft/*.c)
 
 # Object files
 PARSING_OBJS = $(PARSING_SRCS:.c=.o)

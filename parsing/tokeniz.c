@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   tokeniz.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 00:45:53 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/14 04:10:03 by jammin           ###   ########.fr       */
+/*   Updated: 2024/06/16 02:52:10 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parsing.h"
+
+// TODO : 에러가 날 경우 그대로 라인을 넘겨주도록 변경
 
 void tokenize_main(char *line, t_line *lines)
 {
@@ -25,10 +27,12 @@ void tokenize_main(char *line, t_line *lines)
             continue;
         else if (check_pipe(line, lines, &i)) // 파이프 검사
             continue;
-        // if (check_semicolon(line, lines->cmds, &i)) // 세미콜론 검사
-        //     continue;
-        // check_escape(line, cmd, &i); // 이스케이프 검사
-        //     continue;
+        else if (check_semicolon(line, lines, &i)) // 세미콜론 검사
+            continue;
+        else if (check_escape(line, lines, &i)) // 이스케이프 검사
+            continue;
+        else if (check_env(line, lines, &i))
+            continue;
         else
             lines->cmds->buf = ft_strjoin_free(lines->cmds->buf, line[i]);
         i++;

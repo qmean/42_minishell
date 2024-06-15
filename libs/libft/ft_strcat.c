@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.seoul.kr>      +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 00:22:24 by kyumkim           #+#    #+#             */
-/*   Updated: 2023/12/07 17:50:55 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/16 01:02:26 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strcat(char *dst, const char *src)
 {
-	size_t	srclen;
-	size_t	dstlen;
-	size_t	len;
+	size_t				srclen;
+	size_t				dstlen;
+	unsigned long long	i;
+	char				*tmp;
 
+	i = 0;
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
-	len = 0;
-	while (*dst != 0)
+	tmp = (char *) malloc(sizeof(char) * (dstlen + srclen + 1));
+	if (!tmp)
+		return (NULL);
+	while (i < dstlen)
 	{
-		len++;
-		dst++;
+		tmp[i] = dst[i];
+		i++;
 	}
-	while (len + 1 < dstsize && *src != 0)
+	while (i < srclen + dstlen)
 	{
-		*dst++ = *src++;
-		len++;
+		tmp[i] = src[i - dstlen];
+		i++;
 	}
-	*dst = 0;
-	if (dstlen < dstsize)
-		return (dstlen + srclen);
-	else
-		return (srclen + dstsize);
+	tmp[i] = '\0';
+	free(dst);
+	return (tmp);
 }
