@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:55:18 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/10 00:21:51 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/16 01:57:59 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ t_cmd	*make_cmd(void)
     new->buf = NULL;
     new->pipe_flag = 0;
     new->redirect = 0;
-    new->exit_flag = 0;
     new->quote = '\0';
     new->tokens = NULL;
     new->env = NULL;
@@ -42,5 +41,6 @@ t_token	*make_token(void)
     new->redir_args[1] = NULL;
     new->data = NULL;
     new->next = NULL;
+    new->isspace = 0;
     return (new);
 }

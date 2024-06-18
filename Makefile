@@ -3,71 +3,44 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+         #
+#    By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 22:53:17 by kyumkim           #+#    #+#              #
-#    Updated: 2024/06/04 23:05:24 by kyumkim          ###   ########.fr        #
+#    Updated: 2024/06/16 02:37:48 by jaemikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-LIBFT = libft.a
-GNL = get_next_line.a
-LIBFTSRCS = libs/libft/ft_atoi.c \
-			libs/libft/ft_bzero.c \
-			libs/libft/ft_calloc.c \
-			libs/libft/ft_isalnum.c \
-			libs/libft/ft_isalpha.c \
-			libs/libft/ft_isascii.c \
-			libs/libft/ft_isdigit.c \
-			libs/libft/ft_isprint.c \
-			libs/libft/ft_itoa.c \
-			libs/libft/ft_memcpy.c \
-			libs/libft/ft_memchr.c \
-			libs/libft/ft_memcmp.c \
-			libs/libft/ft_memcpy.c \
-			libs/libft/ft_memmove.c \
-			libs/libft/ft_memset.c \
-			libs/libft/ft_putchar_fd.c \
-			libs/libft/ft_putendl_fd.c \
-			libs/libft/ft_putnbr_fd.c \
-			libs/libft/ft_putstr_fd.c \
-			libs/libft/ft_split.c \
-			libs/libft/ft_strchr.c \
-			libs/libft/ft_strdup.c \
-			libs/libft/ft_strjoin.c \
-			libs/libft/ft_strlcat.c \
-			libs/libft/ft_strlcpy.c \
-			libs/libft/ft_strlen.c \
-			libs/libft/ft_strmapi.c \
-			libs/libft/ft_strncmp.c \
-			libs/libft/ft_strnstr.c \
-			libs/libft/ft_strrchr.c \
-			libs/libft/ft_strtrim.c \
-			libs/libft/ft_substr.c \
-			libs/libft/ft_tolower.c \
-			libs/libft/ft_toupper.c
-LIBFTOBJS = $(LIBFTSRCS:.c=.o)
-GNLSRCS = libs/get_next_line/get_next_line.c \
-		 libs/get_next_line/get_next_line_utils.c
-GNLOBJS = $(GNLSRCS:.c=.o)
+CFLAGS = -g -Wall -Wextra -Werror
+LIBS = -lreadline
+NAME = mini_shell
 
-all: $(LIBFT) $(GNL)
+# Parsing source files
+PARSING_SRCS = $(wildcard parsing/*.c)
 
-$(GNL): $(GNLOBJS)
-	ar rscv $(GNL) $(GNLOBJS)
+# Libft source files
+LIBFT_SRCS = $(wildcard libs/libft/*.c)
 
-$(LIBFT): $(LIBFTOBJS)
-	ar rscv $(LIBFT) $(LIBFTOBJS)
+# Object files
+PARSING_OBJS = $(PARSING_SRCS:.c=.o)
+LIBFT_OBJS = $(LIBFT_SRCS:.c=.o)
+OBJS = $(PARSING_OBJS) $(LIBFT_OBJS)
+
+# Compilation rule
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L/opt/homebrew/opt/readline/lib $(LIBS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c -I/opt/homebrew/opt/readline/include $< -o $@
 
 clean:
-	rm -f $(LIBFTOBJS) $(GNLOBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(LIBFT) $(GNL)
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
