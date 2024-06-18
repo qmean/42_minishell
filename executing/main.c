@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:30:20 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:58:41 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ int	main(int argc, char **argv, char **envp)
 
 	cmds = init_line();
 	parse_envp(cmds, envp);
+	t_env *test = cmds->env;
+	while (test)
+	{
+		printf("key: %s, value: %s\n", test->key, test->value);
+		test = test->next;
+	}
 	tcgetattr(0, &term);
 	set_signal();
 	while ((line = readline("minishell$ ")))

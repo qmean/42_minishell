@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 00:45:53 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 02:52:10 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/06/19 03:49:15 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ void tokenize_main(char *line, t_line *lines)
     if (lines->cmds->quote != 0) // 따옴표가 닫히지 않은 경우
         error_invalid_quote();
     if ((line[i] == '\0') && (lines->cmds->buf != NULL)) // 라인이 끝나고 버퍼에 내용이 있으면 토큰으로 추가
-        add_token(lines->cmds);
+        lines->cmds->tokens->data = lines->cmds->buf;
     print_cmd(lines->first_cmd);
 }

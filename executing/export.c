@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 21:36:34 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:44:29 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:55:25 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	export(t_line *line, t_token *token)
 {
 	int	exit_flag;
-	int	idx;
 
 	exit_flag = 0;
 	if (token == NULL)
 		export_with_no_args(line);
-	idx = 0;
 	while (token != NULL)
 	{
 		if (add_env(line, token->data) == 1)
