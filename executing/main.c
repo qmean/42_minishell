@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/12 03:47:39 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/18 21:44:59 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ int	main(int argc, char **argv, char **envp)
 		input = readline("mini_shell$> ");
 		args = ft_split(input, ' ');
 		cmd = args[0];
-		args++;
-		execute(data, cmd, args);
+		execute(data, cmd, args+1, args);
 	}
 	return (0);
 }

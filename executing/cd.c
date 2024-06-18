@@ -6,71 +6,104 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:37:52 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/12 01:43:38 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/18 20:50:36 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
 void	set_value(char *key, char *value, t_data *data);
+void	cd_move_home(t_data *data);
+void	cd_move_one_arg(t_data *data, char *path);
+void	cd_move_oldpwd(t_data *data);
+void	cd_move_path(t_data *data, char *path);
 
-void	cd(t_data *data, char **cmdlist)
+void	cd(t_data *data, char **args)
 {
-	char	**home;
-	char	*oldpwd;
-	char	*newpwd;
-
-	oldpwd = getcwd(NULL, 0);
-	if (cmd_size(cmdlist) > 1)
+	if (cmd_size(args) == 0)
 	{
-		// todo : 에러처리 추가
+		cd_move_home(data);
+	}
+	else if (cmd_size(args) == 1)
+	{
+		cd_move_one_arg(data, args[0]);
+	}
+	else
+	{
+		//todo : 에러처리 추간
 		ft_putstr_fd("cd: too many arguments\n", 2);
+	}
+}
+
+void	cd_move_one_arg(t_data *data, char *path)
+{
+	if (!ft_strcmp(path, "~"))
+	{
+		cd_move_home(data);
 		return ;
 	}
-	else if (cmd_size(cmdlist) == 0)
+	if (!ft_strcmp(path, "-"))
 	{
-		home = find_value("HOME", data);
-		if (home != NULL)
-			newpwd = home[0];
+		cd_move_oldpwd(data);
+		return ;
 	}
-	else
+	cd_move_path(data, path);
+}
+
+void	cd_move_path(t_data *data, char *path)
+{
+	t_env	*env;
+	char	*oldpwd;
+
+	oldpwd = getcwd(NULL, 0);
+	if (chdir(path) == -1)
 	{
-		if (strcmp(cmdlist[0], "~") == 0)
-		{
-			home = find_value("HOME", data);
-			if (home != NULL)
-			{
-				newpwd = ft_strjoin(home[0], cmdlist[0] + 1);
-			}
-			else
-			{
-				ft_putstr_fd("cd: HOME not set\n", 2);
-				return ;
-			}
-		}
-		else if (strcmp(cmdlist[0], "-") == 0)
-		{
-			newpwd = oldpwd;
-		}
-		else
-			newpwd = cmdlist[0];
+		//todo : 에러처리 추가
+		ft_putstr_fd("cd: ", 2);
+		ft_putstr_fd(path, 2);
+		ft_putstr_fd(": No such file or directory\n", 2);
+		return ;
+	}
+	set_value("OLDPWD", oldpwd, data);
+	set_value("PWD", getcwd(NULL, 0), data);
+}
+
+void	cd_move_oldpwd(t_data *data)
+{
+	t_env	*env;
+	char	*oldpwd;
+
+	env = find_env_with_key(data, "OLDPWD");
+	if (env == NULL)
+	{
+		//todo : 에러처리 추가
+		ft_putstr_fd("cd: OLDPWD not set\n", 2);
+		return ;
 	}
 	oldpwd = getcwd(NULL, 0);
-	if (chdir(newpwd) == -1)
+	chdir(env->value[0]);
+	set_value("OLDPWD", oldpwd, data);
+	set_value("PWD", env->value[0], data);
+}
+
+void	cd_move_home(t_data *data)
+{
+	char	*home;
+	char	*key;
+	char	*value;
+
+	home = find_value("HOME", data)[0];
+	if (home == NULL)
 	{
-		strerror(errno);
-		ft_putstr_fd("cd: ", 2);
-		ft_putstr_fd("\n", 2);
-		exit(1);
+		//todo : 에러처리 추가
+		ft_putstr_fd("cd: HOME not set\n", 2);
+		return ;
 	}
-	else
-	{
-		newpwd = getcwd(NULL, 0);
-		set_value("OLDPWD", oldpwd, data);
-		set_value("PWD", newpwd, data);
-		free(oldpwd);
-		free(newpwd);
-	}
+	key = "OLDPWD";
+	value = getcwd(NULL, 0);
+	set_value(key, value, data);
+	chdir(home);
+	set_value("PWD", home, data);
 }
 
 void	set_value(char *key, char *value, t_data *data)
@@ -82,8 +115,17 @@ void	set_value(char *key, char *value, t_data *data)
 	{
 		if (strcmp(env->key, key) == 0)
 		{
-			free(env->value[0]);
-			env->value[0] = strdup(value);
+			if (env->value != NULL)
+			{
+				free(env->value[0]);
+				env->value[0] = strdup(value);
+			}
+			else
+			{
+				env->value = malloc(2 * sizeof(char *));
+				env->value[0] = strdup(value);
+				env->value[1] = NULL;
+			}
 			return ;
 		}
 		env = env->next;

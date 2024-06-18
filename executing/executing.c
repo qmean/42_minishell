@@ -6,21 +6,20 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 18:11:50 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/16 01:18:01 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/18 22:08:50 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-void echo(char **pString, char **pString1);
-int	export(t_data *data, char **args);
 void	exec_cmd(t_data *data, char *cmd, char **args);
-void	unset(t_data *data, char **args);
 char 	**env_to_char(t_env *env);
 int		ft_env_size(t_env *env);
 void	print_char_envp(char **envp);
 
-void	execute(t_data *data, char *cmd, char **args)
+char *check_and_put_path(char *dirPath, char *cmd);
+
+void	execute(t_data *data, char *cmd, char **args, char **input)
 {
 	int	pid;
 	int wait_status;
@@ -34,23 +33,19 @@ void	execute(t_data *data, char *cmd, char **args)
 	else if (!ft_strcmp(cmd, "unset"))
 		unset(data, args);
 	else if (!ft_strcmp(cmd, "echo"))
-		echo(args, args);
+		echo(args);
 	else if (!ft_strcmp(cmd, "exit"))
-		exit(0);
+		ft_exit(data, args);
 	else if (!ft_strcmp(cmd, "pwd"))
 		pwd();
 	else
 	{
 		pid = fork();
 		if (pid == 0)
-			exec_cmd(data, cmd, args);
+			exec_cmd(data, cmd, input);
 		else
 		{
 			waitpid(pid, &wait_status, 0);
-			if (WIFEXITED(wait_status))
-				printf("======exit status = %d=======\n", WEXITSTATUS(wait_status));
-			else
-				printf("======exit status = %d=======\n", WEXITSTATUS(wait_status));
 		}
 	}
 }
@@ -59,83 +54,59 @@ void	exec_cmd(t_data *data, char *cmd, char **args)
 {
 	char		**paths;
 	char		*path;
-	char		**new_args;
 	char		**envp;
-	struct stat	*buf;
+	int			i;
 
+	i = 0;
+	while (args[i] != NULL)
+		printf("args[%d] = %s\n", i++, args[i]);
 	paths = find_value("PATH", data);
 	if (paths == NULL)
 	{
 		ft_putstr_fd("command not found\n", 2);
-		return ;
+		exit(1);
 	}
-	new_args = (char **)malloc(sizeof(char *) * value_len(args) + 2);
-	int idx = 0;
-	new_args[idx++] = NULL;
-	while (args[idx - 1])
-	{
-		new_args[idx] = args[idx - 1];
-		idx++;
-	}
-	new_args[idx] = NULL;
-	while (*paths)
-	{
-		path = ft_strjoin(*paths, "/");
-		path = ft_strjoin(path, cmd);
-		new_args[0] = path;
-		envp = env_to_char(data->env);
-		if (open(path, O_RDONLY) != -1)
-		{
-			idx = 0;
-			while (new_args[idx])
-			{
-				printf("new_args[%d] = %s\n", idx, new_args[idx]);
-				idx++;
-			}
-			if (execve(path, new_args, envp) == -1)
-				exit(1);
-		}
-		else
-		{
-			paths++;
-		}
-	}
-	ft_putstr_fd("command not found\n", 2);
-}
-
-void	echo(char **pString, char **pString1)
-{
-	int	i;
-
 	i = 0;
-	while (pString[i])
+	path = check_and_put_path(paths[i], cmd);
+	while (paths[i] != NULL)
 	{
-		ft_putstr_fd(pString[i], 1);
+		path = check_and_put_path(paths[i], cmd);
+		if (path != NULL)
+			break ;
 		i++;
 	}
-	ft_putstr_fd("\n", 1);
+	if (path == NULL)
+	{
+		ft_putstr_fd("minishell: ", 2);
+		ft_putstr_fd(cmd, 2);
+		ft_putstr_fd(": command not found\n", 2);
+		exit(1);
+	}
+	envp = env_to_char(data->env);
+	execve(path, args, envp);
 }
 
-void	unset(t_data *data, char **args)
+char	*check_and_put_path(char *dirPath, char *cmd)
 {
-	t_env	*env;
-	int		i;
+	DIR				*dir;
+	struct dirent	*entry;
+	char			*path;
 
-	i = 0;
-	while (args[i])
+	dir = opendir(dirPath);
+	if (dir == NULL)
+		return (NULL);
+	entry = readdir(dir);
+	while (entry != NULL)
 	{
-		env = data->env;
-		while (env)
+		if (!ft_strcmp(entry->d_name, cmd))
 		{
-			if (!ft_strncmp(env->key, args[i], ft_strlen(args[i])))
-			{
-				env->value[0] = NULL;
-				break ;
-			}
-			env = env->next;
+			path = ft_strjoin(dirPath, "/");
+			path = ft_strjoin(path, cmd);
+			return (path);
 		}
-		i++;
+		entry = readdir(dir);
 	}
+	return (NULL);
 }
 
 char	**env_to_char(t_env *env)

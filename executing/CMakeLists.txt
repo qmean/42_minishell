@@ -29,6 +29,9 @@ add_executable(minishell ${SOURCES}
         export_change_value.c
         export_add_no_value.c
         env_add_end_value.c
+        unset.c
+        echo.c
+        exit.c
 )
 
 # Link the library

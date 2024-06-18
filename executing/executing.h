@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/16 00:46:52 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/18 23:18:58 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include "fcntl.h"
 # include "sys/stat.h"
 # include "readline/readline.h"
+# include "dirent.h"
 
 typedef struct s_env
 {
@@ -31,8 +32,13 @@ typedef struct s_data
 {
 	t_env	*env;
 }	t_data;
-void	execute(t_data *data, char *cmd, char **args);
 
+void	execute(t_data *data, char *cmd, char **args, char **input);
+void	cd(t_data *data, char **args);
+void	pwd(void);
+void	echo(char **args);
+void	ft_exit(t_data *data, char **args);
+void	unset(t_data *data, char **args);
 /* ================================== ENV ==================================*/
 
 // env.c
@@ -40,9 +46,6 @@ void	env(t_data *data);
 void	env_print(t_env *env);
 
 /* ================================== ENV ==================================*/
-
-void	cd(t_data *data, char **cmdlist);
-void	pwd(void);
 
 /* ================================== EXPORT ==================================*/
 
