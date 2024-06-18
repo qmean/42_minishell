@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 18:11:50 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:31:20 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:51:01 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,7 +156,7 @@ int	isbuiltin(t_cmd *cmd)
 	if (!ft_strcmp(cmd->first_token->data, "cd"))
 		return (BCD);
 	if (!ft_strcmp(cmd->first_token->data, "echo"))
-		return (ECHO);
+		return (BECHO);
 	if (!ft_strcmp(cmd->first_token->data, "env"))
 		return (BENV);
 	if (!ft_strcmp(cmd->first_token->data, "export"))

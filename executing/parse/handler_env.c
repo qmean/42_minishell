@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/19 03:03:25 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 04:03:37 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	check_env(char *line, t_line *lines, int *i)
                     key = ft_strjoin_free(key, line[*i]);
                     *i += 1;
                 }
-                get_env_value(key, lines->cmds);
+                get_env_value(key, lines);
             }
             else
             {
@@ -53,25 +53,25 @@ int	check_env(char *line, t_line *lines, int *i)
     return (0);
 }
 
-void    get_env_value(char *key, t_cmd *cmd)
+void    get_env_value(char *key, t_line *line)
 {
     t_env   *env;
     int     is_env;
 
     is_env = 0;
-    env = cmd->env;
+    env = line->env;
     while (env)
     {
         if (ft_strcmp_par(env->key, key) == 0)
         {
-            if (cmd->env->value != NULL)
+            if (line->env->value != NULL)
             {
-				cmd->buf = ft_strcat(cmd->buf, env->value);
+				line->cmds->buf = ft_strcat(line->cmds->buf, env->value);
                 is_env = 1;
             }
         }
         env = env->next;
     }
     if (is_env == 0)
-        cmd->buf = ft_strjoin_free(cmd->buf, '\0');
+        line->cmds->buf = ft_strjoin_free(line->cmds->buf, '\0');
 }

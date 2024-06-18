@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 21:53:23 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:43:50 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:52:13 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	print_n_option(t_token *token)
 	{
 		ft_putstr_fd(token->data, 1);
 		token = token->next;
-		if (token->data != NULL)
+		if (token != NULL)
 			ft_putstr_fd(" ", 1);
 	}
 }

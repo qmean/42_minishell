@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/19 03:04:45 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 04:03:00 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	free_cmd(t_line *lines);
 void    free_token(t_token *token);
 int		check_space(char *line, t_cmd *cmd, int *i);
 int		check_env(char *line, t_line *lines, int *i);
-void    get_env_value(char *key, t_cmd *cmd);
+void    get_env_value(char *key, t_line *line);
 int		ft_strcmp_par(const char *s1, const char *s2);
 
 void    print_cmd(t_cmd *cmd);

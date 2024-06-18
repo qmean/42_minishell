@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:53:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 02:34:33 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:54:26 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void    print_cmd(t_cmd *cmd)
 
     j = 1;
     tmp = cmd;
+	printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
+	printf("============print_cmd==========\n");
+	printf("===============================\n");
     while (tmp)
     {
         token = tmp->first_token;
@@ -35,4 +38,7 @@ void    print_cmd(t_cmd *cmd)
         tmp = tmp->next;
         j++;
     }
+	printf("===============================\n");
+	printf("============print_cmd==========\n");
+	printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
 }

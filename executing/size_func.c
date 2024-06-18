@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 18:58:53 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:40:52 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:51:38 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,7 @@ int	token_size(t_token *token)
 	int		ret;
 
 	ret = 0;
-	if (token == NULL)
-		return (0);
-	while (token->data != NULL)
+	while (token != NULL)
 	{
 		ret++;
 		token = token->next;
