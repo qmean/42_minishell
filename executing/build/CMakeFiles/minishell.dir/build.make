@@ -69,10 +69,24 @@ include CMakeFiles/minishell.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/minishell.dir/flags.make
 
+CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o: CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o -MF CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o.d -o CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+
+CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c > CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i
+
+CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c -o CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s
+
 CMakeFiles/minishell.dir/cd.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/cd.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cd.c
 CMakeFiles/minishell.dir/cd.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minishell.dir/cd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/minishell.dir/cd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/cd.c.o -MF CMakeFiles/minishell.dir/cd.c.o.d -o CMakeFiles/minishell.dir/cd.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cd.c
 
 CMakeFiles/minishell.dir/cd.c.i: cmake_force
@@ -83,10 +97,38 @@ CMakeFiles/minishell.dir/cd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/cd.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cd.c -o CMakeFiles/minishell.dir/cd.c.s
 
+CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c
+CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o -MF CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o.d -o CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c
+
+CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c > CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i
+
+CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c -o CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s
+
+CMakeFiles/minishell.dir/echo.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/echo.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/echo.c
+CMakeFiles/minishell.dir/echo.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/minishell.dir/echo.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/echo.c.o -MF CMakeFiles/minishell.dir/echo.c.o.d -o CMakeFiles/minishell.dir/echo.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/echo.c
+
+CMakeFiles/minishell.dir/echo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/echo.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/echo.c > CMakeFiles/minishell.dir/echo.c.i
+
+CMakeFiles/minishell.dir/echo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/echo.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/echo.c -o CMakeFiles/minishell.dir/echo.c.s
+
 CMakeFiles/minishell.dir/env.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/env.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/env.c
 CMakeFiles/minishell.dir/env.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/minishell.dir/env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/minishell.dir/env.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/env.c.o -MF CMakeFiles/minishell.dir/env.c.o.d -o CMakeFiles/minishell.dir/env.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/env.c
 
 CMakeFiles/minishell.dir/env.c.i: cmake_force
@@ -100,7 +142,7 @@ CMakeFiles/minishell.dir/env.c.s: cmake_force
 CMakeFiles/minishell.dir/env_parsing_func.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/env_parsing_func.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/env_parsing_func.c
 CMakeFiles/minishell.dir/env_parsing_func.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minishell.dir/env_parsing_func.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/minishell.dir/env_parsing_func.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/env_parsing_func.c.o -MF CMakeFiles/minishell.dir/env_parsing_func.c.o.d -o CMakeFiles/minishell.dir/env_parsing_func.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/env_parsing_func.c
 
 CMakeFiles/minishell.dir/env_parsing_func.c.i: cmake_force
@@ -114,7 +156,7 @@ CMakeFiles/minishell.dir/env_parsing_func.c.s: cmake_force
 CMakeFiles/minishell.dir/executing.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/executing.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/executing.c
 CMakeFiles/minishell.dir/executing.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/minishell.dir/executing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/minishell.dir/executing.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/executing.c.o -MF CMakeFiles/minishell.dir/executing.c.o.d -o CMakeFiles/minishell.dir/executing.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/executing.c
 
 CMakeFiles/minishell.dir/executing.c.i: cmake_force
@@ -125,10 +167,24 @@ CMakeFiles/minishell.dir/executing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/executing.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/executing.c -o CMakeFiles/minishell.dir/executing.c.s
 
+CMakeFiles/minishell.dir/exit.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/exit.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/exit.c
+CMakeFiles/minishell.dir/exit.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/minishell.dir/exit.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/exit.c.o -MF CMakeFiles/minishell.dir/exit.c.o.d -o CMakeFiles/minishell.dir/exit.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/exit.c
+
+CMakeFiles/minishell.dir/exit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/exit.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/exit.c > CMakeFiles/minishell.dir/exit.c.i
+
+CMakeFiles/minishell.dir/exit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/exit.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/exit.c -o CMakeFiles/minishell.dir/exit.c.s
+
 CMakeFiles/minishell.dir/export.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/export.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export.c
 CMakeFiles/minishell.dir/export.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/minishell.dir/export.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/minishell.dir/export.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export.c.o -MF CMakeFiles/minishell.dir/export.c.o.d -o CMakeFiles/minishell.dir/export.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export.c
 
 CMakeFiles/minishell.dir/export.c.i: cmake_force
@@ -139,52 +195,24 @@ CMakeFiles/minishell.dir/export.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export.c -o CMakeFiles/minishell.dir/export.c.s
 
-CMakeFiles/minishell.dir/export_add_env.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_add_env.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_env.c
-CMakeFiles/minishell.dir/export_add_env.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/minishell.dir/export_add_env.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_add_env.c.o -MF CMakeFiles/minishell.dir/export_add_env.c.o.d -o CMakeFiles/minishell.dir/export_add_env.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_env.c
+CMakeFiles/minishell.dir/export_check_and_do.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/export_check_and_do.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_and_do.c
+CMakeFiles/minishell.dir/export_check_and_do.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/minishell.dir/export_check_and_do.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_check_and_do.c.o -MF CMakeFiles/minishell.dir/export_check_and_do.c.o.d -o CMakeFiles/minishell.dir/export_check_and_do.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_and_do.c
 
-CMakeFiles/minishell.dir/export_add_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_add_env.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_env.c > CMakeFiles/minishell.dir/export_add_env.c.i
+CMakeFiles/minishell.dir/export_check_and_do.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_check_and_do.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_and_do.c > CMakeFiles/minishell.dir/export_check_and_do.c.i
 
-CMakeFiles/minishell.dir/export_add_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_add_env.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_env.c -o CMakeFiles/minishell.dir/export_add_env.c.s
-
-CMakeFiles/minishell.dir/export_add_no_value.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_add_no_value.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_no_value.c
-CMakeFiles/minishell.dir/export_add_no_value.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/minishell.dir/export_add_no_value.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_add_no_value.c.o -MF CMakeFiles/minishell.dir/export_add_no_value.c.o.d -o CMakeFiles/minishell.dir/export_add_no_value.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_no_value.c
-
-CMakeFiles/minishell.dir/export_add_no_value.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_add_no_value.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_no_value.c > CMakeFiles/minishell.dir/export_add_no_value.c.i
-
-CMakeFiles/minishell.dir/export_add_no_value.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_add_no_value.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_add_no_value.c -o CMakeFiles/minishell.dir/export_add_no_value.c.s
-
-CMakeFiles/minishell.dir/export_change_value.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_change_value.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_change_value.c
-CMakeFiles/minishell.dir/export_change_value.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/minishell.dir/export_change_value.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_change_value.c.o -MF CMakeFiles/minishell.dir/export_change_value.c.o.d -o CMakeFiles/minishell.dir/export_change_value.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_change_value.c
-
-CMakeFiles/minishell.dir/export_change_value.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_change_value.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_change_value.c > CMakeFiles/minishell.dir/export_change_value.c.i
-
-CMakeFiles/minishell.dir/export_change_value.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_change_value.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_change_value.c -o CMakeFiles/minishell.dir/export_change_value.c.s
+CMakeFiles/minishell.dir/export_check_and_do.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_check_and_do.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_and_do.c -o CMakeFiles/minishell.dir/export_check_and_do.c.s
 
 CMakeFiles/minishell.dir/export_check_validated.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/export_check_validated.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_validated.c
 CMakeFiles/minishell.dir/export_check_validated.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/minishell.dir/export_check_validated.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/minishell.dir/export_check_validated.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_check_validated.c.o -MF CMakeFiles/minishell.dir/export_check_validated.c.o.d -o CMakeFiles/minishell.dir/export_check_validated.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_validated.c
 
 CMakeFiles/minishell.dir/export_check_validated.c.i: cmake_force
@@ -195,66 +223,24 @@ CMakeFiles/minishell.dir/export_check_validated.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_check_validated.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_validated.c -o CMakeFiles/minishell.dir/export_check_validated.c.s
 
-CMakeFiles/minishell.dir/export_copy_utils.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_copy_utils.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_copy_utils.c
-CMakeFiles/minishell.dir/export_copy_utils.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/minishell.dir/export_copy_utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_copy_utils.c.o -MF CMakeFiles/minishell.dir/export_copy_utils.c.o.d -o CMakeFiles/minishell.dir/export_copy_utils.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_copy_utils.c
+CMakeFiles/minishell.dir/export_do_export.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/export_do_export.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_do_export.c
+CMakeFiles/minishell.dir/export_do_export.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/minishell.dir/export_do_export.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_do_export.c.o -MF CMakeFiles/minishell.dir/export_do_export.c.o.d -o CMakeFiles/minishell.dir/export_do_export.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_do_export.c
 
-CMakeFiles/minishell.dir/export_copy_utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_copy_utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_copy_utils.c > CMakeFiles/minishell.dir/export_copy_utils.c.i
+CMakeFiles/minishell.dir/export_do_export.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_do_export.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_do_export.c > CMakeFiles/minishell.dir/export_do_export.c.i
 
-CMakeFiles/minishell.dir/export_copy_utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_copy_utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_copy_utils.c -o CMakeFiles/minishell.dir/export_copy_utils.c.s
-
-CMakeFiles/minishell.dir/export_plus.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_plus.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_plus.c
-CMakeFiles/minishell.dir/export_plus.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/minishell.dir/export_plus.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_plus.c.o -MF CMakeFiles/minishell.dir/export_plus.c.o.d -o CMakeFiles/minishell.dir/export_plus.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_plus.c
-
-CMakeFiles/minishell.dir/export_plus.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_plus.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_plus.c > CMakeFiles/minishell.dir/export_plus.c.i
-
-CMakeFiles/minishell.dir/export_plus.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_plus.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_plus.c -o CMakeFiles/minishell.dir/export_plus.c.s
-
-CMakeFiles/minishell.dir/export_print_utils.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_print_utils.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_print_utils.c
-CMakeFiles/minishell.dir/export_print_utils.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/minishell.dir/export_print_utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_print_utils.c.o -MF CMakeFiles/minishell.dir/export_print_utils.c.o.d -o CMakeFiles/minishell.dir/export_print_utils.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_print_utils.c
-
-CMakeFiles/minishell.dir/export_print_utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_print_utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_print_utils.c > CMakeFiles/minishell.dir/export_print_utils.c.i
-
-CMakeFiles/minishell.dir/export_print_utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_print_utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_print_utils.c -o CMakeFiles/minishell.dir/export_print_utils.c.s
-
-CMakeFiles/minishell.dir/export_sort_utils.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/export_sort_utils.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_sort_utils.c
-CMakeFiles/minishell.dir/export_sort_utils.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/minishell.dir/export_sort_utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_sort_utils.c.o -MF CMakeFiles/minishell.dir/export_sort_utils.c.o.d -o CMakeFiles/minishell.dir/export_sort_utils.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_sort_utils.c
-
-CMakeFiles/minishell.dir/export_sort_utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/export_sort_utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_sort_utils.c > CMakeFiles/minishell.dir/export_sort_utils.c.i
-
-CMakeFiles/minishell.dir/export_sort_utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_sort_utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_sort_utils.c -o CMakeFiles/minishell.dir/export_sort_utils.c.s
+CMakeFiles/minishell.dir/export_do_export.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/export_do_export.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_do_export.c -o CMakeFiles/minishell.dir/export_do_export.c.s
 
 CMakeFiles/minishell.dir/export_with_no_args.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/export_with_no_args.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_with_no_args.c
 CMakeFiles/minishell.dir/export_with_no_args.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/minishell.dir/export_with_no_args.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/minishell.dir/export_with_no_args.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/export_with_no_args.c.o -MF CMakeFiles/minishell.dir/export_with_no_args.c.o.d -o CMakeFiles/minishell.dir/export_with_no_args.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_with_no_args.c
 
 CMakeFiles/minishell.dir/export_with_no_args.c.i: cmake_force
@@ -268,7 +254,7 @@ CMakeFiles/minishell.dir/export_with_no_args.c.s: cmake_force
 CMakeFiles/minishell.dir/free_env.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/free_env.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/free_env.c
 CMakeFiles/minishell.dir/free_env.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/minishell.dir/free_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/minishell.dir/free_env.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/free_env.c.o -MF CMakeFiles/minishell.dir/free_env.c.o.d -o CMakeFiles/minishell.dir/free_env.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/free_env.c
 
 CMakeFiles/minishell.dir/free_env.c.i: cmake_force
@@ -282,7 +268,7 @@ CMakeFiles/minishell.dir/free_env.c.s: cmake_force
 CMakeFiles/minishell.dir/ft_strcmp.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/ft_strcmp.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/ft_strcmp.c
 CMakeFiles/minishell.dir/ft_strcmp.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/minishell.dir/ft_strcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/minishell.dir/ft_strcmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/ft_strcmp.c.o -MF CMakeFiles/minishell.dir/ft_strcmp.c.o.d -o CMakeFiles/minishell.dir/ft_strcmp.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/ft_strcmp.c
 
 CMakeFiles/minishell.dir/ft_strcmp.c.i: cmake_force
@@ -296,7 +282,7 @@ CMakeFiles/minishell.dir/ft_strcmp.c.s: cmake_force
 CMakeFiles/minishell.dir/main.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/main.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/main.c
 CMakeFiles/minishell.dir/main.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/minishell.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/minishell.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/main.c.o -MF CMakeFiles/minishell.dir/main.c.o.d -o CMakeFiles/minishell.dir/main.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/main.c
 
 CMakeFiles/minishell.dir/main.c.i: cmake_force
@@ -307,10 +293,164 @@ CMakeFiles/minishell.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/main.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/main.c -o CMakeFiles/minishell.dir/main.c.s
 
+CMakeFiles/minishell.dir/parse/check_operators.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/check_operators.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/check_operators.c
+CMakeFiles/minishell.dir/parse/check_operators.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/minishell.dir/parse/check_operators.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/check_operators.c.o -MF CMakeFiles/minishell.dir/parse/check_operators.c.o.d -o CMakeFiles/minishell.dir/parse/check_operators.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/check_operators.c
+
+CMakeFiles/minishell.dir/parse/check_operators.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/check_operators.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/check_operators.c > CMakeFiles/minishell.dir/parse/check_operators.c.i
+
+CMakeFiles/minishell.dir/parse/check_operators.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/check_operators.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/check_operators.c -o CMakeFiles/minishell.dir/parse/check_operators.c.s
+
+CMakeFiles/minishell.dir/parse/ckeck_quote.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/ckeck_quote.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/ckeck_quote.c
+CMakeFiles/minishell.dir/parse/ckeck_quote.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/minishell.dir/parse/ckeck_quote.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/ckeck_quote.c.o -MF CMakeFiles/minishell.dir/parse/ckeck_quote.c.o.d -o CMakeFiles/minishell.dir/parse/ckeck_quote.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/ckeck_quote.c
+
+CMakeFiles/minishell.dir/parse/ckeck_quote.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/ckeck_quote.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/ckeck_quote.c > CMakeFiles/minishell.dir/parse/ckeck_quote.c.i
+
+CMakeFiles/minishell.dir/parse/ckeck_quote.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/ckeck_quote.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/ckeck_quote.c -o CMakeFiles/minishell.dir/parse/ckeck_quote.c.s
+
+CMakeFiles/minishell.dir/parse/error_print.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/error_print.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/error_print.c
+CMakeFiles/minishell.dir/parse/error_print.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/minishell.dir/parse/error_print.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/error_print.c.o -MF CMakeFiles/minishell.dir/parse/error_print.c.o.d -o CMakeFiles/minishell.dir/parse/error_print.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/error_print.c
+
+CMakeFiles/minishell.dir/parse/error_print.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/error_print.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/error_print.c > CMakeFiles/minishell.dir/parse/error_print.c.i
+
+CMakeFiles/minishell.dir/parse/error_print.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/error_print.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/error_print.c -o CMakeFiles/minishell.dir/parse/error_print.c.s
+
+CMakeFiles/minishell.dir/parse/handler_env.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/handler_env.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_env.c
+CMakeFiles/minishell.dir/parse/handler_env.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/minishell.dir/parse/handler_env.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/handler_env.c.o -MF CMakeFiles/minishell.dir/parse/handler_env.c.o.d -o CMakeFiles/minishell.dir/parse/handler_env.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_env.c
+
+CMakeFiles/minishell.dir/parse/handler_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/handler_env.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_env.c > CMakeFiles/minishell.dir/parse/handler_env.c.i
+
+CMakeFiles/minishell.dir/parse/handler_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/handler_env.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_env.c -o CMakeFiles/minishell.dir/parse/handler_env.c.s
+
+CMakeFiles/minishell.dir/parse/handler_linked_list.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/handler_linked_list.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_linked_list.c
+CMakeFiles/minishell.dir/parse/handler_linked_list.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/minishell.dir/parse/handler_linked_list.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/handler_linked_list.c.o -MF CMakeFiles/minishell.dir/parse/handler_linked_list.c.o.d -o CMakeFiles/minishell.dir/parse/handler_linked_list.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_linked_list.c
+
+CMakeFiles/minishell.dir/parse/handler_linked_list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/handler_linked_list.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_linked_list.c > CMakeFiles/minishell.dir/parse/handler_linked_list.c.i
+
+CMakeFiles/minishell.dir/parse/handler_linked_list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/handler_linked_list.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/handler_linked_list.c -o CMakeFiles/minishell.dir/parse/handler_linked_list.c.s
+
+CMakeFiles/minishell.dir/parse/init.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/init.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/init.c
+CMakeFiles/minishell.dir/parse/init.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/minishell.dir/parse/init.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/init.c.o -MF CMakeFiles/minishell.dir/parse/init.c.o.d -o CMakeFiles/minishell.dir/parse/init.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/init.c
+
+CMakeFiles/minishell.dir/parse/init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/init.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/init.c > CMakeFiles/minishell.dir/parse/init.c.i
+
+CMakeFiles/minishell.dir/parse/init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/init.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/init.c -o CMakeFiles/minishell.dir/parse/init.c.s
+
+CMakeFiles/minishell.dir/parse/make_nodes.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/make_nodes.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/make_nodes.c
+CMakeFiles/minishell.dir/parse/make_nodes.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/minishell.dir/parse/make_nodes.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/make_nodes.c.o -MF CMakeFiles/minishell.dir/parse/make_nodes.c.o.d -o CMakeFiles/minishell.dir/parse/make_nodes.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/make_nodes.c
+
+CMakeFiles/minishell.dir/parse/make_nodes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/make_nodes.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/make_nodes.c > CMakeFiles/minishell.dir/parse/make_nodes.c.i
+
+CMakeFiles/minishell.dir/parse/make_nodes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/make_nodes.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/make_nodes.c -o CMakeFiles/minishell.dir/parse/make_nodes.c.s
+
+CMakeFiles/minishell.dir/parse/parsing_utils.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/parsing_utils.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/parsing_utils.c
+CMakeFiles/minishell.dir/parse/parsing_utils.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/minishell.dir/parse/parsing_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/parsing_utils.c.o -MF CMakeFiles/minishell.dir/parse/parsing_utils.c.o.d -o CMakeFiles/minishell.dir/parse/parsing_utils.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/parsing_utils.c
+
+CMakeFiles/minishell.dir/parse/parsing_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/parsing_utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/parsing_utils.c > CMakeFiles/minishell.dir/parse/parsing_utils.c.i
+
+CMakeFiles/minishell.dir/parse/parsing_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/parsing_utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/parsing_utils.c -o CMakeFiles/minishell.dir/parse/parsing_utils.c.s
+
+CMakeFiles/minishell.dir/parse/signal_hanlder.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/signal_hanlder.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/signal_hanlder.c
+CMakeFiles/minishell.dir/parse/signal_hanlder.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/minishell.dir/parse/signal_hanlder.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/signal_hanlder.c.o -MF CMakeFiles/minishell.dir/parse/signal_hanlder.c.o.d -o CMakeFiles/minishell.dir/parse/signal_hanlder.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/signal_hanlder.c
+
+CMakeFiles/minishell.dir/parse/signal_hanlder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/signal_hanlder.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/signal_hanlder.c > CMakeFiles/minishell.dir/parse/signal_hanlder.c.i
+
+CMakeFiles/minishell.dir/parse/signal_hanlder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/signal_hanlder.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/signal_hanlder.c -o CMakeFiles/minishell.dir/parse/signal_hanlder.c.s
+
+CMakeFiles/minishell.dir/parse/test.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/test.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/test.c
+CMakeFiles/minishell.dir/parse/test.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/minishell.dir/parse/test.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/test.c.o -MF CMakeFiles/minishell.dir/parse/test.c.o.d -o CMakeFiles/minishell.dir/parse/test.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/test.c
+
+CMakeFiles/minishell.dir/parse/test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/test.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/test.c > CMakeFiles/minishell.dir/parse/test.c.i
+
+CMakeFiles/minishell.dir/parse/test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/test.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/test.c -o CMakeFiles/minishell.dir/parse/test.c.s
+
+CMakeFiles/minishell.dir/parse/tokeniz.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/parse/tokeniz.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/tokeniz.c
+CMakeFiles/minishell.dir/parse/tokeniz.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/minishell.dir/parse/tokeniz.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/parse/tokeniz.c.o -MF CMakeFiles/minishell.dir/parse/tokeniz.c.o.d -o CMakeFiles/minishell.dir/parse/tokeniz.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/tokeniz.c
+
+CMakeFiles/minishell.dir/parse/tokeniz.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/parse/tokeniz.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/tokeniz.c > CMakeFiles/minishell.dir/parse/tokeniz.c.i
+
+CMakeFiles/minishell.dir/parse/tokeniz.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/parse/tokeniz.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/parse/tokeniz.c -o CMakeFiles/minishell.dir/parse/tokeniz.c.s
+
 CMakeFiles/minishell.dir/print_error.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/print_error.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/print_error.c
 CMakeFiles/minishell.dir/print_error.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/minishell.dir/print_error.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/minishell.dir/print_error.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/print_error.c.o -MF CMakeFiles/minishell.dir/print_error.c.o.d -o CMakeFiles/minishell.dir/print_error.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/print_error.c
 
 CMakeFiles/minishell.dir/print_error.c.i: cmake_force
@@ -324,7 +464,7 @@ CMakeFiles/minishell.dir/print_error.c.s: cmake_force
 CMakeFiles/minishell.dir/pwd.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/pwd.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/pwd.c
 CMakeFiles/minishell.dir/pwd.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/minishell.dir/pwd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/minishell.dir/pwd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/pwd.c.o -MF CMakeFiles/minishell.dir/pwd.c.o.d -o CMakeFiles/minishell.dir/pwd.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/pwd.c
 
 CMakeFiles/minishell.dir/pwd.c.i: cmake_force
@@ -338,7 +478,7 @@ CMakeFiles/minishell.dir/pwd.c.s: cmake_force
 CMakeFiles/minishell.dir/size_func.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/size_func.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/size_func.c
 CMakeFiles/minishell.dir/size_func.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/minishell.dir/size_func.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/minishell.dir/size_func.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/size_func.c.o -MF CMakeFiles/minishell.dir/size_func.c.o.d -o CMakeFiles/minishell.dir/size_func.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/size_func.c
 
 CMakeFiles/minishell.dir/size_func.c.i: cmake_force
@@ -349,57 +489,108 @@ CMakeFiles/minishell.dir/size_func.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/size_func.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/size_func.c -o CMakeFiles/minishell.dir/size_func.c.s
 
+CMakeFiles/minishell.dir/unset.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/unset.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/unset.c
+CMakeFiles/minishell.dir/unset.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/minishell.dir/unset.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/unset.c.o -MF CMakeFiles/minishell.dir/unset.c.o.d -o CMakeFiles/minishell.dir/unset.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/unset.c
+
+CMakeFiles/minishell.dir/unset.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/unset.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/unset.c > CMakeFiles/minishell.dir/unset.c.i
+
+CMakeFiles/minishell.dir/unset.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/unset.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/unset.c -o CMakeFiles/minishell.dir/unset.c.s
+
+CMakeFiles/minishell.dir/value_utils.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/value_utils.c.o: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/value_utils.c
+CMakeFiles/minishell.dir/value_utils.c.o: CMakeFiles/minishell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/minishell.dir/value_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minishell.dir/value_utils.c.o -MF CMakeFiles/minishell.dir/value_utils.c.o.d -o CMakeFiles/minishell.dir/value_utils.c.o -c /Users/kyuminkim/Desktop/DEV/42_minishell/executing/value_utils.c
+
+CMakeFiles/minishell.dir/value_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minishell.dir/value_utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kyuminkim/Desktop/DEV/42_minishell/executing/value_utils.c > CMakeFiles/minishell.dir/value_utils.c.i
+
+CMakeFiles/minishell.dir/value_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minishell.dir/value_utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kyuminkim/Desktop/DEV/42_minishell/executing/value_utils.c -o CMakeFiles/minishell.dir/value_utils.c.s
+
 # Object files for target minishell
 minishell_OBJECTS = \
+"CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o" \
 "CMakeFiles/minishell.dir/cd.c.o" \
+"CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o" \
+"CMakeFiles/minishell.dir/echo.c.o" \
 "CMakeFiles/minishell.dir/env.c.o" \
 "CMakeFiles/minishell.dir/env_parsing_func.c.o" \
 "CMakeFiles/minishell.dir/executing.c.o" \
+"CMakeFiles/minishell.dir/exit.c.o" \
 "CMakeFiles/minishell.dir/export.c.o" \
-"CMakeFiles/minishell.dir/export_add_env.c.o" \
-"CMakeFiles/minishell.dir/export_add_no_value.c.o" \
-"CMakeFiles/minishell.dir/export_change_value.c.o" \
+"CMakeFiles/minishell.dir/export_check_and_do.c.o" \
 "CMakeFiles/minishell.dir/export_check_validated.c.o" \
-"CMakeFiles/minishell.dir/export_copy_utils.c.o" \
-"CMakeFiles/minishell.dir/export_plus.c.o" \
-"CMakeFiles/minishell.dir/export_print_utils.c.o" \
-"CMakeFiles/minishell.dir/export_sort_utils.c.o" \
+"CMakeFiles/minishell.dir/export_do_export.c.o" \
 "CMakeFiles/minishell.dir/export_with_no_args.c.o" \
 "CMakeFiles/minishell.dir/free_env.c.o" \
 "CMakeFiles/minishell.dir/ft_strcmp.c.o" \
 "CMakeFiles/minishell.dir/main.c.o" \
+"CMakeFiles/minishell.dir/parse/check_operators.c.o" \
+"CMakeFiles/minishell.dir/parse/ckeck_quote.c.o" \
+"CMakeFiles/minishell.dir/parse/error_print.c.o" \
+"CMakeFiles/minishell.dir/parse/handler_env.c.o" \
+"CMakeFiles/minishell.dir/parse/handler_linked_list.c.o" \
+"CMakeFiles/minishell.dir/parse/init.c.o" \
+"CMakeFiles/minishell.dir/parse/make_nodes.c.o" \
+"CMakeFiles/minishell.dir/parse/parsing_utils.c.o" \
+"CMakeFiles/minishell.dir/parse/signal_hanlder.c.o" \
+"CMakeFiles/minishell.dir/parse/test.c.o" \
+"CMakeFiles/minishell.dir/parse/tokeniz.c.o" \
 "CMakeFiles/minishell.dir/print_error.c.o" \
 "CMakeFiles/minishell.dir/pwd.c.o" \
-"CMakeFiles/minishell.dir/size_func.c.o"
+"CMakeFiles/minishell.dir/size_func.c.o" \
+"CMakeFiles/minishell.dir/unset.c.o" \
+"CMakeFiles/minishell.dir/value_utils.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
 
+minishell: CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
 minishell: CMakeFiles/minishell.dir/cd.c.o
+minishell: CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
+minishell: CMakeFiles/minishell.dir/echo.c.o
 minishell: CMakeFiles/minishell.dir/env.c.o
 minishell: CMakeFiles/minishell.dir/env_parsing_func.c.o
 minishell: CMakeFiles/minishell.dir/executing.c.o
+minishell: CMakeFiles/minishell.dir/exit.c.o
 minishell: CMakeFiles/minishell.dir/export.c.o
-minishell: CMakeFiles/minishell.dir/export_add_env.c.o
-minishell: CMakeFiles/minishell.dir/export_add_no_value.c.o
-minishell: CMakeFiles/minishell.dir/export_change_value.c.o
+minishell: CMakeFiles/minishell.dir/export_check_and_do.c.o
 minishell: CMakeFiles/minishell.dir/export_check_validated.c.o
-minishell: CMakeFiles/minishell.dir/export_copy_utils.c.o
-minishell: CMakeFiles/minishell.dir/export_plus.c.o
-minishell: CMakeFiles/minishell.dir/export_print_utils.c.o
-minishell: CMakeFiles/minishell.dir/export_sort_utils.c.o
+minishell: CMakeFiles/minishell.dir/export_do_export.c.o
 minishell: CMakeFiles/minishell.dir/export_with_no_args.c.o
 minishell: CMakeFiles/minishell.dir/free_env.c.o
 minishell: CMakeFiles/minishell.dir/ft_strcmp.c.o
 minishell: CMakeFiles/minishell.dir/main.c.o
+minishell: CMakeFiles/minishell.dir/parse/check_operators.c.o
+minishell: CMakeFiles/minishell.dir/parse/ckeck_quote.c.o
+minishell: CMakeFiles/minishell.dir/parse/error_print.c.o
+minishell: CMakeFiles/minishell.dir/parse/handler_env.c.o
+minishell: CMakeFiles/minishell.dir/parse/handler_linked_list.c.o
+minishell: CMakeFiles/minishell.dir/parse/init.c.o
+minishell: CMakeFiles/minishell.dir/parse/make_nodes.c.o
+minishell: CMakeFiles/minishell.dir/parse/parsing_utils.c.o
+minishell: CMakeFiles/minishell.dir/parse/signal_hanlder.c.o
+minishell: CMakeFiles/minishell.dir/parse/test.c.o
+minishell: CMakeFiles/minishell.dir/parse/tokeniz.c.o
 minishell: CMakeFiles/minishell.dir/print_error.c.o
 minishell: CMakeFiles/minishell.dir/pwd.c.o
 minishell: CMakeFiles/minishell.dir/size_func.c.o
+minishell: CMakeFiles/minishell.dir/unset.c.o
+minishell: CMakeFiles/minishell.dir/value_utils.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/libft.a
-minishell: /Users/kyuminkim/Desktop/DEV/42_minishell/executing/get_next_line.a
 minishell: CMakeFiles/minishell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable minishell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kyuminkim/Desktop/DEV/42_minishell/executing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable minishell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minishell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

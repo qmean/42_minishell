@@ -6,17 +6,27 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:10 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/15 23:25:45 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:44:18 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-void	env(t_data *data)
+void	env_print(t_env *env);
+
+void	env(t_line *line, t_token *token)
 {
 	t_env	*env;
 
-	env = data->env;
+	while (token != NULL)
+	{
+		ft_putstr_fd("env: ", 2);
+		ft_putstr_fd(token->data, 2);
+		ft_putstr_fd(": No such file or directory\n", 2);
+		line->exit_flag = 1;
+		return ;
+	}
+	env = line->env;
 	while (env != NULL)
 	{
 		if (env->value == NULL)
@@ -31,21 +41,8 @@ void	env(t_data *data)
 
 void	env_print(t_env *env)
 {
-	int	i;
-
 	ft_putstr_fd(env->key, 1);
 	ft_putchar_fd('=', 1);
-	i = 0;
-	if (env->value[i] != NULL)
-	{
-		ft_putstr_fd(env->value[i], 1);
-		i++;
-	}
-	while (env->value[i] != NULL)
-	{
-		ft_putchar_fd(':', 1);
-		ft_putstr_fd(env->value[i], 1);
-		i++;
-	}
+	ft_putstr_fd(env->value, 1);
 	ft_putchar_fd('\n', 1);
 }

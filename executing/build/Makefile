@@ -129,6 +129,30 @@ minishell/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
 .PHONY : minishell/fast
 
+CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.o: CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.o
+
+# target to build an object file
+CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
+
+CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.i: CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.i
+
+# target to preprocess a source file
+CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.i
+
+CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.s: CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.s
+
+# target to generate assembly for a file
+CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.s
+
 cd.o: cd.c.o
 .PHONY : cd.o
 
@@ -152,6 +176,54 @@ cd.s: cd.c.s
 cd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cd.c.s
 .PHONY : cd.c.s
+
+cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o: cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o
+
+# target to build an object file
+cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
+
+cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.i: cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.i
+
+# target to preprocess a source file
+cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.i
+
+cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.s: cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.s
+
+# target to generate assembly for a file
+cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.s
+
+echo.o: echo.c.o
+.PHONY : echo.o
+
+# target to build an object file
+echo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/echo.c.o
+.PHONY : echo.c.o
+
+echo.i: echo.c.i
+.PHONY : echo.i
+
+# target to preprocess a source file
+echo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/echo.c.i
+.PHONY : echo.c.i
+
+echo.s: echo.c.s
+.PHONY : echo.s
+
+# target to generate assembly for a file
+echo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/echo.c.s
+.PHONY : echo.c.s
 
 env.o: env.c.o
 .PHONY : env.o
@@ -225,6 +297,30 @@ executing.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/executing.c.s
 .PHONY : executing.c.s
 
+exit.o: exit.c.o
+.PHONY : exit.o
+
+# target to build an object file
+exit.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/exit.c.o
+.PHONY : exit.c.o
+
+exit.i: exit.c.i
+.PHONY : exit.i
+
+# target to preprocess a source file
+exit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/exit.c.i
+.PHONY : exit.c.i
+
+exit.s: exit.c.s
+.PHONY : exit.s
+
+# target to generate assembly for a file
+exit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/exit.c.s
+.PHONY : exit.c.s
+
 export.o: export.c.o
 .PHONY : export.o
 
@@ -249,77 +345,29 @@ export.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export.c.s
 .PHONY : export.c.s
 
-export_add_env.o: export_add_env.c.o
-.PHONY : export_add_env.o
+export_check_and_do.o: export_check_and_do.c.o
+.PHONY : export_check_and_do.o
 
 # target to build an object file
-export_add_env.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_add_env.c.o
-.PHONY : export_add_env.c.o
+export_check_and_do.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_check_and_do.c.o
+.PHONY : export_check_and_do.c.o
 
-export_add_env.i: export_add_env.c.i
-.PHONY : export_add_env.i
-
-# target to preprocess a source file
-export_add_env.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_add_env.c.i
-.PHONY : export_add_env.c.i
-
-export_add_env.s: export_add_env.c.s
-.PHONY : export_add_env.s
-
-# target to generate assembly for a file
-export_add_env.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_add_env.c.s
-.PHONY : export_add_env.c.s
-
-export_add_no_value.o: export_add_no_value.c.o
-.PHONY : export_add_no_value.o
-
-# target to build an object file
-export_add_no_value.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_add_no_value.c.o
-.PHONY : export_add_no_value.c.o
-
-export_add_no_value.i: export_add_no_value.c.i
-.PHONY : export_add_no_value.i
+export_check_and_do.i: export_check_and_do.c.i
+.PHONY : export_check_and_do.i
 
 # target to preprocess a source file
-export_add_no_value.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_add_no_value.c.i
-.PHONY : export_add_no_value.c.i
+export_check_and_do.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_check_and_do.c.i
+.PHONY : export_check_and_do.c.i
 
-export_add_no_value.s: export_add_no_value.c.s
-.PHONY : export_add_no_value.s
-
-# target to generate assembly for a file
-export_add_no_value.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_add_no_value.c.s
-.PHONY : export_add_no_value.c.s
-
-export_change_value.o: export_change_value.c.o
-.PHONY : export_change_value.o
-
-# target to build an object file
-export_change_value.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_change_value.c.o
-.PHONY : export_change_value.c.o
-
-export_change_value.i: export_change_value.c.i
-.PHONY : export_change_value.i
-
-# target to preprocess a source file
-export_change_value.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_change_value.c.i
-.PHONY : export_change_value.c.i
-
-export_change_value.s: export_change_value.c.s
-.PHONY : export_change_value.s
+export_check_and_do.s: export_check_and_do.c.s
+.PHONY : export_check_and_do.s
 
 # target to generate assembly for a file
-export_change_value.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_change_value.c.s
-.PHONY : export_change_value.c.s
+export_check_and_do.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_check_and_do.c.s
+.PHONY : export_check_and_do.c.s
 
 export_check_validated.o: export_check_validated.c.o
 .PHONY : export_check_validated.o
@@ -345,101 +393,29 @@ export_check_validated.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_check_validated.c.s
 .PHONY : export_check_validated.c.s
 
-export_copy_utils.o: export_copy_utils.c.o
-.PHONY : export_copy_utils.o
+export_do_export.o: export_do_export.c.o
+.PHONY : export_do_export.o
 
 # target to build an object file
-export_copy_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_copy_utils.c.o
-.PHONY : export_copy_utils.c.o
+export_do_export.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_do_export.c.o
+.PHONY : export_do_export.c.o
 
-export_copy_utils.i: export_copy_utils.c.i
-.PHONY : export_copy_utils.i
-
-# target to preprocess a source file
-export_copy_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_copy_utils.c.i
-.PHONY : export_copy_utils.c.i
-
-export_copy_utils.s: export_copy_utils.c.s
-.PHONY : export_copy_utils.s
-
-# target to generate assembly for a file
-export_copy_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_copy_utils.c.s
-.PHONY : export_copy_utils.c.s
-
-export_plus.o: export_plus.c.o
-.PHONY : export_plus.o
-
-# target to build an object file
-export_plus.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_plus.c.o
-.PHONY : export_plus.c.o
-
-export_plus.i: export_plus.c.i
-.PHONY : export_plus.i
+export_do_export.i: export_do_export.c.i
+.PHONY : export_do_export.i
 
 # target to preprocess a source file
-export_plus.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_plus.c.i
-.PHONY : export_plus.c.i
+export_do_export.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_do_export.c.i
+.PHONY : export_do_export.c.i
 
-export_plus.s: export_plus.c.s
-.PHONY : export_plus.s
-
-# target to generate assembly for a file
-export_plus.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_plus.c.s
-.PHONY : export_plus.c.s
-
-export_print_utils.o: export_print_utils.c.o
-.PHONY : export_print_utils.o
-
-# target to build an object file
-export_print_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_print_utils.c.o
-.PHONY : export_print_utils.c.o
-
-export_print_utils.i: export_print_utils.c.i
-.PHONY : export_print_utils.i
-
-# target to preprocess a source file
-export_print_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_print_utils.c.i
-.PHONY : export_print_utils.c.i
-
-export_print_utils.s: export_print_utils.c.s
-.PHONY : export_print_utils.s
+export_do_export.s: export_do_export.c.s
+.PHONY : export_do_export.s
 
 # target to generate assembly for a file
-export_print_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_print_utils.c.s
-.PHONY : export_print_utils.c.s
-
-export_sort_utils.o: export_sort_utils.c.o
-.PHONY : export_sort_utils.o
-
-# target to build an object file
-export_sort_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_sort_utils.c.o
-.PHONY : export_sort_utils.c.o
-
-export_sort_utils.i: export_sort_utils.c.i
-.PHONY : export_sort_utils.i
-
-# target to preprocess a source file
-export_sort_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_sort_utils.c.i
-.PHONY : export_sort_utils.c.i
-
-export_sort_utils.s: export_sort_utils.c.s
-.PHONY : export_sort_utils.s
-
-# target to generate assembly for a file
-export_sort_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_sort_utils.c.s
-.PHONY : export_sort_utils.c.s
+export_do_export.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/export_do_export.c.s
+.PHONY : export_do_export.c.s
 
 export_with_no_args.o: export_with_no_args.c.o
 .PHONY : export_with_no_args.o
@@ -537,6 +513,270 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/main.c.s
 .PHONY : main.c.s
 
+parse/check_operators.o: parse/check_operators.c.o
+.PHONY : parse/check_operators.o
+
+# target to build an object file
+parse/check_operators.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/check_operators.c.o
+.PHONY : parse/check_operators.c.o
+
+parse/check_operators.i: parse/check_operators.c.i
+.PHONY : parse/check_operators.i
+
+# target to preprocess a source file
+parse/check_operators.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/check_operators.c.i
+.PHONY : parse/check_operators.c.i
+
+parse/check_operators.s: parse/check_operators.c.s
+.PHONY : parse/check_operators.s
+
+# target to generate assembly for a file
+parse/check_operators.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/check_operators.c.s
+.PHONY : parse/check_operators.c.s
+
+parse/ckeck_quote.o: parse/ckeck_quote.c.o
+.PHONY : parse/ckeck_quote.o
+
+# target to build an object file
+parse/ckeck_quote.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/ckeck_quote.c.o
+.PHONY : parse/ckeck_quote.c.o
+
+parse/ckeck_quote.i: parse/ckeck_quote.c.i
+.PHONY : parse/ckeck_quote.i
+
+# target to preprocess a source file
+parse/ckeck_quote.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/ckeck_quote.c.i
+.PHONY : parse/ckeck_quote.c.i
+
+parse/ckeck_quote.s: parse/ckeck_quote.c.s
+.PHONY : parse/ckeck_quote.s
+
+# target to generate assembly for a file
+parse/ckeck_quote.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/ckeck_quote.c.s
+.PHONY : parse/ckeck_quote.c.s
+
+parse/error_print.o: parse/error_print.c.o
+.PHONY : parse/error_print.o
+
+# target to build an object file
+parse/error_print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/error_print.c.o
+.PHONY : parse/error_print.c.o
+
+parse/error_print.i: parse/error_print.c.i
+.PHONY : parse/error_print.i
+
+# target to preprocess a source file
+parse/error_print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/error_print.c.i
+.PHONY : parse/error_print.c.i
+
+parse/error_print.s: parse/error_print.c.s
+.PHONY : parse/error_print.s
+
+# target to generate assembly for a file
+parse/error_print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/error_print.c.s
+.PHONY : parse/error_print.c.s
+
+parse/handler_env.o: parse/handler_env.c.o
+.PHONY : parse/handler_env.o
+
+# target to build an object file
+parse/handler_env.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/handler_env.c.o
+.PHONY : parse/handler_env.c.o
+
+parse/handler_env.i: parse/handler_env.c.i
+.PHONY : parse/handler_env.i
+
+# target to preprocess a source file
+parse/handler_env.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/handler_env.c.i
+.PHONY : parse/handler_env.c.i
+
+parse/handler_env.s: parse/handler_env.c.s
+.PHONY : parse/handler_env.s
+
+# target to generate assembly for a file
+parse/handler_env.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/handler_env.c.s
+.PHONY : parse/handler_env.c.s
+
+parse/handler_linked_list.o: parse/handler_linked_list.c.o
+.PHONY : parse/handler_linked_list.o
+
+# target to build an object file
+parse/handler_linked_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/handler_linked_list.c.o
+.PHONY : parse/handler_linked_list.c.o
+
+parse/handler_linked_list.i: parse/handler_linked_list.c.i
+.PHONY : parse/handler_linked_list.i
+
+# target to preprocess a source file
+parse/handler_linked_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/handler_linked_list.c.i
+.PHONY : parse/handler_linked_list.c.i
+
+parse/handler_linked_list.s: parse/handler_linked_list.c.s
+.PHONY : parse/handler_linked_list.s
+
+# target to generate assembly for a file
+parse/handler_linked_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/handler_linked_list.c.s
+.PHONY : parse/handler_linked_list.c.s
+
+parse/init.o: parse/init.c.o
+.PHONY : parse/init.o
+
+# target to build an object file
+parse/init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/init.c.o
+.PHONY : parse/init.c.o
+
+parse/init.i: parse/init.c.i
+.PHONY : parse/init.i
+
+# target to preprocess a source file
+parse/init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/init.c.i
+.PHONY : parse/init.c.i
+
+parse/init.s: parse/init.c.s
+.PHONY : parse/init.s
+
+# target to generate assembly for a file
+parse/init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/init.c.s
+.PHONY : parse/init.c.s
+
+parse/make_nodes.o: parse/make_nodes.c.o
+.PHONY : parse/make_nodes.o
+
+# target to build an object file
+parse/make_nodes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/make_nodes.c.o
+.PHONY : parse/make_nodes.c.o
+
+parse/make_nodes.i: parse/make_nodes.c.i
+.PHONY : parse/make_nodes.i
+
+# target to preprocess a source file
+parse/make_nodes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/make_nodes.c.i
+.PHONY : parse/make_nodes.c.i
+
+parse/make_nodes.s: parse/make_nodes.c.s
+.PHONY : parse/make_nodes.s
+
+# target to generate assembly for a file
+parse/make_nodes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/make_nodes.c.s
+.PHONY : parse/make_nodes.c.s
+
+parse/parsing_utils.o: parse/parsing_utils.c.o
+.PHONY : parse/parsing_utils.o
+
+# target to build an object file
+parse/parsing_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/parsing_utils.c.o
+.PHONY : parse/parsing_utils.c.o
+
+parse/parsing_utils.i: parse/parsing_utils.c.i
+.PHONY : parse/parsing_utils.i
+
+# target to preprocess a source file
+parse/parsing_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/parsing_utils.c.i
+.PHONY : parse/parsing_utils.c.i
+
+parse/parsing_utils.s: parse/parsing_utils.c.s
+.PHONY : parse/parsing_utils.s
+
+# target to generate assembly for a file
+parse/parsing_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/parsing_utils.c.s
+.PHONY : parse/parsing_utils.c.s
+
+parse/signal_hanlder.o: parse/signal_hanlder.c.o
+.PHONY : parse/signal_hanlder.o
+
+# target to build an object file
+parse/signal_hanlder.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/signal_hanlder.c.o
+.PHONY : parse/signal_hanlder.c.o
+
+parse/signal_hanlder.i: parse/signal_hanlder.c.i
+.PHONY : parse/signal_hanlder.i
+
+# target to preprocess a source file
+parse/signal_hanlder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/signal_hanlder.c.i
+.PHONY : parse/signal_hanlder.c.i
+
+parse/signal_hanlder.s: parse/signal_hanlder.c.s
+.PHONY : parse/signal_hanlder.s
+
+# target to generate assembly for a file
+parse/signal_hanlder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/signal_hanlder.c.s
+.PHONY : parse/signal_hanlder.c.s
+
+parse/test.o: parse/test.c.o
+.PHONY : parse/test.o
+
+# target to build an object file
+parse/test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/test.c.o
+.PHONY : parse/test.c.o
+
+parse/test.i: parse/test.c.i
+.PHONY : parse/test.i
+
+# target to preprocess a source file
+parse/test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/test.c.i
+.PHONY : parse/test.c.i
+
+parse/test.s: parse/test.c.s
+.PHONY : parse/test.s
+
+# target to generate assembly for a file
+parse/test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/test.c.s
+.PHONY : parse/test.c.s
+
+parse/tokeniz.o: parse/tokeniz.c.o
+.PHONY : parse/tokeniz.o
+
+# target to build an object file
+parse/tokeniz.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/tokeniz.c.o
+.PHONY : parse/tokeniz.c.o
+
+parse/tokeniz.i: parse/tokeniz.c.i
+.PHONY : parse/tokeniz.i
+
+# target to preprocess a source file
+parse/tokeniz.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/tokeniz.c.i
+.PHONY : parse/tokeniz.c.i
+
+parse/tokeniz.s: parse/tokeniz.c.s
+.PHONY : parse/tokeniz.s
+
+# target to generate assembly for a file
+parse/tokeniz.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/parse/tokeniz.c.s
+.PHONY : parse/tokeniz.c.s
+
 print_error.o: print_error.c.o
 .PHONY : print_error.o
 
@@ -609,6 +849,54 @@ size_func.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/size_func.c.s
 .PHONY : size_func.c.s
 
+unset.o: unset.c.o
+.PHONY : unset.o
+
+# target to build an object file
+unset.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/unset.c.o
+.PHONY : unset.c.o
+
+unset.i: unset.c.i
+.PHONY : unset.i
+
+# target to preprocess a source file
+unset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/unset.c.i
+.PHONY : unset.c.i
+
+unset.s: unset.c.s
+.PHONY : unset.s
+
+# target to generate assembly for a file
+unset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/unset.c.s
+.PHONY : unset.c.s
+
+value_utils.o: value_utils.c.o
+.PHONY : value_utils.o
+
+# target to build an object file
+value_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/value_utils.c.o
+.PHONY : value_utils.c.o
+
+value_utils.i: value_utils.c.i
+.PHONY : value_utils.i
+
+# target to preprocess a source file
+value_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/value_utils.c.i
+.PHONY : value_utils.c.i
+
+value_utils.s: value_utils.c.s
+.PHONY : value_utils.s
+
+# target to generate assembly for a file
+value_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/value_utils.c.s
+.PHONY : value_utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -618,9 +906,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... minishell"
+	@echo "... CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.o"
+	@echo "... CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.i"
+	@echo "... CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.s"
 	@echo "... cd.o"
 	@echo "... cd.i"
 	@echo "... cd.s"
+	@echo "... cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o"
+	@echo "... cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.i"
+	@echo "... cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.s"
+	@echo "... echo.o"
+	@echo "... echo.i"
+	@echo "... echo.s"
 	@echo "... env.o"
 	@echo "... env.i"
 	@echo "... env.s"
@@ -630,33 +927,21 @@ help:
 	@echo "... executing.o"
 	@echo "... executing.i"
 	@echo "... executing.s"
+	@echo "... exit.o"
+	@echo "... exit.i"
+	@echo "... exit.s"
 	@echo "... export.o"
 	@echo "... export.i"
 	@echo "... export.s"
-	@echo "... export_add_env.o"
-	@echo "... export_add_env.i"
-	@echo "... export_add_env.s"
-	@echo "... export_add_no_value.o"
-	@echo "... export_add_no_value.i"
-	@echo "... export_add_no_value.s"
-	@echo "... export_change_value.o"
-	@echo "... export_change_value.i"
-	@echo "... export_change_value.s"
+	@echo "... export_check_and_do.o"
+	@echo "... export_check_and_do.i"
+	@echo "... export_check_and_do.s"
 	@echo "... export_check_validated.o"
 	@echo "... export_check_validated.i"
 	@echo "... export_check_validated.s"
-	@echo "... export_copy_utils.o"
-	@echo "... export_copy_utils.i"
-	@echo "... export_copy_utils.s"
-	@echo "... export_plus.o"
-	@echo "... export_plus.i"
-	@echo "... export_plus.s"
-	@echo "... export_print_utils.o"
-	@echo "... export_print_utils.i"
-	@echo "... export_print_utils.s"
-	@echo "... export_sort_utils.o"
-	@echo "... export_sort_utils.i"
-	@echo "... export_sort_utils.s"
+	@echo "... export_do_export.o"
+	@echo "... export_do_export.i"
+	@echo "... export_do_export.s"
 	@echo "... export_with_no_args.o"
 	@echo "... export_with_no_args.i"
 	@echo "... export_with_no_args.s"
@@ -669,6 +954,39 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parse/check_operators.o"
+	@echo "... parse/check_operators.i"
+	@echo "... parse/check_operators.s"
+	@echo "... parse/ckeck_quote.o"
+	@echo "... parse/ckeck_quote.i"
+	@echo "... parse/ckeck_quote.s"
+	@echo "... parse/error_print.o"
+	@echo "... parse/error_print.i"
+	@echo "... parse/error_print.s"
+	@echo "... parse/handler_env.o"
+	@echo "... parse/handler_env.i"
+	@echo "... parse/handler_env.s"
+	@echo "... parse/handler_linked_list.o"
+	@echo "... parse/handler_linked_list.i"
+	@echo "... parse/handler_linked_list.s"
+	@echo "... parse/init.o"
+	@echo "... parse/init.i"
+	@echo "... parse/init.s"
+	@echo "... parse/make_nodes.o"
+	@echo "... parse/make_nodes.i"
+	@echo "... parse/make_nodes.s"
+	@echo "... parse/parsing_utils.o"
+	@echo "... parse/parsing_utils.i"
+	@echo "... parse/parsing_utils.s"
+	@echo "... parse/signal_hanlder.o"
+	@echo "... parse/signal_hanlder.i"
+	@echo "... parse/signal_hanlder.s"
+	@echo "... parse/test.o"
+	@echo "... parse/test.i"
+	@echo "... parse/test.s"
+	@echo "... parse/tokeniz.o"
+	@echo "... parse/tokeniz.i"
+	@echo "... parse/tokeniz.s"
 	@echo "... print_error.o"
 	@echo "... print_error.i"
 	@echo "... print_error.s"
@@ -678,6 +996,12 @@ help:
 	@echo "... size_func.o"
 	@echo "... size_func.i"
 	@echo "... size_func.s"
+	@echo "... unset.o"
+	@echo "... unset.i"
+	@echo "... unset.s"
+	@echo "... value_utils.o"
+	@echo "... value_utils.i"
+	@echo "... value_utils.s"
 .PHONY : help
 
 

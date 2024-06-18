@@ -3,40 +3,37 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+         #
+#    By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 22:53:17 by kyumkim           #+#    #+#              #
-#    Updated: 2024/06/16 02:37:48 by jaemikim         ###   ########.fr        #
+#    Updated: 2024/06/19 03:17:02 by kyuminkim        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -g -Wall -Wextra -Werror
-LIBS = -lreadline
-NAME = mini_shell
 
-# Parsing source files
-PARSING_SRCS = $(wildcard parsing/*.c)
+AR = ar
+ARFLAGS = rcs
+NAME = libft.a
 
 # Libft source files
 LIBFT_SRCS = $(wildcard libs/libft/*.c)
 
 # Object files
-PARSING_OBJS = $(PARSING_SRCS:.c=.o)
 LIBFT_OBJS = $(LIBFT_SRCS:.c=.o)
-OBJS = $(PARSING_OBJS) $(LIBFT_OBJS)
 
 # Compilation rule
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L/opt/homebrew/opt/readline/lib $(LIBS)
+$(NAME): $(LIBFT_OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(LIBFT_OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -I/opt/homebrew/opt/readline/include $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(LIBFT_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
