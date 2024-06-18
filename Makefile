@@ -12,6 +12,7 @@
 
 CC = cc
 CFLAGS = -g -Wall -Wextra -Werror
+
 AR = ar
 ARFLAGS = rcs
 NAME = libft.a
@@ -29,7 +30,7 @@ $(NAME): $(LIBFT_OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(LIBFT_OBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c -I/opt/homebrew/opt/readline/include $< -o $@
 
 clean:
 	rm -f $(LIBFT_OBJS)
