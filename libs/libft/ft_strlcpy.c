@@ -3,30 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.seoul.kr>      +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 23:06:17 by kyumkim           #+#    #+#             */
-/*   Updated: 2023/12/07 17:37:08 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/12 03:57:36 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, char *src)
 {
 	size_t	ret;
-	size_t	cnt;
 
 	ret = ft_strlen(src);
-	if (dstsize == 0)
-		return (ret);
-	cnt = 1;
-	while (cnt < dstsize && *src != 0)
+	dst = malloc(ret + 1);
+	if (dst == NULL)
+		return (0);
+	while (*src != 0)
 	{
 		*dst = *src;
 		dst++;
 		src++;
-		cnt++;
 	}
 	*dst = 0;
 	return (ret);

@@ -6,37 +6,47 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:17:56 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/18 20:20:08 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 02:40:00 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-void	delete_env(t_data *data, t_env *env);
+void	delete_env(t_line *line, t_env *env);
 
-void	unset(t_data *data, char **args)
+int check_unset(char *arg);
+
+void	unset(t_line *line, t_token *token)
 {
-	int		i;
-	t_env	*env;
-
-	i = 0;
-	while (args[i])
+	line->exit_flag = 0;
+	while (token)
 	{
-		env = find_env_with_key(data, args[i]);
-		if (env)
-			delete_env(data, env);
-		i++;
+		if (check_unset(token->data) == 0)
+		{
+			ft_putstr_fd("minishell: unset: `", 2);
+			ft_putstr_fd(token->data, 2);
+			ft_putstr_fd("': not a valid identifier\n", 2);
+			line->exit_flag = 1;
+			return ;
+		}
+		delete_env(line, find_env_with_key(line, token->data));
+		token = token->next;
 	}
 }
 
-void	delete_env(t_data *data, t_env *env)
+int check_unset(char *arg)
+{
+	return 0;
+}
+
+void	delete_env(t_line *line, t_env *env)
 {
 	t_env	*iter;
 
-	iter = data->env;
+	iter = line->env;
 	if (iter == env)
 	{
-		data->env = iter->next;
+		line->env = iter->next;
 		free(env->key);
 		free(env->value);
 		free(env);
@@ -55,4 +65,3 @@ void	delete_env(t_data *data, t_env *env)
 		iter = iter->next;
 	}
 }
-

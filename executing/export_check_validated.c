@@ -6,13 +6,15 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 02:16:03 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/10 02:46:09 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 01:45:08 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
+int	check_valid_first_char(char *arg);
 int	check_valid_null_char(char *arg);
+int	check_valid_special_char(char *arg);
 
 int	export_check_validated(char *arg)
 {

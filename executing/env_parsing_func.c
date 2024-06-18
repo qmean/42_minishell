@@ -6,17 +6,17 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 17:39:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/15 23:42:38 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 01:28:23 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-char	**find_value(char *key, t_data *data)
+char	*find_value(t_line *line, char *key)
 {
 	t_env	*env;
 
-	env = data->env;
+	env = line->env;
 	while (env)
 	{
 		if (!ft_strcmp(env->key, key))
@@ -26,11 +26,11 @@ char	**find_value(char *key, t_data *data)
 	return (NULL);
 }
 
-t_env	*find_env_with_key(t_data *data, char *key)
+t_env	*find_env_with_key(t_line *line, char *key)
 {
 	t_env	*iter;
 
-	iter = data->env;
+	iter = line->env;
 	while (iter)
 	{
 		if (!ft_strcmp(iter->key, key))
@@ -40,51 +40,56 @@ t_env	*find_env_with_key(t_data *data, char *key)
 	return (NULL);
 }
 
-// value가 ':' 기준으로 나뉘어진 문자열임이 자명한
-void	add_env_value(t_data *data, char *key, char *value)
+// key 에 해당하는 env 를 찾아서 value 를 뒤에 추가한다.
+// env 가 없으면 새로 만든다.
+// 문자열을 덧붙일 경우에는 파라미터로 들어온 value 는 free 를 해준다.
+void	add_env_value(t_line *line, char *key, char *value)
 {
 	t_env	*env;
-	char	**new_value;
-	int		idx;
+	char	*new_value;
 
-	env = find_env_with_key(data, key);
+	env = find_env_with_key(line, key);
 	if (env == NULL)
 	{
-		new_env(data, key, value);
+		new_env(line, key, value);
 		return ;
 	}
-	new_value = malloc((sizeof(char *)) * (value_size(env) + 2));
+	new_value = ft_strcat(env->value, value);
 	if (new_value == NULL)
 		exit(1); // todo : 에러 처리 추가
-	idx = 0;
-	while (env->value[idx])
-	{
-		new_value[idx] = env->value[idx];
-		idx++;
-	}
-	new_value[idx] = ft_strdup(value);
-	new_value[idx + 1] = NULL;
+	free(value);
 	free(env->value);
 	env->value = new_value;
 }
 
-void	new_env(t_data *data, char *key, char *value)
+void	new_env(t_line *line, char *key, char *value)
 {
 	t_env	*new;
 
 	new = (t_env *)malloc(sizeof(t_env));
-	new->key = ft_strdup(key);
-	new->value = malloc(sizeof(char *) * 2);
-	if (new->value == NULL)
+	if (new == NULL)
 		exit(1); // todo : 에러 처리 추가
-	new->value[0] = ft_strdup(value);
-	new->value[1] = NULL;
-	new->next = NULL;
-	if (data->env == NULL)
+	new->key = key;
+	new->value = value;
+	if (line->env == NULL)
 	{
-		data->env = new;
+		line->env = new;
 		return ;
 	}
-	new->next = data->env;
-	data->env = new;
+	new->next = line->env;
+	line->env = new;
+}
+
+void	set_value(t_line *line, char *key, char *value)
+{
+	t_env	*env;
+
+	env = find_env_with_key(line, key);
+	if (env == NULL)
+	{
+		new_env(line, key, value);
+		return ;
+	}
+	free(env->value);
+	env->value = value;
 }

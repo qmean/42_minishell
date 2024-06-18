@@ -6,82 +6,90 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/18 21:44:59 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:30:20 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-t_data	*parse_envp(char **envp);
-void	print_env(t_data *data);
+void  parse_envp(t_line *line, char **envp);
+char	**env_split(char *str);
+t_line	*init_line(void);
 
 int	main(int argc, char **argv, char **envp)
 {
-	char	*input;
-	char	*cmd;
-	char	**args;
-	t_data	*data;
-	pid_t	pid;
+	char	*line;
+	struct termios	term;
+	t_line	*cmds;
 
-	if (argc != 1)
+	cmds = init_line();
+	parse_envp(cmds, envp);
+	tcgetattr(0, &term);
+	set_signal();
+	while ((line = readline("minishell$ ")))
 	{
-		ft_putstr_fd("Error: too many arguments\n", 2);
-		return (1);
-	}
-	data = parse_envp(envp);
-	while (1)
-	{
-		input = readline("mini_shell$> ");
-		args = ft_split(input, ' ');
-		cmd = args[0];
-		execute(data, cmd, args+1, args);
-	}
-	return (0);
-}
-
-void	print_env(t_data *data)
-{
-	t_env	*env;
-	int		i;
-
-	env = data->env;
-	while (env != NULL)
-	{
-		printf("key = %s\n", env->key);
-		i = 0;
-		while (env->value[i] != NULL)
+		if ((line[0] != '\0') && (!iswhitespace(line))) // 빈문자열이 아니고 공백문자열이 아닐 때
 		{
-			printf("value = %s\n", env->value[i]);
-			i++;
+			init(cmds);
+			cmds->cmds->env = malloc(sizeof(t_env));
+			add_history(line);
+			tokenize_main(line, cmds);
+			execute(cmds);
+			free_cmd(cmds);
 		}
-		printf("=====================\n");
-		env = env->next;
+		free(line);
 	}
+	sig_term_handler(); // ctrl + D 핸들러
+	tcsetattr(0, TCSANOW, &term);
 }
 
-t_data	*parse_envp(char **envp)
+t_line	*init_line(void)
 {
-	t_data	*data;
+	t_line	*line;
+
+	line = (t_line *)malloc(sizeof(t_line));
+	if (line == NULL)
+		exit(1); // todo : 에러 처리 추가
+	line->env = NULL;
+	line->exit_flag = 0;
+	return (line);
+}
+
+char	**env_split(char *str)
+{
+	char	**ret;
+	int		idx;
+
+	ret = (char **)malloc(sizeof(char *) * 2);
+	idx = 0;
+	while (str[idx] != '=' && str[idx] != '\0')
+		idx++;
+	if (str[idx] == '\0')
+	{
+		ret[0] = ft_strdup(str);
+		if (ret[0] == NULL)
+			exit(1); // todo : 에러 처리 추가
+		ret[1] = NULL;
+		return (ret);
+	}
+	ret[0] = ft_substr(str, 0, idx);
+	ret[1] = ft_strdup(str + idx + 1);
+	if (ret[0] == NULL || ret[1] == NULL)
+		exit(1); // todo : 에러 처리 추가
+	return (ret);
+}
+
+void  parse_envp(t_line *line, char **envp)
+{
 	t_env	*env;
 	char	**split;
 
-	data = (t_data *)malloc(sizeof(t_data));
-	data->env = NULL;
-	while (*envp != NULL)
+	env = NULL;
+	while (*envp)
 	{
-		env = (t_env *)malloc(sizeof(t_env));
-		split = ft_split(*envp, '=');
-		env->key = split[0];
-		if (split[1] != NULL)
-			env->value = ft_split(split[1], ':');
-		else
-		{
-			env->value = malloc(sizeof(char *));
-			env->value[0] = NULL;
-		}
-		env->next = data->env;
-		data->env = env;
+		split = env_split(*envp);
+		new_env(line, split[0], split[1]);
 		envp++;
 	}
-	return (data);
+	return ;
 }

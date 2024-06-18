@@ -3,37 +3,71 @@ project(minishell C)
 
 set(CMAKE_C_STANDARD 99)
 
-# Collect all C source files in the current directory
-file(GLOB SOURCES "*.c")
+# 설정된 라이브러리 경로
+set(LIBFT_PATH "/Users/kyuminkim/Desktop/DEV/42_minishell/executing")
 
-# Specify the .a library file in the source directory
-set(LIBRARIES "${CMAKE_SOURCE_DIR}/libft.a;${CMAKE_SOURCE_DIR}/get_next_line.a")
-
-# Add the executable
-add_executable(minishell ${SOURCES}
+# 소스 파일 목록
+set(SRCS
+        cd.c
+        echo.c
+        env.c
         env_parsing_func.c
         executing.c
-        size_func.c
+        exit.c
         export.c
-        export_print_utils.c
+        export_check_and_do.c
+        export_check_validated.c
+        export_do_export.c
         export_with_no_args.c
         free_env.c
-        print_error.c
         ft_strcmp.c
-        ../libs/libft/libft.h
-        export_sort_utils.c
-        export_copy_utils.c
-        export_add_env.c
-        export_check_validated.c
-        export_plus.c
-        export_change_value.c
-        export_add_no_value.c
-        env_add_end_value.c
+        main.c
+        parse/check_operators.c
+        parse/ckeck_quote.c
+        parse/error_print.c
+        parse/handler_env.c
+        parse/handler_linked_list.c
+        parse/init.c
+        parse/make_nodes.c
+        parse/parsing_utils.c
+        parse/signal_hanlder.c
+        parse/test.c
+        parse/tokeniz.c
+        print_error.c
+        pwd.c
+        size_func.c
         unset.c
-        echo.c
-        exit.c
+        value_utils.c
 )
 
-# Link the library
-target_link_libraries(minishell ${LIBRARIES})
-target_link_libraries(minishell readline)
+# 인클루드 디렉토리 설정
+include_directories(
+        /opt/homebrew/opt/readline/include
+        ${LIBFT_PATH}
+)
+
+# 라이브러리 디렉토리 설정
+link_directories(
+        /opt/homebrew/opt/readline/lib
+        ${LIBFT_PATH}
+)
+
+# 실행 파일 생성
+add_executable(minishell ${SRCS})
+
+# 라이브러리 링크
+target_link_libraries(minishell readline libft.a)
+
+# 빌드에서 특정 파일을 제외하기 위한 설정
+set_source_files_properties(
+        ${CMAKE_BINARY_DIR}/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
+        ${CMAKE_BINARY_DIR}/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
+        PROPERTIES GENERATED TRUE EXCLUDE_FROM_ALL TRUE
+)
+
+# 중복 빌드를 방지하기 위한 설정
+set_source_files_properties(
+        ${CMAKE_BINARY_DIR}/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+        ${CMAKE_BINARY_DIR}/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c
+        PROPERTIES GENERATED TRUE EXCLUDE_FROM_ALL TRUE
+)

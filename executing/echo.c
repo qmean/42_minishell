@@ -6,65 +6,53 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 21:53:23 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/18 22:06:15 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/19 03:43:50 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
+void	print_default(t_token *token);
 int		check_n_option(const char *str);
-void	print_n_option(char **args);
-void	print_default(char **args);
+void	print_n_option(t_token *token);
 
-void	echo(char **args)
+void	echo(t_line *line, t_token *token)
 {
 	int	n_option;
-	int	idx;
 
-	if (cmd_size(args) == 0)
+	if (token_size(token) == 0)
 	{
 		ft_putstr_fd("\n", 1);
 		return ;
 	}
 	n_option = 0;
-	idx = 0;
-	while (args[idx] != NULL)
+	while (token != NULL)
 	{
-		if (check_n_option(args[idx]))
+		if (check_n_option(token->data))
 			n_option = 1;
 		else
 			break ;
-		idx++;
+		token = token->next;
 	}
 	if (n_option)
 	{
-		print_n_option(args + idx);
+		print_n_option(token);
 		return ;
 	}
-	print_default(args);
+	print_default(token);
+	line->exit_flag = 0;
 }
 
-void	print_default(char **args)
+void	print_default(t_token *token)
 {
-	while (*args != NULL)
+	while (token != NULL)
 	{
-		ft_putstr_fd(*args, 1);
-		args++;
-		if (*args != NULL)
+		ft_putstr_fd(token->data, 1);
+		token = token->next;
+		if (token != NULL)
 			ft_putstr_fd(" ", 1);
 	}
 	ft_putstr_fd("\n", 1);
-}
-
-void	print_n_option(char **args)
-{
-	while (*args != NULL)
-	{
-		ft_putstr_fd(*args, 1);
-		args++;
-		if (*args != NULL)
-			ft_putstr_fd(" ", 1);
-	}
 }
 
 int	check_n_option(const char *str)
@@ -81,4 +69,15 @@ int	check_n_option(const char *str)
 		idx++;
 	}
 	return (1);
+}
+
+void	print_n_option(t_token *token)
+{
+	while (token != NULL)
+	{
+		ft_putstr_fd(token->data, 1);
+		token = token->next;
+		if (token->data != NULL)
+			ft_putstr_fd(" ", 1);
+	}
 }
