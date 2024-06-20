@@ -21,7 +21,6 @@ t_cmd	*make_cmd(void)
         return (NULL);
     new->buf = NULL;
     new->pipe_flag = 0;
-    new->redirect = 0;
     new->quote = '\0';
     new->tokens = NULL;
     new->env = NULL;

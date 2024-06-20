@@ -25,11 +25,11 @@ int	main(int argc, char **argv, char **envp)
 	cmds = init_line();
 	parse_envp(cmds, envp);
 	t_env *test = cmds->env;
-	while (test)
-	{
-		printf("key: %s, value: %s\n", test->key, test->value);
-		test = test->next;
-	}
+	// while (test)
+	// {
+	// 	printf("key: %s, value: %s\n", test->key, test->value);
+	// 	test = test->next;
+	// }
 	tcgetattr(0, &term);
 	set_signal();
 	while ((line = readline("minishell$ ")))
@@ -40,7 +40,7 @@ int	main(int argc, char **argv, char **envp)
 			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
-			execute(cmds);
+			// execute(cmds);
 			free_cmd(cmds);
 		}
 		free(line);

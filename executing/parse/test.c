@@ -21,9 +21,9 @@ void    print_cmd(t_cmd *cmd)
 
     j = 1;
     tmp = cmd;
-	printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
-	printf("============print_cmd==========\n");
-	printf("===============================\n");
+	// printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
+	// printf("============print_cmd==========\n");
+	// printf("===============================\n");
     while (tmp)
     {
         token = tmp->first_token;
@@ -38,7 +38,7 @@ void    print_cmd(t_cmd *cmd)
         tmp = tmp->next;
         j++;
     }
-	printf("===============================\n");
-	printf("============print_cmd==========\n");
-	printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
+	// printf("===============================\n");
+	// printf("============print_cmd==========\n");
+	// printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
 }

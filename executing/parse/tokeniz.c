@@ -6,33 +6,25 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 00:45:53 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/19 03:49:15 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/21 02:50:04 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parsing.h"
 
-// TODO : 에러가 날 경우 그대로 라인을 넘겨주도록 변경
-
 void tokenize_main(char *line, t_line *lines)
 {
     int i;
+    int ret;
     
     i = 0;
     while (line[i])
     {
-        if (check_quote(line, lines->cmds, &i)) // 따옴표 검사
+        ret = check_issue(line, lines, &i);
+        if (ret == 1)
             continue;
-        else if (check_space(line, lines->cmds, &i)) // 공백 검사
-            continue;
-        else if (check_pipe(line, lines, &i)) // 파이프 검사
-            continue;
-        else if (check_semicolon(line, lines, &i)) // 세미콜론 검사
-            continue;
-        else if (check_escape(line, lines, &i)) // 이스케이프 검사
-            continue;
-        else if (check_env(line, lines, &i))
-            continue;
+        else if (ret == -1)
+            return ;
         else
             lines->cmds->buf = ft_strjoin_free(lines->cmds->buf, line[i]);
         i++;
@@ -42,4 +34,26 @@ void tokenize_main(char *line, t_line *lines)
     if ((line[i] == '\0') && (lines->cmds->buf != NULL)) // 라인이 끝나고 버퍼에 내용이 있으면 토큰으로 추가
         lines->cmds->tokens->data = lines->cmds->buf;
     print_cmd(lines->first_cmd);
+}
+
+int check_issue(char *line, t_line *lines, int *i)
+{
+    int ret;
+
+    ret = check_quote(line, lines->cmds, i);
+    if (ret != 0)
+        return (ret);
+    ret = check_space(line, lines->cmds, i);
+    if (ret != 0)
+        return (ret);
+    ret = check_pipe(line, lines, i);
+    if (ret != 0)
+        return (ret);
+    ret = check_env(line, lines, i);
+    if (ret != 0)
+        return (ret);
+    ret = check_redir(line, lines, i);
+    if (ret != 0)
+        return (ret);
+    return (0);
 }

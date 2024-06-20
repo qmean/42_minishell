@@ -4,7 +4,7 @@ project(minishell C)
 set(CMAKE_C_STANDARD 99)
 
 # 설정된 라이브러리 경로
-set(LIBFT_PATH "/Users/kyuminkim/Desktop/DEV/42_minishell/executing")
+set(LIBFT_PATH "/Users/jammin/minishell/executing")
 
 # 소스 파일 목록
 set(SRCS

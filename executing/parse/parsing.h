@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/19 04:03:00 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/21 03:14:11 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct s_env
 
 typedef struct	s_token
 {
-	int				redir; // 0: 아님 1: >, 2: <, 3: >>, 4: <<
+	int				redir; // 0: 아님 1: >, 2: >>, 3: <, 4: <<
 	int				isspace; // 마지막에 space로 토큰을 나누었는지 아닌지 -> 0: 아님 1: 공백
 	char			*redir_args[2]; // 리다이렉션 파일
 	char			*data; // 명령어
@@ -48,7 +48,6 @@ typedef struct	s_cmd
 {
 	char			*buf; // 명령어를 저장할 버퍼
 	int				pipe_flag; // 0 : NULL, 1 : pipe, 2: semicolon
-	int				redirect; // 0: >, 1: <, 2: >>, 3: <<;
 	char			quote; // 따옴표를 저장(' or "), 같은 따옴표가 나오면 다시 0으로 복귀
 
 	t_token			*first_token; // 토큰의 첫번째 노드;
@@ -92,6 +91,10 @@ int		check_space(char *line, t_cmd *cmd, int *i);
 int		check_env(char *line, t_line *lines, int *i);
 void    get_env_value(char *key, t_line *line);
 int		ft_strcmp_par(const char *s1, const char *s2);
+int		check_issue(char *line, t_line *lines, int *i);
+int		check_redir(char *line, t_line *lines, int *i);
+int		check_redir_right(char *line, t_line *lines, int *i);
+int		check_redir_left(char *line, t_line *lines, int *i);
 
 void    print_cmd(t_cmd *cmd);
 
