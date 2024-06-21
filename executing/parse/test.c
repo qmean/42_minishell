@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:53:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:54:26 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/06/22 01:44:20 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void    print_cmd(t_cmd *cmd)
         printf("cmd%d \n", j);
         while (token)
         {
-            printf("token%d: %s \n", i, token->data);
+            printf("token%d: %s dir: %d\n", i, token->data, token->redir);
             token = token->next;
             i++;
         }
