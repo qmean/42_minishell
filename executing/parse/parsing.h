@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/19 04:03:00 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 13:42:21 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct	s_cmd
 
 typedef struct s_line
 {
+	int		pipe[2][2];
 	t_cmd	*first_cmd; // 명령어 뭉치의 첫번째 노드
 	t_cmd	*cmds; // 명령어 뭉치를 저장할 연결리스트
 	t_env	*env; // 환경 변수를 저장할 연결리스트

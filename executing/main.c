@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:58:41 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 13:42:32 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int	main(int argc, char **argv, char **envp)
 			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
+			pipe(cmds->pipe[0]);
+			pipe(cmds->pipe[1]);
 			execute(cmds);
 			free_cmd(cmds);
 		}
@@ -97,5 +99,4 @@ void  parse_envp(t_line *line, char **envp)
 		new_env(line, split[0], split[1]);
 		envp++;
 	}
-	return ;
 }

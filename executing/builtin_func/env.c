@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:10 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:44:18 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 14:58:44 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	env(t_line *line, t_token *token)
 {
 	t_env	*env;
 
-	while (token != NULL)
+	// todo : 파이프 처리시 token의 data가 null 이 되는 파싱예외 수정후 리팩토링
+	if (token != NULL && token->data != NULL)
 	{
 		ft_putstr_fd("env: ", 2);
 		ft_putstr_fd(token->data, 2);

@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:53:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:54:26 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 14:35:10 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void    print_cmd(t_cmd *cmd)
             token = token->next;
             i++;
         }
+		printf("pipe flag : %d\n", tmp->pipe_flag);
         tmp = tmp->next;
         j++;
     }

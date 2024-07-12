@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:04:45 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 11:13:13 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,12 @@ char	**value_split(char *str);
 
 /* ================================== SIZE_UTILS ==================================*/
 int		cmd_size(t_cmd *cmd);
-int		env_size(t_line *line);
+int		env_size(t_env *start);
 int		token_size(t_token *token);
 /* ================================== SIZE_UTILS ==================================*/
 int		ft_strcmp(const char *s1, const char *s2);
+
+void	print_error(char *cmd, char *arg, char *msg);
+int		isbuiltin(t_cmd *cmd);
+void	execute_bin(t_line *line, t_cmd *cmd);
 #endif
