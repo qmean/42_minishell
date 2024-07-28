@@ -1,0 +1,14 @@
+CMakeLists.txt
+Makefile
+a.out.dSYM
+build
+executing
+get_next_line.a
+libft.a
+libs
+ls
+mainheader.h
+mini_shell
+parsing
+t
+txt.txt

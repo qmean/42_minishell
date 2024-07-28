@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/21 03:14:11 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/07/07 16:27:00 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,9 @@ typedef struct s_env
 
 typedef struct	s_token
 {
-	int				redir; // 0: 아님 1: >, 2: >>, 3: <, 4: <<
 	int				isspace; // 마지막에 space로 토큰을 나누었는지 아닌지 -> 0: 아님 1: 공백
-	char			*redir_args[2]; // 리다이렉션 파일
 	char			*data; // 명령어
-	
+	int				pipe_flag; // 0 : NULL, 1 : pipe
 	
 	struct s_token	*next;
 }				t_token;
@@ -47,8 +45,12 @@ typedef struct	s_token
 typedef struct	s_cmd
 {
 	char			*buf; // 명령어를 저장할 버퍼
-	int				pipe_flag; // 0 : NULL, 1 : pipe, 2: semicolon
 	char			quote; // 따옴표를 저장(' or "), 같은 따옴표가 나오면 다시 0으로 복귀
+	char			*input_file; // 입력 리다이렉션 파일
+	char			*output_file; // 출력 리다이렉션 파일
+
+	int				input_flag; // 입력 리다이렉션 플래그 0: 없음 1: < 2: <<
+	int				output_flag; // 출력 리다이렉션 플래그 0: 없음 1: > 2: >>
 
 	t_token			*first_token; // 토큰의 첫번째 노드;
 	t_token			*tokens; // 명령어를 저장할 연결리스트
@@ -95,7 +97,11 @@ int		check_issue(char *line, t_line *lines, int *i);
 int		check_redir(char *line, t_line *lines, int *i);
 int		check_redir_right(char *line, t_line *lines, int *i);
 int		check_redir_left(char *line, t_line *lines, int *i);
-
+int		check_syntax(t_line *lines);
 void    print_cmd(t_cmd *cmd);
+int		error_nofile(char *c);
+int		input_redirection(char *file1);
+void	make_redir_token(t_token *token, t_token *next);
+
 
 #endif

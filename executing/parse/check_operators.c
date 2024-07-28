@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_operators.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 01:11:44 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/22 02:11:54 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/07/07 16:02:50 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int check_pipe(char *line, t_line *lines, int *i) {
 	if (line[*i] == '|') {
 		if (lines->cmds->quote == 0) {
-			lines->cmds->pipe_flag = 1; // 파이프 플래그 설정
 			line[*i] = '\0'; // 라인을 끊은 뒤 명령어 뭉치로 저장
 			if (lines->cmds->buf != NULL) // 버퍼에 내용이 있으면 토큰으로 추가
 				add_token(lines->cmds);
+			lines->cmds->tokens->pipe_flag = 1; // 파이프 플래그 설정
 			add_cmd(lines); // 새로운 명령어 뭉치 생성
 			*i += 1;
 			if (line[*i] == '|') // 파이프 연속으로 나오는 경우
@@ -65,7 +65,7 @@ int check_redir(char *line, t_line *lines, int *i)
 
 int	check_redir_right(char *line, t_line *lines, int *i)
 {
-	if ((lines->cmds->pipe_flag == 0) && (line[*i] == '>'))
+	if ((lines->cmds->tokens->pipe_flag == 0) && (line[*i] == '>'))
 	{
 		*i += 1;
 		if (lines->cmds->buf != NULL)

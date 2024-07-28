@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:58:41 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/07 16:28:43 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,12 @@ int	main(int argc, char **argv, char **envp)
 			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
+			check_syntax(cmds);
+			print_cmd(cmds->first_cmd);
+
 			// execute(cmds);
+			// if (cmds->cmds->first_token->next->redir == 3)
+			// 	printf(input_redirection("redir.c"));
 			free_cmd(cmds);
 		}
 		free(line);

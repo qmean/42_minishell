@@ -55,8 +55,6 @@ build CMakeFiles/minishell.dir/cd.c.o: C_COMPILER__minishell_unscanned_Debug /Us
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/echo.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/echo.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/echo.c.o.d
@@ -64,8 +62,6 @@ build CMakeFiles/minishell.dir/echo.c.o: C_COMPILER__minishell_unscanned_Debug /
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/env.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/env.c.o.d
@@ -73,8 +69,6 @@ build CMakeFiles/minishell.dir/env.c.o: C_COMPILER__minishell_unscanned_Debug /U
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/env_parsing_func.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/env_parsing_func.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/env_parsing_func.c.o.d
@@ -82,8 +76,6 @@ build CMakeFiles/minishell.dir/env_parsing_func.c.o: C_COMPILER__minishell_unsca
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/executing.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/executing.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/executing.c.o.d
@@ -91,8 +83,6 @@ build CMakeFiles/minishell.dir/executing.c.o: C_COMPILER__minishell_unscanned_De
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/exit.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/exit.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/exit.c.o.d
@@ -100,8 +90,6 @@ build CMakeFiles/minishell.dir/exit.c.o: C_COMPILER__minishell_unscanned_Debug /
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/export.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/export.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/export.c.o.d
@@ -109,8 +97,6 @@ build CMakeFiles/minishell.dir/export.c.o: C_COMPILER__minishell_unscanned_Debug
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/export_check_and_do.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/export_check_and_do.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/export_check_and_do.c.o.d
@@ -118,8 +104,6 @@ build CMakeFiles/minishell.dir/export_check_and_do.c.o: C_COMPILER__minishell_un
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/export_check_validated.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/export_check_validated.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/export_check_validated.c.o.d
@@ -127,8 +111,6 @@ build CMakeFiles/minishell.dir/export_check_validated.c.o: C_COMPILER__minishell
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/export_do_export.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/export_do_export.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/export_do_export.c.o.d
@@ -136,8 +118,6 @@ build CMakeFiles/minishell.dir/export_do_export.c.o: C_COMPILER__minishell_unsca
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/export_with_no_args.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/export_with_no_args.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/export_with_no_args.c.o.d
@@ -145,8 +125,6 @@ build CMakeFiles/minishell.dir/export_with_no_args.c.o: C_COMPILER__minishell_un
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/free_env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/free_env.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/free_env.c.o.d
@@ -154,8 +132,6 @@ build CMakeFiles/minishell.dir/free_env.c.o: C_COMPILER__minishell_unscanned_Deb
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/ft_strcmp.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/ft_strcmp.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/ft_strcmp.c.o.d
@@ -163,8 +139,6 @@ build CMakeFiles/minishell.dir/ft_strcmp.c.o: C_COMPILER__minishell_unscanned_De
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/main.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/main.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/main.c.o.d
@@ -172,8 +146,6 @@ build CMakeFiles/minishell.dir/main.c.o: C_COMPILER__minishell_unscanned_Debug /
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/check_operators.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/check_operators.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/check_operators.c.o.d
@@ -181,8 +153,6 @@ build CMakeFiles/minishell.dir/parse/check_operators.c.o: C_COMPILER__minishell_
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/ckeck_quote.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/ckeck_quote.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/ckeck_quote.c.o.d
@@ -190,8 +160,6 @@ build CMakeFiles/minishell.dir/parse/ckeck_quote.c.o: C_COMPILER__minishell_unsc
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/error_print.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/error_print.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/error_print.c.o.d
@@ -199,8 +167,6 @@ build CMakeFiles/minishell.dir/parse/error_print.c.o: C_COMPILER__minishell_unsc
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/handler_env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/handler_env.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/handler_env.c.o.d
@@ -208,8 +174,6 @@ build CMakeFiles/minishell.dir/parse/handler_env.c.o: C_COMPILER__minishell_unsc
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/handler_linked_list.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/handler_linked_list.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/handler_linked_list.c.o.d
@@ -217,8 +181,6 @@ build CMakeFiles/minishell.dir/parse/handler_linked_list.c.o: C_COMPILER__minish
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/init.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/init.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/init.c.o.d
@@ -226,8 +188,6 @@ build CMakeFiles/minishell.dir/parse/init.c.o: C_COMPILER__minishell_unscanned_D
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/make_nodes.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/make_nodes.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/make_nodes.c.o.d
@@ -235,8 +195,6 @@ build CMakeFiles/minishell.dir/parse/make_nodes.c.o: C_COMPILER__minishell_unsca
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/parsing_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/parsing_utils.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/parsing_utils.c.o.d
@@ -244,8 +202,6 @@ build CMakeFiles/minishell.dir/parse/parsing_utils.c.o: C_COMPILER__minishell_un
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/signal_hanlder.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/signal_hanlder.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/signal_hanlder.c.o.d
@@ -253,8 +209,6 @@ build CMakeFiles/minishell.dir/parse/signal_hanlder.c.o: C_COMPILER__minishell_u
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/test.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/test.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/test.c.o.d
@@ -262,8 +216,6 @@ build CMakeFiles/minishell.dir/parse/test.c.o: C_COMPILER__minishell_unscanned_D
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/parse/tokeniz.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/tokeniz.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/parse/tokeniz.c.o.d
@@ -271,8 +223,6 @@ build CMakeFiles/minishell.dir/parse/tokeniz.c.o: C_COMPILER__minishell_unscanne
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/print_error.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/print_error.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/print_error.c.o.d
@@ -280,8 +230,6 @@ build CMakeFiles/minishell.dir/print_error.c.o: C_COMPILER__minishell_unscanned_
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/pwd.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/pwd.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/pwd.c.o.d
@@ -289,8 +237,6 @@ build CMakeFiles/minishell.dir/pwd.c.o: C_COMPILER__minishell_unscanned_Debug /U
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/size_func.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/size_func.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/size_func.c.o.d
@@ -298,8 +244,6 @@ build CMakeFiles/minishell.dir/size_func.c.o: C_COMPILER__minishell_unscanned_De
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/unset.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/unset.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/unset.c.o.d
@@ -307,8 +251,6 @@ build CMakeFiles/minishell.dir/unset.c.o: C_COMPILER__minishell_unscanned_Debug 
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
 
 build CMakeFiles/minishell.dir/value_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/value_utils.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/value_utils.c.o.d
@@ -316,8 +258,27 @@ build CMakeFiles/minishell.dir/value_utils.c.o: C_COMPILER__minishell_unscanned_
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
-  TARGET_PDB = minishell.pdb
+
+build CMakeFiles/minishell.dir/parse/check_syntax.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/check_syntax.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/parse/check_syntax.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
+
+build CMakeFiles/minishell.dir/parse/redir.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/redir.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/parse/redir.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
+
+build CMakeFiles/minishell.dir/parse/syntax_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/jammin/minishell/executing/parse/syntax_utils.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/parse/syntax_utils.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/jammin/minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
 
 
 # =============================================================================
@@ -327,16 +288,15 @@ build CMakeFiles/minishell.dir/value_utils.c.o: C_COMPILER__minishell_unscanned_
 #############################################
 # Link the executable minishell
 
-build minishell: C_EXECUTABLE_LINKER__minishell_Debug CMakeFiles/minishell.dir/cd.c.o CMakeFiles/minishell.dir/echo.c.o CMakeFiles/minishell.dir/env.c.o CMakeFiles/minishell.dir/env_parsing_func.c.o CMakeFiles/minishell.dir/executing.c.o CMakeFiles/minishell.dir/exit.c.o CMakeFiles/minishell.dir/export.c.o CMakeFiles/minishell.dir/export_check_and_do.c.o CMakeFiles/minishell.dir/export_check_validated.c.o CMakeFiles/minishell.dir/export_do_export.c.o CMakeFiles/minishell.dir/export_with_no_args.c.o CMakeFiles/minishell.dir/free_env.c.o CMakeFiles/minishell.dir/ft_strcmp.c.o CMakeFiles/minishell.dir/main.c.o CMakeFiles/minishell.dir/parse/check_operators.c.o CMakeFiles/minishell.dir/parse/ckeck_quote.c.o CMakeFiles/minishell.dir/parse/error_print.c.o CMakeFiles/minishell.dir/parse/handler_env.c.o CMakeFiles/minishell.dir/parse/handler_linked_list.c.o CMakeFiles/minishell.dir/parse/init.c.o CMakeFiles/minishell.dir/parse/make_nodes.c.o CMakeFiles/minishell.dir/parse/parsing_utils.c.o CMakeFiles/minishell.dir/parse/signal_hanlder.c.o CMakeFiles/minishell.dir/parse/test.c.o CMakeFiles/minishell.dir/parse/tokeniz.c.o CMakeFiles/minishell.dir/print_error.c.o CMakeFiles/minishell.dir/pwd.c.o CMakeFiles/minishell.dir/size_func.c.o CMakeFiles/minishell.dir/unset.c.o CMakeFiles/minishell.dir/value_utils.c.o
+build minishell: C_EXECUTABLE_LINKER__minishell_Debug CMakeFiles/minishell.dir/cd.c.o CMakeFiles/minishell.dir/echo.c.o CMakeFiles/minishell.dir/env.c.o CMakeFiles/minishell.dir/env_parsing_func.c.o CMakeFiles/minishell.dir/executing.c.o CMakeFiles/minishell.dir/exit.c.o CMakeFiles/minishell.dir/export.c.o CMakeFiles/minishell.dir/export_check_and_do.c.o CMakeFiles/minishell.dir/export_check_validated.c.o CMakeFiles/minishell.dir/export_do_export.c.o CMakeFiles/minishell.dir/export_with_no_args.c.o CMakeFiles/minishell.dir/free_env.c.o CMakeFiles/minishell.dir/ft_strcmp.c.o CMakeFiles/minishell.dir/main.c.o CMakeFiles/minishell.dir/parse/check_operators.c.o CMakeFiles/minishell.dir/parse/ckeck_quote.c.o CMakeFiles/minishell.dir/parse/error_print.c.o CMakeFiles/minishell.dir/parse/handler_env.c.o CMakeFiles/minishell.dir/parse/handler_linked_list.c.o CMakeFiles/minishell.dir/parse/init.c.o CMakeFiles/minishell.dir/parse/make_nodes.c.o CMakeFiles/minishell.dir/parse/parsing_utils.c.o CMakeFiles/minishell.dir/parse/signal_hanlder.c.o CMakeFiles/minishell.dir/parse/test.c.o CMakeFiles/minishell.dir/parse/tokeniz.c.o CMakeFiles/minishell.dir/print_error.c.o CMakeFiles/minishell.dir/pwd.c.o CMakeFiles/minishell.dir/size_func.c.o CMakeFiles/minishell.dir/unset.c.o CMakeFiles/minishell.dir/value_utils.c.o CMakeFiles/minishell.dir/parse/check_syntax.c.o CMakeFiles/minishell.dir/parse/redir.c.o CMakeFiles/minishell.dir/parse/syntax_utils.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/opt/readline/lib -Wl,-rpath,/Users/jammin/minishell/executing  -lreadline  -lft
   LINK_PATH = -L/opt/homebrew/opt/readline/lib   -L/Users/jammin/minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/minishell.dir/
   TARGET_FILE = minishell
-  TARGET_PDB = minishell.pdb
+  TARGET_PDB = minishell.dbg
 
 
 #############################################
@@ -381,14 +341,14 @@ build all: phony minishell
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/jammin/minishell/executing/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/jammin/minishell/executing/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/jammin/minishell/executing/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/jammin/minishell/executing/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

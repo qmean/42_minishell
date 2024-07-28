@@ -33,7 +33,7 @@ void tokenize_main(char *line, t_line *lines)
         error_invalid_quote();
     if ((line[i] == '\0') && (lines->cmds->buf != NULL)) // 라인이 끝나고 버퍼에 내용이 있으면 토큰으로 추가
         lines->cmds->tokens->data = lines->cmds->buf;
-    print_cmd(lines->first_cmd);
+    check_syntax(lines);
 }
 
 int check_issue(char *line, t_line *lines, int *i)

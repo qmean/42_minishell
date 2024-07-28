@@ -38,6 +38,9 @@ set(SRCS
         size_func.c
         unset.c
         value_utils.c
+        parse/check_syntax.c
+        parse/redir.c
+        parse/syntax_utils.c
 )
 
 # 인클루드 디렉토리 설정

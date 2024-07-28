@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   make_nodes.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:55:18 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 01:57:59 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/07/07 15:56:17 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ t_cmd	*make_cmd(void)
     if (!new)
         return (NULL);
     new->buf = NULL;
-    new->pipe_flag = 0;
     new->quote = '\0';
     new->tokens = NULL;
     new->env = NULL;
@@ -41,5 +40,6 @@ t_token	*make_token(void)
     new->data = NULL;
     new->next = NULL;
     new->isspace = 0;
+    new->pipe_flag = 0;
     return (new);
 }

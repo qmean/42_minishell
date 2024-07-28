@@ -19,4 +19,5 @@ void    init(t_line *lines)
     lines->cmds->tokens = make_token();
     lines->cmds->first_token = lines->cmds->tokens;
     lines->exit_flag = 0;
+
 }

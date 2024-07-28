@@ -31,7 +31,7 @@ void    print_cmd(t_cmd *cmd)
         printf("cmd%d \n", j);
         while (token)
         {
-            printf("token%d: %s dir: %d\n", i, token->data, token->redir);
+            printf("token%d: %8s dir: %d pipe: %d\n", i, token->data, token->redir, token->pipe_flag);
             token = token->next;
             i++;
         }

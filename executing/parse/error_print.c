@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 04:23:46 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/21 03:33:44 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/07/01 01:55:03 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,12 @@ int    error_syntax(char *c)
     else
         ft_putstr_fd(c, 2);
     ft_putstr_fd("'\n", 2);
+    return (-1);
+}
+
+int    error_nofile(char *c)
+{
+    ft_putstr_fd(c, 2);
+    ft_putstr_fd(": No such file or directory", 2);
     return (-1);
 }
