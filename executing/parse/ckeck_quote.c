@@ -6,7 +6,7 @@
 /*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:31:32 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/14 03:38:44 by jammin           ###   ########.fr       */
+/*   Updated: 2024/06/21 03:58:45 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ int check_smallquote(char *line, t_cmd *cmd, int *i)
         else if (cmd->quote == '\'')
         {
             cmd->quote = 0;
-            add_token(cmd);
+            if ((line[*i + 1] != '\0') && (line[*i + 1] != '<') && \
+                (line[*i + 1] != '>'))
+                add_token(cmd);
         }
         else
             cmd->buf = ft_strjoin_free(cmd->buf, line[*i]);
@@ -55,7 +57,9 @@ int check_bigquote(char *line, t_cmd *cmd, int *i)
         else if (cmd->quote == '\"')
         {
             cmd->quote = 0;
-            add_token(cmd);
+            if ((line[*i + 1] != '\0') && (line[*i + 1] != '<') && \
+                (line[*i + 1] != '>'))
+                add_token(cmd);
         }
         else
             cmd->buf = ft_strjoin_free(cmd->buf, line[*i]);

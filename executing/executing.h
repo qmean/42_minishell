@@ -13,9 +13,9 @@
 #ifndef EXECUTING_H
 # define EXECUTING_H
 
-# include "./parse/parsing.h"
+#include "./parse/parsing.h"
 
-# define BCD 1
+#define BCD 1
 # define BPWD 2
 # define BECHO 3
 # define BEXPORT 4
