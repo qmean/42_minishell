@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 18:58:53 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:51:38 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 11:13:29 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,15 @@ int	cmd_size(t_cmd *cmd)
 	return (ret);
 }
 
-int	env_size(t_line *line)
+int	env_size(t_env *start)
 {
-	t_env	*env;
 	int		ret;
 
 	ret = 0;
-	env = line->env;
-	while (env)
+	while (start)
 	{
 		ret++;
-		env = env->next;
+		start = start->next;
 	}
 	return (ret);
 }

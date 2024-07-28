@@ -49,96 +49,89 @@ cmake_ninja_workdir = /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cmake-
 
 build cmake_object_order_depends_target_minishell: phony || CMakeFiles/minishell.dir
 
-build CMakeFiles/minishell.dir/cd.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/cd.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/cd.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/cd.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/cd.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/cd.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/echo.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/echo.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/echo.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/echo.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/echo.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/echo.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/env.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/env.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/env.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/env.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/env_parsing_func.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/env_parsing_func.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/env_parsing_func.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/env_parsing_func.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/env_parsing_func.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/env_parsing_func.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/executing.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/executing.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/executing.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/exit.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/exit.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/exit.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/exit.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/exit.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/exit.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/export.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/export.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/export.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/export.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/export.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/export_check_and_do.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/export_check_and_do.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/export_check_and_do.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/export_check_and_do.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_and_do.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/export_check_and_do.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/export_check_validated.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/export_check_validated.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/export_check_validated.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/export_check_validated.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_check_validated.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/export_check_validated.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/export_do_export.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/export_do_export.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/export_do_export.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/export_do_export.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_do_export.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/export_do_export.c.o.d
+build CMakeFiles/minishell.dir/builtin_func/export_with_no_args.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/export_with_no_args.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/export_with_no_args.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
 
-build CMakeFiles/minishell.dir/export_with_no_args.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/export_with_no_args.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/export_with_no_args.c.o.d
+build CMakeFiles/minishell.dir/utils/free_env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/utils/free_env.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/utils/free_env.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/utils
 
-build CMakeFiles/minishell.dir/free_env.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/free_env.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/free_env.c.o.d
+build CMakeFiles/minishell.dir/utils/ft_strcmp.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/utils/ft_strcmp.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/utils/ft_strcmp.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
-
-build CMakeFiles/minishell.dir/ft_strcmp.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/ft_strcmp.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/ft_strcmp.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
-  OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/utils
 
 build CMakeFiles/minishell.dir/main.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/main.c || cmake_object_order_depends_target_minishell
   DEP_FILE = CMakeFiles/minishell.dir/main.c.o.d
@@ -224,40 +217,110 @@ build CMakeFiles/minishell.dir/parse/tokeniz.c.o: C_COMPILER__minishell_unscanne
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir/parse
 
-build CMakeFiles/minishell.dir/print_error.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/print_error.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/print_error.c.o.d
+build CMakeFiles/minishell.dir/utils/print_error.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/utils/print_error.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/utils/print_error.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/utils
+
+build CMakeFiles/minishell.dir/builtin_func/pwd.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/pwd.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/pwd.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
+
+build CMakeFiles/minishell.dir/utils/size_func.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/utils/size_func.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/utils/size_func.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/utils
+
+build CMakeFiles/minishell.dir/builtin_func/unset.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_func/unset.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_func/unset.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/builtin_func
+
+build CMakeFiles/minishell.dir/utils/value_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/utils/value_utils.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/utils/value_utils.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/utils
+
+build CMakeFiles/minishell.dir/builtin_execution.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/builtin_execution.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/builtin_execution.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
 
-build CMakeFiles/minishell.dir/pwd.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/pwd.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/pwd.c.o.d
+build CMakeFiles/minishell.dir/execute_bin.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute_bin.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute_bin.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
   OBJECT_FILE_DIR = CMakeFiles/minishell.dir
 
-build CMakeFiles/minishell.dir/size_func.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/size_func.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/size_func.c.o.d
+build CMakeFiles/minishell.dir/execute/executing.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/executing.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/executing.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
 
-build CMakeFiles/minishell.dir/unset.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/unset.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/unset.c.o.d
+build CMakeFiles/minishell.dir/execute/pipe_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/pipe_utils.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/pipe_utils.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
 
-build CMakeFiles/minishell.dir/value_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/value_utils.c || cmake_object_order_depends_target_minishell
-  DEP_FILE = CMakeFiles/minishell.dir/value_utils.c.o.d
+build CMakeFiles/minishell.dir/execute/free_executing_params.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/free_executing_params.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/free_executing_params.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
   OBJECT_DIR = CMakeFiles/minishell.dir
-  OBJECT_FILE_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
+
+build CMakeFiles/minishell.dir/execute/pipe_executing.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/pipe_executing.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/pipe_executing.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
+
+build CMakeFiles/minishell.dir/execute/normal_executing.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/normal_executing.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/normal_executing.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
+
+build CMakeFiles/minishell.dir/execute/executing_utils.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/executing_utils.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/executing_utils.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
+
+build CMakeFiles/minishell.dir/execute/executing_bin.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/executing_bin.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/executing_bin.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
+
+build CMakeFiles/minishell.dir/execute/redirect_executing.c.o: C_COMPILER__minishell_unscanned_Debug /Users/kyuminkim/Desktop/DEV/42_minishell/executing/execute/redirect_executing.c || cmake_object_order_depends_target_minishell
+  DEP_FILE = CMakeFiles/minishell.dir/execute/redirect_executing.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/readline/include -I/Users/kyuminkim/Desktop/DEV/42_minishell/executing
+  OBJECT_DIR = CMakeFiles/minishell.dir
+  OBJECT_FILE_DIR = CMakeFiles/minishell.dir/execute
 
 
 # =============================================================================
@@ -267,7 +330,7 @@ build CMakeFiles/minishell.dir/value_utils.c.o: C_COMPILER__minishell_unscanned_
 #############################################
 # Link the executable minishell
 
-build minishell: C_EXECUTABLE_LINKER__minishell_Debug CMakeFiles/minishell.dir/cd.c.o CMakeFiles/minishell.dir/echo.c.o CMakeFiles/minishell.dir/env.c.o CMakeFiles/minishell.dir/env_parsing_func.c.o CMakeFiles/minishell.dir/executing.c.o CMakeFiles/minishell.dir/exit.c.o CMakeFiles/minishell.dir/export.c.o CMakeFiles/minishell.dir/export_check_and_do.c.o CMakeFiles/minishell.dir/export_check_validated.c.o CMakeFiles/minishell.dir/export_do_export.c.o CMakeFiles/minishell.dir/export_with_no_args.c.o CMakeFiles/minishell.dir/free_env.c.o CMakeFiles/minishell.dir/ft_strcmp.c.o CMakeFiles/minishell.dir/main.c.o CMakeFiles/minishell.dir/parse/check_operators.c.o CMakeFiles/minishell.dir/parse/ckeck_quote.c.o CMakeFiles/minishell.dir/parse/error_print.c.o CMakeFiles/minishell.dir/parse/handler_env.c.o CMakeFiles/minishell.dir/parse/handler_linked_list.c.o CMakeFiles/minishell.dir/parse/init.c.o CMakeFiles/minishell.dir/parse/make_nodes.c.o CMakeFiles/minishell.dir/parse/parsing_utils.c.o CMakeFiles/minishell.dir/parse/signal_hanlder.c.o CMakeFiles/minishell.dir/parse/test.c.o CMakeFiles/minishell.dir/parse/tokeniz.c.o CMakeFiles/minishell.dir/print_error.c.o CMakeFiles/minishell.dir/pwd.c.o CMakeFiles/minishell.dir/size_func.c.o CMakeFiles/minishell.dir/unset.c.o CMakeFiles/minishell.dir/value_utils.c.o
+build minishell: C_EXECUTABLE_LINKER__minishell_Debug CMakeFiles/minishell.dir/builtin_func/cd.c.o CMakeFiles/minishell.dir/builtin_func/echo.c.o CMakeFiles/minishell.dir/builtin_func/env.c.o CMakeFiles/minishell.dir/builtin_func/env_parsing_func.c.o CMakeFiles/minishell.dir/builtin_func/exit.c.o CMakeFiles/minishell.dir/builtin_func/export.c.o CMakeFiles/minishell.dir/builtin_func/export_check_and_do.c.o CMakeFiles/minishell.dir/builtin_func/export_check_validated.c.o CMakeFiles/minishell.dir/builtin_func/export_do_export.c.o CMakeFiles/minishell.dir/builtin_func/export_with_no_args.c.o CMakeFiles/minishell.dir/utils/free_env.c.o CMakeFiles/minishell.dir/utils/ft_strcmp.c.o CMakeFiles/minishell.dir/main.c.o CMakeFiles/minishell.dir/parse/check_operators.c.o CMakeFiles/minishell.dir/parse/ckeck_quote.c.o CMakeFiles/minishell.dir/parse/error_print.c.o CMakeFiles/minishell.dir/parse/handler_env.c.o CMakeFiles/minishell.dir/parse/handler_linked_list.c.o CMakeFiles/minishell.dir/parse/init.c.o CMakeFiles/minishell.dir/parse/make_nodes.c.o CMakeFiles/minishell.dir/parse/parsing_utils.c.o CMakeFiles/minishell.dir/parse/signal_hanlder.c.o CMakeFiles/minishell.dir/parse/test.c.o CMakeFiles/minishell.dir/parse/tokeniz.c.o CMakeFiles/minishell.dir/utils/print_error.c.o CMakeFiles/minishell.dir/builtin_func/pwd.c.o CMakeFiles/minishell.dir/utils/size_func.c.o CMakeFiles/minishell.dir/builtin_func/unset.c.o CMakeFiles/minishell.dir/utils/value_utils.c.o CMakeFiles/minishell.dir/builtin_execution.c.o CMakeFiles/minishell.dir/execute_bin.c.o CMakeFiles/minishell.dir/execute/executing.c.o CMakeFiles/minishell.dir/execute/pipe_utils.c.o CMakeFiles/minishell.dir/execute/free_executing_params.c.o CMakeFiles/minishell.dir/execute/pipe_executing.c.o CMakeFiles/minishell.dir/execute/normal_executing.c.o CMakeFiles/minishell.dir/execute/executing_utils.c.o CMakeFiles/minishell.dir/execute/executing_bin.c.o CMakeFiles/minishell.dir/execute/redirect_executing.c.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/opt/readline/lib -Wl,-rpath,/Users/kyuminkim/Desktop/DEV/42_minishell/executing  -lreadline  -lft
   LINK_PATH = -L/opt/homebrew/opt/readline/lib   -L/Users/kyuminkim/Desktop/DEV/42_minishell/executing

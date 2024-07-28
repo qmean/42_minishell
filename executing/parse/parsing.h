@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/19 04:03:00 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/29 01:24:44 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,19 @@ typedef struct s_env
 
 typedef struct	s_token
 {
-	int				redir; // 0: 아님 1: >, 2: <, 3: >>, 4: <<
 	int				isspace; // 마지막에 space로 토큰을 나누었는지 아닌지 -> 0: 아님 1: 공백
-	char			*redir_args[2]; // 리다이렉션 파일
 	char			*data; // 명령어
-	
-	
+
 	struct s_token	*next;
 }				t_token;
 
 typedef struct	s_cmd
 {
+	int				pipe[2];
 	char			*buf; // 명령어를 저장할 버퍼
-	int				pipe_flag; // 0 : NULL, 1 : pipe, 2: semicolon
-	int				redirect; // 0: >, 1: <, 2: >>, 3: <<;
+	int 			input_file; // 초기값 -1
+	char			*heredoc_str;
+	int 			output_file; // 초기값 -1
 	char			quote; // 따옴표를 저장(' or "), 같은 따옴표가 나오면 다시 0으로 복귀
 
 	t_token			*first_token; // 토큰의 첫번째 노드;
@@ -59,6 +58,8 @@ typedef struct	s_cmd
 
 typedef struct s_line
 {
+	int		pipe_flag; // 0 : NULL, 1 : pipe
+	int 	cmd_size;
 	t_cmd	*first_cmd; // 명령어 뭉치의 첫번째 노드
 	t_cmd	*cmds; // 명령어 뭉치를 저장할 연결리스트
 	t_env	*env; // 환경 변수를 저장할 연결리스트
@@ -76,7 +77,6 @@ t_token	*make_token(void);
 void    init(t_line *lines);
 void	tokenize_main(char *line, t_line *lines);
 void    add_token(t_cmd *cmd);
-int 	check_pipe(char *line, t_line *lines, int *i);
 int     check_quote(char *line, t_cmd *cmd, int *i);
 int     check_smallquote(char *line, t_cmd *cmd, int *i);
 int     check_bigquote(char *line, t_cmd *cmd, int *i);

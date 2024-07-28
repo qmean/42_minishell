@@ -8,19 +8,18 @@ set(LIBFT_PATH "/Users/kyuminkim/Desktop/DEV/42_minishell/executing")
 
 # 소스 파일 목록
 set(SRCS
-        cd.c
-        echo.c
-        env.c
-        env_parsing_func.c
-        executing.c
-        exit.c
-        export.c
-        export_check_and_do.c
-        export_check_validated.c
-        export_do_export.c
-        export_with_no_args.c
-        free_env.c
-        ft_strcmp.c
+        builtin_func/cd.c
+        builtin_func/echo.c
+        builtin_func/env.c
+        builtin_func/env_parsing_func.c
+        builtin_func/exit.c
+        builtin_func/export.c
+        builtin_func/export_check_and_do.c
+        builtin_func/export_check_validated.c
+        builtin_func/export_do_export.c
+        builtin_func/export_with_no_args.c
+        utils/free_env.c
+        utils/ft_strcmp.c
         main.c
         parse/check_operators.c
         parse/ckeck_quote.c
@@ -33,11 +32,21 @@ set(SRCS
         parse/signal_hanlder.c
         parse/test.c
         parse/tokeniz.c
-        print_error.c
-        pwd.c
-        size_func.c
-        unset.c
-        value_utils.c
+        utils/print_error.c
+        builtin_func/pwd.c
+        utils/size_func.c
+        builtin_func/unset.c
+        utils/value_utils.c
+        builtin_execution.c
+        execute_bin.c
+        execute/executing.c
+        execute/pipe_utils.c
+        execute/free_executing_params.c
+        execute/pipe_executing.c
+        execute/normal_executing.c
+        execute/executing_utils.c
+        execute/executing_bin.c
+        execute/redirect_executing.c
 )
 
 # 인클루드 디렉토리 설정

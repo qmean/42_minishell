@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:58:41 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/12 13:42:32 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,4 @@ void  parse_envp(t_line *line, char **envp)
 		new_env(line, split[0], split[1]);
 		envp++;
 	}
-	return ;
 }
