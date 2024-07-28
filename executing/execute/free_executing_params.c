@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_error.c                                      :+:      :+:    :+:   */
+/*   free_executing_params.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/09 22:35:46 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/28 23:37:44 by kyumkim          ###   ########.fr       */
+/*   Created: 2024/07/28 20:28:05 by kyumkim           #+#    #+#             */
+/*   Updated: 2024/07/28 20:28:34 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "executing.h"
+#include "../executing.h"
 
-void	print_error(char *cmd, char *arg, char *msg)
+int free_argv(char **argv)
 {
-	ft_putstr_fd("minishell: ", 2);
-	if (cmd)
+	int i;
+
+	i = 0;
+	while (argv[i])
 	{
-		ft_putstr_fd(cmd, 2);
-		ft_putstr_fd(": ", 2);
+		free(argv[i]);
+		i++;
 	}
-	if (arg)
+	free(argv);
+	return (0);
+}
+
+int free_envp(char **envp)
+{
+	int i;
+
+	i = 0;
+	while (envp[i])
 	{
-		ft_putstr_fd(arg, 2);
-		ft_putstr_fd(": ", 2);
+		free(envp[i]);
+		i++;
 	}
-	ft_putstr_fd(msg, 2);
-	ft_putstr_fd("\n", 2);
+	free(envp);
+	return (0);
 }

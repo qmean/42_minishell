@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/12 11:13:13 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/29 01:09:59 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,21 @@ int		ft_strcmp(const char *s1, const char *s2);
 
 void	print_error(char *cmd, char *arg, char *msg);
 int		isbuiltin(t_cmd *cmd);
-void	execute_bin(t_line *line, t_cmd *cmd);
+
+int		free_argv(char **argv);
+int		free_envp(char **envp);
+
+void	initialize_pipe(t_line *line);
+void	dup_pipe(t_cmd *cur_cmd, t_cmd *prev_cmd);
+
+void	do_pipe_cmd(t_line *line, t_cmd *cmd);
+
+void	do_normal_cmd(t_line *line, t_cmd *cmd);
+void	exec_cmd_pipe(t_line *line, t_cmd *cmd);
+void	execute_builtin(t_line *line, t_cmd *cmd, int cmd_def);
+char	*check_and_put_path(char *dir_path, char *cmd);
+void	execute_bin(t_line *line, t_cmd *cmd, char **argv, char **envp);
+char	**cmd_to_argv(t_cmd *cmd);
+char	**env_to_envp(t_env *env);
+void	do_pipe_cmd(t_line *line, t_cmd *cmd);
 #endif

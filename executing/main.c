@@ -40,8 +40,6 @@ int	main(int argc, char **argv, char **envp)
 			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
-			pipe(cmds->pipe[0]);
-			pipe(cmds->pipe[1]);
 			execute(cmds);
 			free_cmd(cmds);
 		}

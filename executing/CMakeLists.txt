@@ -12,7 +12,6 @@ set(SRCS
         builtin_func/echo.c
         builtin_func/env.c
         builtin_func/env_parsing_func.c
-        executing.c
         builtin_func/exit.c
         builtin_func/export.c
         builtin_func/export_check_and_do.c
@@ -40,6 +39,14 @@ set(SRCS
         utils/value_utils.c
         builtin_execution.c
         execute_bin.c
+        execute/executing.c
+        execute/pipe_utils.c
+        execute/free_executing_params.c
+        execute/pipe_executing.c
+        execute/normal_executing.c
+        execute/executing_utils.c
+        execute/executing_bin.c
+        execute/redirect_executing.c
 )
 
 # 인클루드 디렉토리 설정
