@@ -10,41 +10,16 @@ set(LIBFT_PATH "/Users/jammin/minishell/executing")
 include_directories(.)
 
 # 소스 파일 목록
-set(SRCS
-        cd.c
-        echo.c
-        env.c
-        env_parsing_func.c
-        executing.c
-        exit.c
-        export.c
-        export_check_and_do.c
-        export_check_validated.c
-        export_do_export.c
-        export_with_no_args.c
-        free_env.c
-        ft_strcmp.c
-        main.c
-        parse/check_operators.c
-        parse/ckeck_quote.c
-        parse/error_print.c
-        parse/handler_env.c
-        parse/handler_linked_list.c
-        parse/init.c
-        parse/make_nodes.c
-        parse/parsing_utils.c
-        parse/signal_hanlder.c
-        parse/test.c
-        parse/tokeniz.c
-        print_error.c
-        pwd.c
-        size_func.c
-        unset.c
-        value_utils.c
-        parse/check_syntax.c
-        parse/redir.c
-        parse/syntax_utils.c
+file(GLOB SRCS
+        "${PROJECT_SOURCE_DIR}/*.c"
+        "${PROJECT_SOURCE_DIR}/builtin_func/*.c"
+        "${PROJECT_SOURCE_DIR}/execute/*.c"
+        "${PROJECT_SOURCE_DIR}/parse/*.c"
+        "${PROJECT_SOURCE_DIR}/utils/*.c"
 )
+
+# 소스 파일 목록
+set(SRCS ${SRCS})
 
 # 인클루드 디렉토리 설정
 include_directories(
@@ -63,17 +38,17 @@ add_executable(minishell ${SRCS})
 
 # 라이브러리 링크
 target_link_libraries(minishell readline libft.a)
-
-# 빌드에서 특정 파일을 제외하기 위한 설정
-set_source_files_properties(
-        ${CMAKE_BINARY_DIR}/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
-        ${CMAKE_BINARY_DIR}/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
-        PROPERTIES GENERATED TRUE EXCLUDE_FROM_ALL TRUE
-)
-
-# 중복 빌드를 방지하기 위한 설정
-set_source_files_properties(
-        ${CMAKE_BINARY_DIR}/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
-        ${CMAKE_BINARY_DIR}/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c
-        PROPERTIES GENERATED TRUE EXCLUDE_FROM_ALL TRUE
-)
+#
+## 빌드에서 특정 파일을 제외하기 위한 설정
+#set_source_files_properties(
+#        ${CMAKE_BINARY_DIR}/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c.o
+#        ${CMAKE_BINARY_DIR}/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c.o
+#        PROPERTIES GENERATED TRUE EXCLUDE_FROM_ALL TRUE
+#)
+#
+## 중복 빌드를 방지하기 위한 설정
+#set_source_files_properties(
+#        ${CMAKE_BINARY_DIR}/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+#        ${CMAKE_BINARY_DIR}/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c
+#        PROPERTIES GENERATED TRUE EXCLUDE_FROM_ALL TRUE
+#)

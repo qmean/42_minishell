@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/07 16:28:43 by jaemikim         ###   ########.fr       */
+/*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
+/*   Updated: 2024/07/29 03:53:01 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,4 @@ void  parse_envp(t_line *line, char **envp)
 		new_env(line, split[0], split[1]);
 		envp++;
 	}
-	return ;
 }
