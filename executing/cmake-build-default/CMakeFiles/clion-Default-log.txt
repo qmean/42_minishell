@@ -1,4 +1,0 @@
-/Users/jammin/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_MAKE_PROGRAM=/Users/jammin/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/jammin/minishell/executing -B /Users/jammin/minishell/executing/cmake-build-default
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/jammin/minishell/executing/cmake-build-default

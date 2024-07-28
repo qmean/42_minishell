@@ -18,7 +18,7 @@ int check_pipe(char *line, t_line *lines, int *i) {
 			line[*i] = '\0'; // 라인을 끊은 뒤 명령어 뭉치로 저장
 			if (lines->cmds->buf != NULL) // 버퍼에 내용이 있으면 토큰으로 추가
 				add_token(lines->cmds);
-			lines->cmds->tokens->pipe_flag = 1; // 파이프 플래그 설정
+			lines->pipe_flag = 1; // 파이프 플래그 설정
 			add_cmd(lines); // 새로운 명령어 뭉치 생성
 			*i += 1;
 			if (line[*i] == '|') // 파이프 연속으로 나오는 경우
@@ -65,7 +65,7 @@ int check_redir(char *line, t_line *lines, int *i)
 
 int	check_redir_right(char *line, t_line *lines, int *i)
 {
-	if ((lines->cmds->tokens->pipe_flag == 0) && (line[*i] == '>'))
+	if ((lines->pipe_flag == 0) && (line[*i] == '>'))
 	{
 		*i += 1;
 		if (lines->cmds->buf != NULL)
@@ -91,6 +91,8 @@ int	check_redir_right(char *line, t_line *lines, int *i)
 			*i += 1;
 			if (line[*i] == '<') // ><< 에러 처리
 			{
+				while (line[*i] == ' ')
+					*i += 1;
 				if (line[*i + 1] == '<') // ><<< 에러 처리
 					return (error_syntax("<<<"));
 				return (error_syntax("<<"));
@@ -99,6 +101,7 @@ int	check_redir_right(char *line, t_line *lines, int *i)
 				return (error_syntax("<>"));
 			return (error_syntax("<"));
 		}
+
 		if (line[*i] == '|') // >| 에러 처리 -> newline
 			return (error_syntax(""));
 		return (1);

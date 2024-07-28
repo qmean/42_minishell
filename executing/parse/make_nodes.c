@@ -21,7 +21,10 @@ t_cmd	*make_cmd(void)
         return (NULL);
     new->buf = NULL;
     new->quote = '\0';
-    new->tokens = NULL;
+    new->input_file = -2;
+    new->output_file = -2;
+    new->tokens = make_token();
+    new->first_token = new->tokens;
     new->env = NULL;
     new->next = NULL;
     return (new);
@@ -35,11 +38,8 @@ t_token	*make_token(void)
     if (!new)
         return (NULL);
     new->redir = '\0';
-    new->redir_args[0] = NULL;
-    new->redir_args[1] = NULL;
     new->data = NULL;
     new->next = NULL;
     new->isspace = 0;
-    new->pipe_flag = 0;
     return (new);
 }

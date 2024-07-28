@@ -40,12 +40,8 @@ int	main(int argc, char **argv, char **envp)
 			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
-			check_syntax(cmds);
-			print_cmd(cmds->first_cmd);
-
+			print_cmd(cmds);
 			// execute(cmds);
-			// if (cmds->cmds->first_token->next->redir == 3)
-			// 	printf(input_redirection("redir.c"));
 			free_cmd(cmds);
 		}
 		free(line);

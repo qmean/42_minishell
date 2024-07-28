@@ -1,0 +1,15 @@
+# ninja log v6
+4	57	1722165652556414231	CMakeFiles/minishell.dir/env_parsing_func.c.o	202b4f5c3c596828
+2	59	1722165652554678595	CMakeFiles/minishell.dir/cd.c.o	96970cf063db6984
+2	61	1722165652554937305	CMakeFiles/minishell.dir/echo.c.o	74c28f0f2a9eb5db
+3	61	1722165652556280813	CMakeFiles/minishell.dir/env.c.o	a5ddc27f2e20ab5c
+5	62	1722165652557915407	CMakeFiles/minishell.dir/exit.c.o	8b66b2d33ca5b548
+5	78	1722165652557769864	CMakeFiles/minishell.dir/executing.c.o	1f667ef5756936ab
+58	104	1722165652610697690	CMakeFiles/minishell.dir/export.c.o	853fc6aa7f7021bd
+62	109	1722165652614822091	CMakeFiles/minishell.dir/export_with_no_args.c.o	fcb7d42b6233df47
+60	110	1722165652613109580	CMakeFiles/minishell.dir/export_check_and_do.c.o	7b47cbc6b2e0d913
+61	110	1722165652614018377	CMakeFiles/minishell.dir/export_check_validated.c.o	7ee905d4c9162bf0
+62	110	1722165652614320921	CMakeFiles/minishell.dir/export_do_export.c.o	f0ae0be5c117c417
+78	120	1722165652630670105	CMakeFiles/minishell.dir/free_env.c.o	b62b4182fa1d0eed
+104	143	1722165652656813974	CMakeFiles/minishell.dir/ft_strcmp.c.o	70aeb49c2c35ac38
+109	144	1722165652662070632	CMakeFiles/minishell.dir/main.c.o	9dedf23e3e8c1d74
