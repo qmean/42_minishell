@@ -23,8 +23,8 @@ int	input_heredoc_redirection(t_cmd *cmds)
 	cmds->heredoc_str = ft_strdup(cmds->tokens->data);
 	if (cmds->heredoc_str == NULL)
 		return (-1);
-	if (open("temp_file", O_CREAT | O_WRONLY | O_TRUNC, 0644) < 0)
-		return (error_nofile("temp_file"));
+	// if (open("temp_file", O_CREAT | O_WRONLY | O_TRUNC, 0644) < 0)
+	// 	return (error_nofile("temp_file"));
 	printf("input file: %d\n", cmds->input_file);
 	return (0);
 }
