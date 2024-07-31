@@ -4,7 +4,7 @@ project(minishell C)
 set(CMAKE_C_STANDARD 99)
 
 # 설정된 라이브러리 경로
-set(LIBFT_PATH "/Users/jammin/minishell/executing")
+set(LIBFT_PATH "./")
 
 # 헤더를 추가하기 위해 설정 (현재 디렉토리 기준 하위 헤더 전부)
 include_directories(.)

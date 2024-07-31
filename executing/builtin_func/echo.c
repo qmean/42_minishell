@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 21:53:23 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 03:52:13 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/31 10:13:18 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	echo(t_line *line, t_token *token)
 {
 	int	n_option;
 
-	if (token_size(token) == 0)
+	if (token == NULL)
 	{
 		ft_putstr_fd("\n", 1);
 		return ;

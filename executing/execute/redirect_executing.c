@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:14:10 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/29 01:43:26 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/31 11:05:28 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	do_redirect_cmd(t_line *line, t_cmd *cmd)
 {
 	if (cmd->input_file == -2 && cmd->output_file == -2)
 		return ;
-	if (cmd->input_file != -2)
+	if (cmd->input_file >= 0)
 		dup2(cmd->input_file, STDIN_FILENO);
-	if (cmd->output_file != -2 && cmd->output_file != 0)
+	if (cmd->output_file > 0)
 		dup2(cmd->output_file, STDOUT_FILENO);
 	if (cmd->output_file == 0)
 		exit(do_heredoc(line, cmd));
@@ -56,7 +56,7 @@ int	do_heredoc(t_line *line, t_cmd *cmd)
 			heredoc_line = readline("> ");
 			if (strcmp(heredoc_line, cmd->heredoc_str) == 0)
 				break ;
-			write(pipe_fd[1], line, ft_strlen(line));
+			write(pipe_fd[1], heredoc_line, ft_strlen(heredoc_line));
 			write(pipe_fd[1], "\n", 1);
 		}
 		waitpid(pid, &exit_status, 0);

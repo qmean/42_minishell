@@ -6,7 +6,7 @@
 /*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/07/29 04:19:15 by jammin           ###   ########.fr       */
+/*   Updated: 2024/07/31 10:08:24 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	main(int argc, char **argv, char **envp)
 	set_signal();
 	while ((line = readline("minishell$ ")))
 	{
+		parse_envp(cmds, envp);
 		if ((line[0] != '\0') && (!iswhitespace(line))) // 빈문자열이 아니고 공백문자열이 아닐 때
 		{
 			init(cmds);
@@ -41,7 +42,7 @@ int	main(int argc, char **argv, char **envp)
 			add_history(line);
 			tokenize_main(line, cmds);
 			print_cmd(cmds);
-			// execute(cmds);
+			execute(cmds);
 			free_cmd(cmds);
 		}
 		free(line);
