@@ -27,31 +27,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 37,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 31,
+				"line" : 59,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 40,
+				"line" : 68,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 10,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 25,
+				"line" : 53,
 				"parent" : 0
 			}
 		]
@@ -69,11 +63,11 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/Users/jammin/minishell/executing/."
+					"path" : "/opt/homebrew/opt/readline/include"
 				},
 				{
-					"backtrace" : 5,
-					"path" : "/opt/homebrew/opt/readline/include"
+					"backtrace" : 4,
+					"path" : "/Users/kyuminkim/Desktop/DEV/42_minishell/executing"
 				}
 			],
 			"language" : "C",
@@ -125,10 +119,7 @@
 				35,
 				36,
 				37,
-				38,
-				39,
-				40,
-				41
+				38
 			]
 		}
 	],
@@ -148,11 +139,11 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/Users/jammin/minishell/executing/.",
+				"fragment" : "-L/Users/kyuminkim/Desktop/DEV/42_minishell/executing",
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/opt/homebrew/opt/readline/lib -Wl,-rpath,/Users/jammin/minishell/executing/.",
+				"fragment" : "-Wl,-rpath,/opt/homebrew/opt/readline/lib -Wl,-rpath,/Users/kyuminkim/Desktop/DEV/42_minishell/executing",
 				"role" : "libraries"
 			},
 			{
@@ -219,21 +210,12 @@
 				35,
 				36,
 				37,
-				38,
-				39,
-				40,
-				41
+				38
 			]
 		}
 	],
 	"sources" : 
 	[
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "builtin_execution.c",
-			"sourceGroupIndex" : 0
-		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
@@ -297,67 +279,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "builtin_func/pwd.c",
+			"path" : "utils/free_env.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "builtin_func/unset.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/executing.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/executing_bin.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/executing_utils.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/free_executing_params.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/normal_executing.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/pipe_executing.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/pipe_utils.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute/redirect_executing.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "execute_bin.c",
+			"path" : "utils/ft_strcmp.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -370,12 +298,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "parse/check_operators.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "parse/check_syntax.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -423,19 +345,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "parse/redir.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "parse/signal_hanlder.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "parse/syntax_utils.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -453,19 +363,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "utils/free_env.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "utils/ft_strcmp.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "utils/print_error.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "builtin_func/pwd.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -477,7 +381,73 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "builtin_func/unset.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "utils/value_utils.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "builtin_execution.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute_bin.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/executing.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/pipe_utils.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/free_executing_params.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/pipe_executing.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/normal_executing.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/executing_utils.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/executing_bin.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "execute/redirect_executing.c",
 			"sourceGroupIndex" : 0
 		}
 	],
