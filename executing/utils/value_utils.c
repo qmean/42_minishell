@@ -6,13 +6,13 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:40:35 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 01:58:19 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/03 23:07:12 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "executing.h"
 
-int	count_values_by_string(char *values);
+int	count_values_by_string(const char *values);
 
 char	**value_split(char *str)
 {
@@ -22,6 +22,8 @@ char	**value_split(char *str)
 	int		len;
 
 	ret = (char **) malloc(sizeof(char *) * (count_values_by_string(str) + 1));
+	if (ret == NULL)
+		exit(1);
 	idx = 0;
 	cnt = 0;
 	while (str[idx] != '\0')
@@ -42,7 +44,7 @@ char	**value_split(char *str)
 	return (ret);
 }
 
-int	count_values_by_string(char *values)
+int	count_values_by_string(const char *values)
 {
 	int	cnt;
 	int	idx;

@@ -39,6 +39,7 @@ t_token	*make_token(void)
         return (NULL);
     new->redir = '\0';
     new->data = NULL;
+    new->prev = NULL;
     new->next = NULL;
     new->isspace = 0;
     return (new);
