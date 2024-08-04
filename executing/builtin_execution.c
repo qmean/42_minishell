@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 11:04:46 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/31 11:10:30 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/05 01:43:27 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	execute_builtin(t_line *line, t_cmd *cmd, int cmd_def)
 {
+	if (cmd->output_file != -2 || cmd->input_file != -2)
+		do_redirect_cmd(line, cmd);
 	if (cmd_def == BCD)
 		cd(line, cmd);
 	else if (cmd_def == BECHO)

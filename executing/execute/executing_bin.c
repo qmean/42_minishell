@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:12:05 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/31 11:08:06 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/05 01:41:12 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,8 @@ void	execute_bin(t_line *line, t_cmd *cmd, char **argv, char **envp)
 	if (path == NULL)
 	{
 		print_error(cmd->first_token->data, NULL, "command not found");
-		line->exit_flag = 127;
-		return ;
+		exit(126);
 	}
-	if (cmd->input_file != -2 || cmd->output_file != -2)
-		do_redirect_cmd(line, cmd);
 	execve(path, argv, envp);
 	print_error(cmd->first_token->data, NULL, "command not found");
 	exit(126);

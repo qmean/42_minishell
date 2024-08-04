@@ -6,7 +6,7 @@
 /*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/07/31 10:08:24 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/05 01:15:02 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,19 @@ int	main(int argc, char **argv, char **envp)
 
 	cmds = init_line();
 	parse_envp(cmds, envp);
-	t_env *test = cmds->env;
-	// while (test)
-	// {
-	// 	printf("key: %s, value: %s\n", test->key, test->value);
-	// 	test = test->next;
-	// }
+//	t_env *test = cmds->env;
+//	 while (test)
+//	 {
+//	 	printf("key: %s, value: %s\n", test->key, test->value);
+//	 	test = test->next;
+//	 }
 	tcgetattr(0, &term);
 	set_signal();
 	while ((line = readline("minishell$ ")))
 	{
-		parse_envp(cmds, envp);
 		if ((line[0] != '\0') && (!iswhitespace(line))) // 빈문자열이 아니고 공백문자열이 아닐 때
 		{
 			init(cmds);
-			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
 			print_cmd(cmds);
@@ -57,7 +55,7 @@ t_line	*init_line(void)
 
 	line = (t_line *)malloc(sizeof(t_line));
 	if (line == NULL)
-		exit(1); // todo : 에러 처리 추가
+		exit(1);
 	line->env = NULL;
 	line->exit_flag = 0;
 	return (line);
@@ -76,23 +74,21 @@ char	**env_split(char *str)
 	{
 		ret[0] = ft_strdup(str);
 		if (ret[0] == NULL)
-			exit(1); // todo : 에러 처리 추가
+			exit(1);
 		ret[1] = NULL;
 		return (ret);
 	}
 	ret[0] = ft_substr(str, 0, idx);
 	ret[1] = ft_strdup(str + idx + 1);
 	if (ret[0] == NULL || ret[1] == NULL)
-		exit(1); // todo : 에러 처리 추가
+		exit(1);
 	return (ret);
 }
 
 void  parse_envp(t_line *line, char **envp)
 {
-	t_env	*env;
 	char	**split;
 
-	env = NULL;
 	while (*envp)
 	{
 		split = env_split(*envp);
