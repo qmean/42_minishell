@@ -1,15 +1,15 @@
 #include "parsing.h"
 
-int	input_redirection(t_cmd *cmds)
+int	input_redirection(t_cmd *cmds, t_token *token)
 {
 	t_token	*tmp;
 
 	if (cmds->input_file != -2)
 		close(cmds->input_file);
-	cmds->input_file = open(cmds->tokens->data, O_RDONLY);
+	cmds->input_file = open(token->next->data, O_RDONLY);
 	if (cmds->input_file < 0)
-		return (error_nofile(cmds->tokens->data));
-	printf("input file: %d\n", cmds->input_file);
+		return (error_nofile(token->next->data));
+	printf("input file: %d %s\n", cmds->input_file, token->next->data);
 	return (0);
 }
 

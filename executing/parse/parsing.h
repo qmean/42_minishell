@@ -41,6 +41,7 @@ typedef struct	s_token
 	int				redir; // 리다이렉션 플래그 0: 없음 1: < 2: << 3: > 4: >>
 
 	struct s_token	*next;
+	struct s_token	*prev;
 }				t_token;
 
 typedef struct	s_cmd
@@ -101,11 +102,11 @@ int		check_redir_left(char *line, t_line *lines, int *i);
 int		check_syntax(t_line *lines);
 void    print_cmd(t_line *lines);
 int		error_nofile(char *c);
-int     input_redirection(t_cmd *cmds);
-void	make_redir_token(t_token *token, t_token *next);
-void	free_last_token(t_line *lines);
+int	input_redirection(t_cmd *cmds, t_token *token);
 int     output_redirection(t_cmd *cmds);
 int     output_append_redirection(t_cmd *cmds);
 int		input_heredoc_redirection(t_cmd *cmds);
+void	remove_redir_token(t_token *token);
+
 
 #endif
