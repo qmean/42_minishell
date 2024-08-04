@@ -35,15 +35,15 @@ int		check_syntax(t_line *lines)
 						return (-1);
 				}
 				else if (token->redir == 2) {
-					if (input_heredoc_redirection(cmd))
+					if (input_heredoc_redirection(cmd, token))
 						return (-1);
 				}
 				else if (token->redir == 3) {
-					if (output_redirection(cmd))
+					if (output_redirection(cmd, token))
 						return (-1);
 				}
 				else if (token->redir == 4) {
-					if (output_append_redirection(cmd))
+					if (output_append_redirection(cmd, token))
 						return (-1);
 				}
 			}

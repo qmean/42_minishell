@@ -103,9 +103,9 @@ int		check_syntax(t_line *lines);
 void    print_cmd(t_line *lines);
 int		error_nofile(char *c);
 int	input_redirection(t_cmd *cmds, t_token *token);
-int     output_redirection(t_cmd *cmds);
-int     output_append_redirection(t_cmd *cmds);
-int		input_heredoc_redirection(t_cmd *cmds);
+int     output_redirection(t_cmd *cmds,	t_token *token);
+int     output_append_redirection(t_cmd *cmds, t_token *token);
+int		input_heredoc_redirection(t_cmd *cmds, t_token *token);
 void	remove_redir_token(t_token *token);
 
 
