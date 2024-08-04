@@ -65,7 +65,7 @@ int check_redir(char *line, t_line *lines, int *i)
 
 int	check_redir_right(char *line, t_line *lines, int *i)
 {
-	if ((lines->pipe_flag == 0) && (line[*i] == '>'))
+	if ((lines->cmds->quote == 0) && (line[*i] == '>'))
 	{
 		*i += 1;
 		if (lines->cmds->buf != NULL)
