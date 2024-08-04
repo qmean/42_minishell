@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:57:28 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/06/16 01:04:26 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/08/05 01:15:04 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ void    init(t_line *lines)
     lines->cmds->first_token = lines->cmds->tokens;
     lines->exit_flag = 0;
     lines->pipe_flag = 0;
-    lines->env = NULL;
 }

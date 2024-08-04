@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 22:35:46 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/28 23:37:44 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/04 17:19:19 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	print_error(char *cmd, char *arg, char *msg)
 	}
 	ft_putstr_fd(msg, 2);
 	ft_putstr_fd("\n", 2);
+	exit(1);
 }
