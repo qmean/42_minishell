@@ -6,16 +6,16 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/29 01:09:59 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/07/31 11:03:32 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EXECUTING_H
 # define EXECUTING_H
 
-# include "./parse/parsing.h"
+#include "./parse/parsing.h"
 
-# define BCD 1
+#define BCD 1
 # define BPWD 2
 # define BECHO 3
 # define BEXPORT 4
@@ -102,4 +102,6 @@ void	execute_bin(t_line *line, t_cmd *cmd, char **argv, char **envp);
 char	**cmd_to_argv(t_cmd *cmd);
 char	**env_to_envp(t_env *env);
 void	do_pipe_cmd(t_line *line, t_cmd *cmd);
+
+void	do_redirect_cmd(t_line *line, t_cmd *cmd);
 #endif

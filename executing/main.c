@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 20:48:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/12 13:42:32 by kyumkim          ###   ########.fr       */
+/*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
+/*   Updated: 2024/07/31 10:08:24 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,23 @@ int	main(int argc, char **argv, char **envp)
 	cmds = init_line();
 	parse_envp(cmds, envp);
 	t_env *test = cmds->env;
-	while (test)
-	{
-		printf("key: %s, value: %s\n", test->key, test->value);
-		test = test->next;
-	}
+	// while (test)
+	// {
+	// 	printf("key: %s, value: %s\n", test->key, test->value);
+	// 	test = test->next;
+	// }
 	tcgetattr(0, &term);
 	set_signal();
 	while ((line = readline("minishell$ ")))
 	{
+		parse_envp(cmds, envp);
 		if ((line[0] != '\0') && (!iswhitespace(line))) // 빈문자열이 아니고 공백문자열이 아닐 때
 		{
 			init(cmds);
 			cmds->cmds->env = malloc(sizeof(t_env));
 			add_history(line);
 			tokenize_main(line, cmds);
+			print_cmd(cmds);
 			execute(cmds);
 			free_cmd(cmds);
 		}

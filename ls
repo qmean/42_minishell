@@ -1,0 +1,13 @@
+fjdiwf
+djfiwfjw
+fdwjfiwdfw
+fdwfijwdojifw
+djfiowf
+dfjidowfwd
+fjwdiofwdjfi
+ls
+ls
+cat
+cat
+ls
+ls
