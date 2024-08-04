@@ -70,11 +70,11 @@ int	check_redir_right(char *line, t_line *lines, int *i)
 		*i += 1;
 		if (lines->cmds->buf != NULL)
 			add_token(lines->cmds); // 리다이렉션 앞부분을 토큰으로 분리
-		lines->cmds->tokens->redir = 1; // 리다이렉션 플래그 설정
+		lines->cmds->tokens->redir = 3; // 리다이렉션 플래그 설정
 		if (line[*i] == '>')
 		{
 			*i += 1;
-			lines->cmds->tokens->redir = 2; // 리다이렉션 플래그 설정
+			lines->cmds->tokens->redir = 4; // 리다이렉션 플래그 설정
 			if (line[*i] == '>')
 			{
 				if (line[*i + 1] == '>')
@@ -116,11 +116,11 @@ int	check_redir_left(char *line, t_line *lines, int *i)
 		*i += 1;
 		if (lines->cmds->buf != NULL)
 			add_token(lines->cmds);
-		lines->cmds->tokens->redir = 3;
+		lines->cmds->tokens->redir = 1;
 		if (line[*i] == '<')
 		{
 			*i += 1;
-			lines->cmds->tokens->redir = 4;
+			lines->cmds->tokens->redir = 2;
 			if (line[*i] == '<')
 			{
 				if (line[*i + 1] == '<') // <<<< 에러 처리
