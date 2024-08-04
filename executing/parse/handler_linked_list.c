@@ -21,6 +21,7 @@ void add_token(t_cmd *cmd)
     } else {
         new_token = make_token();
         cmd->tokens->next = new_token;
+        new_token->prev = cmd->tokens;
         cmd->tokens = new_token; // 새로운 토큰 생성 후 이동
         cmd->tokens->data = cmd->buf; // 새로운 토큰에 데이터 저장
     }
