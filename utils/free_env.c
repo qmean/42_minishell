@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 22:32:13 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:51 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 03:29:44 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 void	free_env(t_env *env)
 {
 	t_env	*tmp;
+	t_env	*free_env;
 
-	while (env)
+	free_env = env;
+	while (free_env)
 	{
-		tmp = env;
-		env = env->next;
-		free(tmp->key);
-		free(tmp->value);
-		free(tmp);
+		tmp = free_env->next;
+		free(free_env->key);
+		free(free_env->value);
+		free(free_env);
+		free_env = tmp;
 	}
 }

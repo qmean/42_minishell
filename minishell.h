@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 00:47:11 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 03:37:01 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ typedef struct s_token
 	int				isspace;
 	char			*data;
 	int				redir;
-
 	struct s_token	*next;
 	struct s_token	*prev;
 }	t_token;
@@ -58,11 +57,9 @@ typedef struct s_cmd
 	int				input_file;
 	int				output_file;
 	char			*heredoc_str;
-
 	int				pipe[2];
 	t_token			*first_token;
 	t_token			*tokens;
-	t_env			*env;
 	struct s_cmd	*next;
 }	t_cmd;
 
@@ -194,4 +191,5 @@ void	do_redirect_cmd(t_cmd *cmd);
 void	restore_stdio(t_cmd *cmd, int stdout, int stdin);
 
 t_env	*env_dup(char *key, char *value);
+void	do_heredoc(t_cmd *cmd);
 #endif

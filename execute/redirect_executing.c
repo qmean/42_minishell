@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:14:10 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 02:24:10 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 02:59:38 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ void	do_heredoc(t_cmd *cmd);
 
 void	do_redirect_cmd(t_cmd *cmd)
 {
-	if (cmd->input_file == -2 && cmd->output_file == -2)
-		return ;
-	if (cmd->input_file == 0)
-		do_heredoc(cmd);
 	if (cmd->input_file > 0)
 		dup2(cmd->input_file, STDIN_FILENO);
 	if (cmd->output_file >= 0)

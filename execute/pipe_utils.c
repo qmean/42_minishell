@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 19:35:26 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:28 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 02:56:13 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,23 @@ void	dup_pipe(t_cmd *cur_cmd, t_cmd *prev_cmd)
 	if (prev_cmd == NULL)
 	{
 		dup2(cur_cmd->pipe[1], 1);
+		if (cur_cmd->input_file == 0)
+			close(STDIN_FILENO);
 	}
 	else if (cur_cmd->next != NULL)
 	{
-		dup2(prev_cmd->pipe[0], 0);
+		if (cur_cmd->input_file == 0)
+			close(STDIN_FILENO);
+		else
+			dup2(prev_cmd->pipe[0], 0);
 		dup2(cur_cmd->pipe[1], 1);
 	}
 	else
 	{
-		dup2(prev_cmd->pipe[0], 0);
+		if (cur_cmd->input_file == 0)
+			close(STDIN_FILENO);
+		else
+			dup2(prev_cmd->pipe[0], 0);
 		close(prev_cmd->pipe[0]);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:15:04 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	check_env(char *line, t_line *lines, int *i)
 {
 	char	*key;
 
-	key = ft_strdup("");
 	if (line[*i] == '$')
 	{
 		if ((lines->cmds->quote == 0) || (lines->cmds->quote == '\"'))
@@ -26,8 +25,10 @@ int	check_env(char *line, t_line *lines, int *i)
 				*i += 1;
 			else if (ft_isalnum(line[*i]) || line[*i] == '_')
 			{
+				key = ft_strdup("");
 				handle_underbar(line, i, &key);
 				get_env_value(key, lines);
+				free(key);
 			}
 			else
 			{

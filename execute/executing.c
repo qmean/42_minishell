@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 19:33:14 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:28 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 03:13:13 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ void	execute(t_line *line)
 	if (line->pipe_flag == 1)
 	{
 		do_pipe_cmd(line, line->first_cmd, NULL);
+		restore_stdio(line->first_cmd, stdout_copy, stdin_copy);
 	}
 	else
 	{
 		do_normal_cmd(line, line->first_cmd);
 		restore_stdio(line->first_cmd, stdout_copy, stdin_copy);
 	}
+	free_cmd(line);
 }
