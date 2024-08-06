@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   signal_hanlder.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:12:05 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:59:50 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	signal_handler(int signo)
 		{
 			ft_putchar_fd('\n', 1);
 			rl_on_new_line();
-							  // todo : makefile 설정시 추가           rl_replace_line("", 0); //버퍼를 비움
+			// rl_replace_line("", 0);
 			rl_redisplay();
 		}
 		else

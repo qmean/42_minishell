@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handler_env.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 04:15:04 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 05:09:57 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_env(char *line, t_line *lines, int *i)
 
 	if (line[*i] == '$')
 	{
-		if ((lines->cmds->quote == 0) || (lines->cmds->quote == '\"'))
+		if ((lines->cmds->quote == 0) && (line[*i + 1] != '\"')) 
 		{
 			*i += 1;
 			if (handle_special_characters(line, lines, i) == 1)
