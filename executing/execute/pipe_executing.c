@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:08:19 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/05 01:21:43 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/06 19:09:31 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	do_pipe_cmd(t_line *line, t_cmd *cur_cmd, t_cmd *prev_cmd)
 	if (pid == 0)
 	{
 		dup_pipe(cur_cmd, prev_cmd);
-		do_redirect_cmd(line, cur_cmd);
+		do_redirect_cmd(cur_cmd);
 		exec_cmd_pipe(line, cur_cmd);
 		exit(line->exit_flag);
 	}
@@ -39,6 +39,8 @@ void	do_pipe_cmd(t_line *line, t_cmd *cur_cmd, t_cmd *prev_cmd)
 		{
 			close_all_pipe(line);
 			waitpid(pid, &wait_status, 0);
+			if (WIFEXITED(wait_status))
+				line->exit_flag = WEXITSTATUS(wait_status);
 		}
 		do_pipe_cmd(line, cur_cmd->next, cur_cmd);
 	}

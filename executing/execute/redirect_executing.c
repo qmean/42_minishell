@@ -14,7 +14,7 @@
 
 void	do_heredoc(t_cmd *cmd);
 
-void	do_redirect_cmd(t_line *line, t_cmd *cmd)
+void	do_redirect_cmd(t_cmd *cmd)
 {
 	if (cmd->input_file == -2 && cmd->output_file == -2)
 		return ;

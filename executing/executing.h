@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/05 01:42:17 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/05 12:32:46 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,6 @@ char	**cmd_to_argv(t_cmd *cmd);
 char	**env_to_envp(t_env *env);
 void	do_pipe_cmd(t_line *line, t_cmd *cur_cmd, t_cmd *prev_cmd);
 
-void	do_redirect_cmd(t_line *line, t_cmd *cmd);
+void	do_redirect_cmd(t_cmd *cmd);
 void	restore_stdio(t_cmd *cmd, int stdout, int stdin);
 #endif

@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 22:09:01 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 02:13:54 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/06 19:05:50 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,32 @@ int	valid_exit_status(char *str);
 
 void	ft_exit(t_line *line, t_token *token)
 {
-	int	idx;
-
 	if (token_size(token) == 0)
-		line->exit_flag = 0;
-	idx = 0;
-	while (token != NULL)
+		exit(0);
+	else if (!valid_exit_status(token->data))
 	{
-		if (idx != 0)
-		{
-			ft_putstr_fd("minishell: exit: too many arguments\n", 2);
-			line->exit_flag = 1; // todo : fix exit flag
-			return ;
-		}
-		if (!valid_exit_status(token->data))
-		{
-			ft_putstr_fd("minishell: exit: ", 2);
-			ft_putstr_fd(token->data, 2);
-			ft_putstr_fd(": numeric argument required\n", 2);
-			line->exit_flag = 2; // todo : fix exit flag
-			return ;
-		}
-		idx++;
-		token = token->next;
+		ft_putstr_fd("exit\n", 2);
+		ft_putstr_fd("minishell: exit: ", 2);
+		ft_putstr_fd(token->data, 2);
+		ft_putstr_fd(": numeric argument required\n", 2);
+		exit(2);
 	}
+	else if (token_size(token) > 1)
+	{
+		ft_putstr_fd("exit\n", 2);
+		ft_putstr_fd("minishell: exit: too many arguments\n", 2);
+		line->exit_flag = 1;
+		return ;
+	}
+	else
+		exit(ft_atoi(token->data));
 }
 
 int	valid_exit_status(char *str)
 {
 	int	idx;
 
+	idx = 0;
 	while (str[idx] != '\0')
 	{
 		if (!ft_isdigit(str[idx]))
