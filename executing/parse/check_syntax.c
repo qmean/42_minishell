@@ -6,18 +6,18 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 01:53:41 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/06 15:45:57 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/08/06 18:58:57 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parsing.h"
 
-int check_syntax(t_line *lines)
+int	check_syntax(t_line *lines)
 {
-	t_cmd *cmd;
-	t_token *token;
-	t_token *tmp;
-	int ret;
+	t_cmd	*cmd;
+	t_token	*token;
+	t_token	*tmp;
+	int		ret;
 
 	cmd = lines->first_cmd;
 	while (cmd)
@@ -25,9 +25,9 @@ int check_syntax(t_line *lines)
 		token = cmd->first_token;
 		if ((token->data == NULL) && (lines->pipe_flag == 1))
 			return (error_syntax("|"));
-			ret = check_redir_token(cmd, token);
-			if (ret == -1)
-				return (ret);
+		ret = check_redir_token(cmd, token);
+		if (ret == -1)
+			return (ret);
 		remove_redir_token(cmd->first_token);
 		cmd = cmd->next;
 		if (lines->pipe_flag == 1)
@@ -67,16 +67,20 @@ void	remove_redir_token(t_token *token)
 	}
 }
 
-void remove_redir_token_move(t_token *tmp)
+void	remove_redir_token_move(t_token *tmp)
 {
 	tmp->next = tmp->next->next;
 	tmp->next->prev = tmp;
 }
 
+int	check_redir_token(t_cmd *cmd, t_token *token)
+{
+	int	ret;
 
-int	check_redir_token(t_cmd *cmd, t_token *token) {
-	while (token) {
-		if (token->redir != 0) {
+	while (token)
+	{
+		if (token->redir != 0)
+		{
 			if (token->next == NULL)
 				return (error_syntax(""));
 			else if (token->redir == 1)
@@ -89,18 +93,26 @@ int	check_redir_token(t_cmd *cmd, t_token *token) {
 				if (input_heredoc_redirection(cmd, token))
 					return (-1);
 			}
-			else if (token->redir == 3)
-			{
-				if (output_redirection(cmd, token))
-					return (-1);
-			}
-			else if (token->redir == 4)
-			{
-				if (output_append_redirection(cmd, token))
-					return (-1);
-			}
+			ret = check_redir_token2(cmd, token);
+			if (ret != 0)
+				return (0);
 		}
 		token = token->next;
+	}
+	return (0);
+}
+
+int	check_redir_token2(t_cmd *cmd, t_token *token)
+{
+	if (token->redir == 3)
+	{
+		if (output_redirection(cmd, token))
+			return (-1);
+	}
+	else if (token->redir == 4)
+	{
+		if (output_append_redirection(cmd, token))
+			return (-1);
 	}
 	return (0);
 }
