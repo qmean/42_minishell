@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:11:32 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/07/31 09:52:59 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/05 12:07:19 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	**cmd_to_argv(t_cmd *cmd)
 	char	**argv;
 	int		idx;
 
-	argv = (char **)malloc(sizeof(char *) * (token_size(cmd->tokens) + 1));
+	argv = (char **)malloc(sizeof(char *) * (token_size(cmd->first_token) + 1));
 	if (argv == NULL)
 		exit(1);
 	idx = 0;

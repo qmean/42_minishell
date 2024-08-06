@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 01:39:17 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 01:50:56 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/06 20:27:04 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,22 @@ void	do_no_value(t_line *line, char *arg)
 {
 	t_env	*env;
 	char	*empty_value;
+	char	*key;
 
-	env = find_env_with_key(line, arg);
+	key = ft_substr(arg, 0, ft_strlen(arg) - 1);
+	env = find_env_with_key(line, key);
 	empty_value = ft_strdup("");
 	if (empty_value == NULL)
-		exit(1); // todo : malloc error 추가
+		exit(1);
 	if (env == NULL)
-		new_env(line, arg, empty_value);
+	{
+		new_env(line, key, empty_value);
+		free(key);
+		free(empty_value);
+	}
 	else
 	{
+		free(key);
 		free(env->value);
 		env->value = empty_value;
 	}
@@ -36,6 +43,8 @@ void	do_plus(t_line *line, char *arg)
 
 	splited = export_split(arg, "+=");
 	add_env_value(line, splited[0], splited[1]);
+	free(splited[0]);
+	free(splited[1]);
 	free(splited);
 }
 

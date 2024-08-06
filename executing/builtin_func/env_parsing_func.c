@@ -6,7 +6,7 @@
 /*   By: kyuminkim <kyuminkim@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 17:39:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/06/19 01:28:23 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/06 20:25:15 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,6 @@ void	add_env_value(t_line *line, char *key, char *value)
 	new_value = ft_strcat(env->value, value);
 	if (new_value == NULL)
 		exit(1); // todo : 에러 처리 추가
-	free(value);
-	free(env->value);
 	env->value = new_value;
 }
 
@@ -68,9 +66,11 @@ void	new_env(t_line *line, char *key, char *value)
 
 	new = (t_env *)malloc(sizeof(t_env));
 	if (new == NULL)
-		exit(1); // todo : 에러 처리 추가
-	new->key = key;
-	new->value = value;
+		exit(1);
+	new->key = ft_strdup(key);
+	new->value = ft_strdup(value);
+	if (new->key == NULL || new->value == NULL)
+		exit(1);
 	if (line->env == NULL)
 	{
 		line->env = new;
