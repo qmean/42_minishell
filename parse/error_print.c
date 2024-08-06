@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_print.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 04:23:46 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 02:53:55 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int	error_syntax(char *c)
 int	error_nofile(char *c)
 {
 	ft_putstr_fd(c, 2);
-	ft_putstr_fd(": No such file or directory", 2);
+	ft_putstr_fd("minishell: No such file or directory\n", 2);
 	return (-1);
 }
