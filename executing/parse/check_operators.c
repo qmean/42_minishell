@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 01:11:44 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/06 17:20:16 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/08/06 17:46:25 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,37 +56,41 @@ int	check_space(char *line, t_cmd *cmd, int *i)
 	return (0);
 }
 
-int check_redir(char *line, t_line *lines, int *i) {
-  int ret;
+int	check_redir(char *line, t_line *lines, int *i)
+{
+	int	ret;
 
-  ret = check_redir_right(line, lines, i);
-  if (ret != 0)
-    return (ret);
-  ret = check_redir_left(line, lines, i);
-  return (ret);
+	ret = check_redir_right(line, lines, i);
+	if (ret != 0)
+		return (ret);
+	ret = check_redir_left(line, lines, i);
+	return (ret);
 }
 
-int check_redir_right(char *line, t_line *lines, int *i) {
-  int ret;
+int	check_redir_right(char *line, t_line *lines, int *i)
+{
+	int	ret;
 
-  if ((lines->cmds->quote == 0) && (line[*i] == '>')) {
-    *i += 1;
-    if (lines->cmds->buf != NULL)
-      add_token(lines->cmds);
-    lines->cmds->tokens->redir = 3;
-    if (line[*i] == '>') {
-      *i += 1;
-      lines->cmds->tokens->redir = 4;
-      ret = check_redir_syntax1(line, *i);
-      if (ret)
-        return (ret);
-    }
-    ret = check_redir_syntax3(line, i);
-    if (ret)
-      return (ret);
-    return (1);
-  }
-  return (0);
+	if ((lines->cmds->quote == 0) && (line[*i] == '>'))
+	{
+		*i += 1;
+		if (lines->cmds->buf != NULL)
+			add_token(lines->cmds);
+		lines->cmds->tokens->redir = 3;
+		if (line[*i] == '>')
+		{
+			*i += 1;
+			lines->cmds->tokens->redir = 4;
+			ret = check_redir_syntax1(line, *i);
+			if (ret)
+				return (ret);
+		}
+		ret = check_redir_syntax3(line, i);
+		if (ret)
+			return (ret);
+		return (1);
+	}
+	return (0);
 }
 
 int	check_redir_left(char *line, t_line *lines, int *i)
@@ -102,7 +106,7 @@ int	check_redir_left(char *line, t_line *lines, int *i)
 			*i += 1;
 			lines->cmds->tokens->redir = 2;
 			if (line[*i] == '<')
-				return check_redir_syntax4(line, i);
+				return (check_redir_syntax4(line, i));
 			if (line[*i] == '>')
 				return (error_syntax(">"));
 		}

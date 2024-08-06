@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/06 15:50:46 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/08/06 17:50:49 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,23 +63,26 @@ void	get_env_value(char *key, t_line *line)
 		line->cmds->buf = ft_strjoin_free(line->cmds->buf, '\0');
 }
 
-int handle_special_characters(char *line, t_line *lines, int *i)
+int	handle_special_characters(char *line, t_line *lines, int *i)
 {
 	if (line[*i] == '$')
 	{
 		lines->cmds->buf = ft_strcat(lines->cmds->buf, ft_itoa(getpid()));
-		return 1;
+		return (1);
 	}
 	else if (line[*i] == '?')
 	{
-		lines->cmds->buf = ft_strcat(lines->cmds->buf, ft_itoa(lines->exit_flag));
-		return 1;
+		lines->cmds->buf \
+		= ft_strcat(lines->cmds->buf, ft_itoa(lines->exit_flag));
+		return (1);
 	}
-	return 0;
+	return (0);
 }
 
-void handle_underbar(char *line, int *i, char **key) {
-	while (ft_isalnum(line[*i]) || line[*i] == '_') {
+void	handle_underbar(char *line, int *i, char **key)
+{
+	while (ft_isalnum(line[*i]) || line[*i] == '_')
+	{
 		*key = ft_strjoin_free(*key, line[*i]);
 		*i += 1;
 	}
