@@ -1,11 +1,11 @@
 # Compiler and flags
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 LREADLINE = -lreadline
+
 NAME = minishell
 LIBFT = libft.a
-# Source files
-# delete test.c later
+
 SRCS = main.c \
 		execute/executing.c \
 		execute/executing_bin.c \
@@ -27,7 +27,6 @@ SRCS = main.c \
 		parse/parsing_utils.c \
 		parse/redir.c \
 		parse/signal_hanlder.c \
-		parse/test.c \
 		parse/tokeniz.c \
 		utils/free_env.c \
 		utils/ft_strcmp.c \
@@ -95,10 +94,9 @@ LIBFTSRCS = libft/ft_atoi.c \
 		libft/ft_toupper.c
 LIBFTOBJS = $(LIBFTSRCS:%.c=%.o)
 
-# Default target
 all: $(NAME)
 
-$(NAME):$(OBJS) $(LIBFT)
+$(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) -o $@ $^ $(LIBFT) $(LREADLINE)
 
 $(LIBFT): $(LIBFTOBJS)

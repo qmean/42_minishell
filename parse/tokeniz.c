@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 00:45:53 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 04:17:46 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:59:22 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	tokenize_main(char *line, t_line *lines)
 	int	i;
 	int	ret;
 
+	init(lines);
 	i = 0;
 	while (line[i])
 	{

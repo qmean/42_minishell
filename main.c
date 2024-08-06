@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 04:22:21 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 05:04:02 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,16 @@ char	**env_split(char *str);
 t_line	*init_line(void);
 void	free_lines(t_line *line);
 
-void leak_check(void)
-{
-	system("leaks minishell");
-}
-
 int	main(int argc, char **argv, char **envp)
 {
 	char			*line;
 	struct termios	term;
 	t_line			*cmd_line;
 
-	atexit(leak_check);
-	argv[argc -1] = NULL;
+	if (argc != 1 || argv[1] != NULL)
+		print_error("main", NULL, "argument error");
 	cmd_line = init_line();
 	parse_envp(cmd_line, envp);
-	envp = NULL;
 	tcgetattr(0, &term);
 	set_signal();
 	line = readline("minishell$ ");
@@ -40,11 +34,9 @@ int	main(int argc, char **argv, char **envp)
 	{
 		if ((line[0] != '\0') && (!iswhitespace(line)))
 		{
-			init(cmd_line);
 			add_history(line);
 			tokenize_main(line, cmd_line);
 			execute(cmd_line);
-			free_cmd(cmd_line);
 		}
 		free(line);
 		line = readline("minishell$ ");

@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:12:05 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:56:32 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	signal_handler(int signo)
 	pid_t	pid;
 
 	sigint_printc_off();
+	rl_replace_line("", 0);
 	pid = waitpid(-1, NULL, WNOHANG);
 	if (signo == SIGINT)
 	{
@@ -30,7 +31,7 @@ void	signal_handler(int signo)
 		{
 			ft_putchar_fd('\n', 1);
 			rl_on_new_line();
-							  // todo : makefile 설정시 추가           rl_replace_line("", 0); //버퍼를 비움
+			rl_replace_line("", 0);
 			rl_redisplay();
 		}
 		else
