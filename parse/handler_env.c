@@ -6,7 +6,7 @@
 /*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 00:05:42 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 05:09:57 by jammin           ###   ########.fr       */
+/*   Updated: 2024/08/07 05:34:06 by jammin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_env(char *line, t_line *lines, int *i)
 
 	if (line[*i] == '$')
 	{
-		if ((lines->cmds->quote == 0) && (line[*i + 1] != '\"')) 
+		if ((lines->cmds->quote == 0) && (line[*i + 1] != '\"'))
 		{
 			*i += 1;
 			if (handle_special_characters(line, lines, i) == 1)
@@ -36,6 +36,13 @@ int	check_env(char *line, t_line *lines, int *i)
 				return (0);
 			}
 			return (1);
+		}
+		if (line[*i + 1] == '\"')
+		{
+			if (lines->cmds->quote == '\"')
+				lines->cmds->buf = ft_strcat(lines->cmds->buf, "$");
+			*i += 1;
+			check_bigquote(line, lines->cmds, i);
 		}
 	}
 	return (0);
