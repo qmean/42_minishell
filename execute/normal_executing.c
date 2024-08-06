@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:10:51 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 04:34:13 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 06:06:26 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	do_normal_cmd(t_line *line, t_cmd *cmd)
 	char	**argv;
 	char	**envp;
 
+	if (cmd->input_file == 0)
+		do_heredoc(cmd);
 	do_redirect_cmd(cmd);
 	cmd_def = isbuiltin(cmd);
 	if (cmd_def)
