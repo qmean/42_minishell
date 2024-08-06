@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 17:39:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:43 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 01:54:25 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	add_env_value(t_line *line, char *key, char *value)
 {
 	t_env	*env;
 	char	*new_value;
+	char	*tmp;
 
 	env = find_env_with_key(line, key);
 	if (env == NULL)
@@ -54,10 +55,13 @@ void	add_env_value(t_line *line, char *key, char *value)
 		new_env(line, key, value);
 		return ;
 	}
-	new_value = ft_strcat(env->value, value);
+	tmp = ft_strdup(env->value);
+	new_value = ft_strcat(tmp, value);
 	if (new_value == NULL)
 		exit(1);
+	tmp = env->value;
 	env->value = new_value;
+	free(tmp);
 }
 
 void	new_env(t_line *line, char *key, char *value)

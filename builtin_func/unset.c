@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:17:56 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:14:59 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 02:19:16 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	unset(t_line *line, t_token *token)
 
 int	check_unset(char *arg)
 {
-	if (arg != NULL)
+	if (!ft_isalpha(*arg) && *arg != '_')
 		return (0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 23:40:35 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:14:33 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 01:54:54 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	**value_split(char *str)
 	cnt = 0;
 	while (str[idx] != '\0')
 	{
-		len = count_length(str+idx);
+		len = count_length(str + idx);
 		if (len == 0)
 			ret[cnt] = ft_strdup("");
 		else

@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:12:25 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 01:58:21 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,13 @@ char	**env_split(char *str)
 void	parse_envp(t_line *line, char **envp)
 {
 	char	**split;
+	int		idx;
 
-	while (*envp)
+	idx = 0;
+	while (envp[idx] != NULL)
 	{
-		split = env_split(*envp);
+		split = env_split(envp[idx]);
 		new_env(line, split[0], split[1]);
-		envp++;
+		idx++;
 	}
 }
