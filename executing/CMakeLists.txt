@@ -19,7 +19,8 @@ file(GLOB SRCS
 )
 
 # 소스 파일 목록
-set(SRCS ${SRCS})
+set(SRCS ${SRCS}
+        parse/check_redir_error.c)
 
 # 인클루드 디렉토리 설정
 include_directories(

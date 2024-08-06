@@ -109,5 +109,9 @@ int		input_heredoc_redirection(t_cmd *cmds, t_token *token);
 void	remove_redir_token(t_token *token);
 int	handle_special_characters(char *line, t_line *lines, int *i);
 void	handle_underbar(char *line, int *i, char **key);
+int	check_redir_syntax1(char *line, int i);
+int	check_redir_syntax2(char *line, int *i);
+int	check_redir_syntax3(char *line, int *i);
+int	check_redir_syntax4(char *line, int *i);
 
 #endif

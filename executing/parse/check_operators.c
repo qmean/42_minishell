@@ -56,60 +56,37 @@ int	check_space(char *line, t_cmd *cmd, int *i)
 	return (0);
 }
 
-int	check_redir(char *line, t_line *lines, int *i)
-{
-	int	ret;
+int check_redir(char *line, t_line *lines, int *i) {
+  int ret;
 
-	ret = check_redir_right(line, lines, i);
-	if (ret != 0)
-		return (ret);
-	ret = check_redir_left(line, lines, i);
-	return (ret);
+  ret = check_redir_right(line, lines, i);
+  if (ret != 0)
+    return (ret);
+  ret = check_redir_left(line, lines, i);
+  return (ret);
 }
 
-int	check_redir_right(char *line, t_line *lines, int *i)
-{
-	if ((lines->cmds->quote == 0) && (line[*i] == '>'))
-	{
-		*i += 1;
-		if (lines->cmds->buf != NULL)
-			add_token(lines->cmds);
-		lines->cmds->tokens->redir = 3;
-		if (line[*i] == '>')
-		{
-			*i += 1;
-			lines->cmds->tokens->redir = 4;
-			if (line[*i] == '>')
-			{
-				if (line[*i + 1] == '>')
-					return (error_syntax(">>"));
-				if (line[*i + 1] == '|')
-					return (error_syntax(">|"));
-				return (error_syntax(">"));
-			}
-			if (line[*i] == '|')
-				return (error_syntax("|"));
-		}
-		if (line[*i] == '<')
-		{
-			*i += 1;
-			if (line[*i] == '<')
-			{
-				while (line[*i] == ' ')
-					*i += 1;
-				if (line[*i + 1] == '<')
-					return (error_syntax("<<<"));
-				return (error_syntax("<<"));
-			}
-			if (line[*i] == '>')
-				return (error_syntax("<>"));
-			return (error_syntax("<"));
-		}
-		if (line[*i] == '|')
-			return (error_syntax(""));
-		return (1);
-	}
-	return (0);
+int check_redir_right(char *line, t_line *lines, int *i) {
+  int ret;
+
+  if ((lines->cmds->quote == 0) && (line[*i] == '>')) {
+    *i += 1;
+    if (lines->cmds->buf != NULL)
+      add_token(lines->cmds);
+    lines->cmds->tokens->redir = 3;
+    if (line[*i] == '>') {
+      *i += 1;
+      lines->cmds->tokens->redir = 4;
+      ret = check_redir_syntax1(line, *i);
+      if (ret)
+        return (ret);
+    }
+    ret = check_redir_syntax3(line, i);
+    if (ret)
+      return (ret);
+    return (1);
+  }
+  return (0);
 }
 
 int	check_redir_left(char *line, t_line *lines, int *i)
@@ -125,25 +102,7 @@ int	check_redir_left(char *line, t_line *lines, int *i)
 			*i += 1;
 			lines->cmds->tokens->redir = 2;
 			if (line[*i] == '<')
-			{
-				if (line[*i + 1] == '<')
-				{
-					if (line[*i + 2] == '<')
-					{
-						if (line[*i + 3] == '<')
-							return (error_syntax("<<<"));
-						return (error_syntax("<<"));
-					}
-					if (line[*i + 2] == '>')
-						return (error_syntax("<>"));
-					return (error_syntax("<"));
-				}
-				if (line[*i + 1] == '>')
-					return (error_syntax(">"));
-				if (line[*i + 1] == '|')
-					return (error_syntax("|"));
-				return (0);
-			}
+				return check_redir_syntax4(line, i);
 			if (line[*i] == '>')
 				return (error_syntax(">"));
 		}
