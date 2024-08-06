@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 20:32:48 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 03:37:01 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 05:41:53 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,4 +192,5 @@ void	restore_stdio(t_cmd *cmd, int stdout, int stdin);
 
 t_env	*env_dup(char *key, char *value);
 void	do_heredoc(t_cmd *cmd);
+int		handle_env(char *line, t_line *lines, int *i);
 #endif
