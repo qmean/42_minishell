@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 00:45:53 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 04:59:22 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 06:34:44 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	check_issue(char *line, t_line *lines, int *i)
 {
 	int	ret;
 
-	ret = check_quote(line, lines->cmds, i);
+	ret = check_env(line, lines, i);
 	if (ret != 0)
 		return (ret);
 	ret = check_space(line, lines->cmds, i);
@@ -50,7 +50,7 @@ int	check_issue(char *line, t_line *lines, int *i)
 	ret = check_pipe(line, lines, i);
 	if (ret != 0)
 		return (ret);
-	ret = check_env(line, lines, i);
+	ret = check_quote(line, lines->cmds, i);
 	if (ret != 0)
 		return (ret);
 	ret = check_redir(line, lines, i);
