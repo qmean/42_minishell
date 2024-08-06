@@ -1,13 +1,37 @@
 {
-<<<<<<< HEAD
   "files.associations": {
-    "executing.h": "c"
-  }
+    "minishell.h": "c",
+    "libft.h": "c",
+    "stdlib.h": "c",
+    "__bit_reference": "c",
+    "__functional_base": "c",
+    "__node_handle": "c",
+    "algorithm": "c",
+    "atomic": "c",
+    "bitset": "c",
+    "chrono": "c",
+    "__memory": "c",
+    "functional": "c",
+    "iterator": "c",
+    "limits": "c",
+    "locale": "c",
+    "memory": "c",
+    "optional": "c",
+    "ratio": "c",
+    "system_error": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "vector": "c"
+  },
+  "cSpell.words": [
+    "BECHO",
+    "BENV",
+    "BEXIT",
+    "BEXPORT",
+    "BPWD",
+    "BUNSET",
+    "isbuiltin",
+    "kyumkim",
+    "putstr"
+  ]
 }
-=======
-    "files.associations": {
-        "libft.h": "c",
-        "parsing.h": "c"
-    }
-}
->>>>>>> main

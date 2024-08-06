@@ -1,3 +1,0 @@
-/Users/jammin/minishell/build/CMakeFiles/mini_shell.dir
-/Users/jammin/minishell/build/CMakeFiles/edit_cache.dir
-/Users/jammin/minishell/build/CMakeFiles/rebuild_cache.dir
