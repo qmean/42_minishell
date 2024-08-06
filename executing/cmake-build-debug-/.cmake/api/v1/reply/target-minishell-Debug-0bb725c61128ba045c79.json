@@ -27,19 +27,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 37,
+				"line" : 38,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 31,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 40,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
@@ -51,7 +51,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 25,
+				"line" : 26,
 				"parent" : 0
 			}
 		]
@@ -379,6 +379,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "parse/check_redir_error.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "parse/check_syntax.c",
 			"sourceGroupIndex" : 0
 		},
@@ -434,12 +440,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "parse/signal_hanlder.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "parse/syntax_utils.c",
 			"sourceGroupIndex" : 0
 		},
 		{

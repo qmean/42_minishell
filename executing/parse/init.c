@@ -12,7 +12,7 @@
 
 #include "parsing.h"
 
-void    init(t_line *lines)
+void	init(t_line *lines)
 {
     lines->cmds = make_cmd();
     lines->first_cmd = lines->cmds;

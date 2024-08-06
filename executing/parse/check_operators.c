@@ -3,56 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   check_operators.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jammin <jammin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 01:11:44 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/07/31 10:55:20 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/06 17:46:25 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parsing.h"
 
-int check_pipe(char *line, t_line *lines, int *i) {
-	if (line[*i] == '|') {
-		if (lines->cmds->quote == 0) {
-			line[*i] = '\0'; // 라인을 끊은 뒤 명령어 뭉치로 저장
-			if (lines->cmds->buf != NULL) // 버퍼에 내용이 있으면 토큰으로 추가
+int	check_pipe(char *line, t_line *lines, int *i)
+{
+	if (line[*i] == '|')
+	{
+		if (lines->cmds->quote == 0)
+		{
+			line[*i] = '\0';
+			if (lines->cmds->buf != NULL)
 				add_token(lines->cmds);
-			lines->pipe_flag = 1; // 파이프 플래그 설정
-			add_cmd(lines); // 새로운 명령어 뭉치 생성
+			lines->pipe_flag = 1;
+			add_cmd(lines);
 			*i += 1;
-			if (line[*i] == '|') // 파이프 연속으로 나오는 경우
+			if (line[*i] == '|')
 			{
-				if ((line[*i + 2] == '|') && (line[*i + 1] == '|')) // ||||이면 ||로 에러 처리
+				if ((line[*i + 2] == '|') && (line[*i + 1] == '|'))
 					return (error_syntax("||"));
-				if (line[*i + 1] == '|') // |||이면 |로 에러 처리
+				if (line[*i + 1] == '|')
 					return (error_syntax("|"));
-				*i += 1; // ||이면 다음으로 넘어감
+				*i += 1;
 			}
 			return (1);
 		}
-		// 따옴표가 열려있는 경우 버퍼에 추가
 	}
 	return (0);
 }
 
-int check_space(char *line, t_cmd *cmd, int *i) {
-	if (line[*i] == ' ') {
-		if (cmd->quote == 0) // 따옴표가 열려있지 않은 경우
+int	check_space(char *line, t_cmd *cmd, int *i)
+{
+	if (line[*i] == ' ')
+	{
+		if (cmd->quote == 0)
 		{
-			if (cmd->buf != NULL) // 버퍼에 내용이 있으면 토큰으로 추가 없으면 넘어감
+			if (cmd->buf != NULL)
 			{
-				cmd->tokens->isspace = 1; // 마지막에 space로 토큰을 나누었을 경우
+				cmd->tokens->isspace = 1;
 				add_token(cmd);
 			}
 			*i += 1;
 			return (1);
 		}
 	}
-	return (0); // 따옴표가 열려있는 경우 버퍼에 추가
+	return (0);
 }
 
-int check_redir(char *line, t_line *lines, int *i)
+int	check_redir(char *line, t_line *lines, int *i)
 {
 	int	ret;
 
@@ -65,45 +69,25 @@ int check_redir(char *line, t_line *lines, int *i)
 
 int	check_redir_right(char *line, t_line *lines, int *i)
 {
-	if ((lines->pipe_flag == 0) && (line[*i] == '>'))
+	int	ret;
+
+	if ((lines->cmds->quote == 0) && (line[*i] == '>'))
 	{
 		*i += 1;
 		if (lines->cmds->buf != NULL)
-			add_token(lines->cmds); // 리다이렉션 앞부분을 토큰으로 분리
-		lines->cmds->tokens->redir = 1; // 리다이렉션 플래그 설정
+			add_token(lines->cmds);
+		lines->cmds->tokens->redir = 3;
 		if (line[*i] == '>')
 		{
 			*i += 1;
-			lines->cmds->tokens->redir = 2; // 리다이렉션 플래그 설정
-			if (line[*i] == '>')
-			{
-				if (line[*i + 1] == '>')
-					return (error_syntax(">>")); // >>>> 에러 처리
-				if (line[*i + 1] == '|')
-					return (error_syntax(">|")); // >>>| 에러 처리
-				return (error_syntax(">")); // >>> 에러 처리
-			}
-			if (line[*i] == '|') // >>| 에러 처리
-				return (error_syntax("|"));
+			lines->cmds->tokens->redir = 4;
+			ret = check_redir_syntax1(line, *i);
+			if (ret)
+				return (ret);
 		}
-		if (line[*i] == '<') // >< 에러 처리
-		{
-			*i += 1;
-			if (line[*i] == '<') // ><< 에러 처리
-			{
-				while (line[*i] == ' ')
-					*i += 1;
-				if (line[*i + 1] == '<') // ><<< 에러 처리
-					return (error_syntax("<<<"));
-				return (error_syntax("<<"));
-			}
-			if (line[*i] == '>') // ><> 에러 처리
-				return (error_syntax("<>"));
-			return (error_syntax("<"));
-		}
-
-		if (line[*i] == '|') // >| 에러 처리 -> newline
-			return (error_syntax(""));
+		ret = check_redir_syntax3(line, i);
+		if (ret)
+			return (ret);
 		return (1);
 	}
 	return (0);
@@ -116,35 +100,17 @@ int	check_redir_left(char *line, t_line *lines, int *i)
 		*i += 1;
 		if (lines->cmds->buf != NULL)
 			add_token(lines->cmds);
-		lines->cmds->tokens->redir = 3;
+		lines->cmds->tokens->redir = 1;
 		if (line[*i] == '<')
 		{
 			*i += 1;
-			lines->cmds->tokens->redir = 4;
+			lines->cmds->tokens->redir = 2;
 			if (line[*i] == '<')
-			{
-				if (line[*i + 1] == '<') // <<<< 에러 처리
-				{
-					if (line[*i + 2] == '<') // <<<<< 에러 처리
-					{
-						if (line[*i + 3] == '<') // <<<<<< 에러 처리
-							return (error_syntax("<<<"));
-						return (error_syntax("<<"));
-					}
-					if (line[*i + 2] == '>')
-						return (error_syntax("<>"));
-					return (error_syntax("<"));
-				}
-				if (line[*i + 1] == '>') // <<<> 에러 처리
-					return (error_syntax(">"));
-				if (line[*i + 1] == '|')
-					return (error_syntax("|"));
-				return (0);
-			}
-			if (line[*i] == '>') // <<> 에러 처리
+				return (check_redir_syntax4(line, i));
+			if (line[*i] == '>')
 				return (error_syntax(">"));
 		}
-		if (line[*i] == '|') // <| <<| 에러 처리
+		if (line[*i] == '|')
 			return (error_syntax("|"));
 		return (1);
 	}
