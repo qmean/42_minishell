@@ -6,7 +6,7 @@
 /*   By: jaemikim <imyourdata@soongsil.ac.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 00:58:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/06 17:52:12 by jaemikim         ###   ########.fr       */
+/*   Updated: 2024/08/06 18:53:04 by jaemikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,7 @@ int		check_redir_syntax1(char *line, int i);
 int		check_redir_syntax2(char *line, int *i);
 int		check_redir_syntax3(char *line, int *i);
 int		check_redir_syntax4(char *line, int *i);
+void	remove_redir_token_move(t_token *tmp);
+int		check_redir_token(t_cmd *cmd, t_token *token);
 
 #endif

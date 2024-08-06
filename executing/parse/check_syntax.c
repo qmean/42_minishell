@@ -12,11 +12,12 @@
 
 #include "parsing.h"
 
-int	check_syntax(t_line *lines)
+int check_syntax(t_line *lines)
 {
-	t_cmd	*cmd;
-	t_token	*token;
-	t_token	*tmp;
+	t_cmd *cmd;
+	t_token *token;
+	t_token *tmp;
+	int ret;
 
 	cmd = lines->first_cmd;
 	while (cmd)
@@ -24,35 +25,9 @@ int	check_syntax(t_line *lines)
 		token = cmd->first_token;
 		if ((token->data == NULL) && (lines->pipe_flag == 1))
 			return (error_syntax("|"));
-		while (token)
-		{
-			if (token->redir != 0)
-			{
-				if (token->next == NULL)
-					return (error_syntax(""));
-				else if (token->redir == 1)
-				{
-					if (input_redirection(cmd, token))
-						return (-1);
-				}
-				else if (token->redir == 2)
-				{
-					if (input_heredoc_redirection(cmd, token))
-						return (-1);
-				}
-				else if (token->redir == 3)
-				{
-					if (output_redirection(cmd, token))
-						return (-1);
-				}
-				else if (token->redir == 4)
-				{
-					if (output_append_redirection(cmd, token))
-						return (-1);
-				}
-			}
-			token = token->next;
-		}
+			ret = check_redir_token(cmd, token);
+			if (ret == -1)
+				return (ret);
 		remove_redir_token(cmd->first_token);
 		cmd = cmd->next;
 		if (lines->pipe_flag == 1)
@@ -81,10 +56,7 @@ void	remove_redir_token(t_token *token)
 				tmp = tmp->prev;
 				free_token = tmp->next;
 				if (tmp->next->next != NULL)
-				{
-					tmp->next = tmp->next->next;
-					tmp->next->prev = tmp;
-				}
+					remove_redir_token_move(tmp);
 				else
 					tmp->next = NULL;
 				free(free_token->data);
@@ -93,4 +65,42 @@ void	remove_redir_token(t_token *token)
 		}
 		token = token->next;
 	}
+}
+
+void remove_redir_token_move(t_token *tmp)
+{
+	tmp->next = tmp->next->next;
+	tmp->next->prev = tmp;
+}
+
+
+int	check_redir_token(t_cmd *cmd, t_token *token) {
+	while (token) {
+		if (token->redir != 0) {
+			if (token->next == NULL)
+				return (error_syntax(""));
+			else if (token->redir == 1)
+			{
+				if (input_redirection(cmd, token))
+					return (-1);
+			}
+			else if (token->redir == 2)
+			{
+				if (input_heredoc_redirection(cmd, token))
+					return (-1);
+			}
+			else if (token->redir == 3)
+			{
+				if (output_redirection(cmd, token))
+					return (-1);
+			}
+			else if (token->redir == 4)
+			{
+				if (output_append_redirection(cmd, token))
+					return (-1);
+			}
+		}
+		token = token->next;
+	}
+	return (0);
 }
