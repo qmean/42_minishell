@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:11:32 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:28 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:35:22 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	**env_to_envp(t_env *env)
 {
 	char	**envp;
+	char	*tmp;
 	t_env	*env_iter;
 	int		idx;
 
@@ -25,10 +26,11 @@ char	**env_to_envp(t_env *env)
 	env_iter = env;
 	while (env_iter != NULL)
 	{
-		envp[idx] = ft_strjoin(env_iter->key, "=");
-		if (envp[idx] == NULL)
+		tmp = ft_strjoin(env_iter->key, "=");
+		if (tmp == NULL)
 			exit(1);
-		envp[idx] = ft_strjoin(envp[idx], env_iter->value);
+		envp[idx] = ft_strjoin(tmp, env_iter->value);
+		free(tmp);
 		if (envp[idx] == NULL)
 			exit(1);
 		idx++;

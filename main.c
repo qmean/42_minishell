@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 16:28:43 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:58:21 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:22:21 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,24 @@
 void	parse_envp(t_line *line, char **envp);
 char	**env_split(char *str);
 t_line	*init_line(void);
+void	free_lines(t_line *line);
+
+void leak_check(void)
+{
+	system("leaks minishell");
+}
 
 int	main(int argc, char **argv, char **envp)
 {
 	char			*line;
 	struct termios	term;
-	t_line			*cmds;
+	t_line			*cmd_line;
 
+	atexit(leak_check);
 	argv[argc -1] = NULL;
-	cmds = init_line();
-	parse_envp(cmds, envp);
+	cmd_line = init_line();
+	parse_envp(cmd_line, envp);
+	envp = NULL;
 	tcgetattr(0, &term);
 	set_signal();
 	line = readline("minishell$ ");
@@ -32,16 +40,16 @@ int	main(int argc, char **argv, char **envp)
 	{
 		if ((line[0] != '\0') && (!iswhitespace(line)))
 		{
-			init(cmds);
+			init(cmd_line);
 			add_history(line);
-			tokenize_main(line, cmds);
-			print_cmd(cmds);
-			execute(cmds);
-			free_cmd(cmds);
+			tokenize_main(line, cmd_line);
+			execute(cmd_line);
+			free_cmd(cmd_line);
 		}
 		free(line);
 		line = readline("minishell$ ");
 	}
+	free_lines(cmd_line);
 	sig_term_handler();
 	tcsetattr(0, TCSANOW, &term);
 }
@@ -92,6 +100,15 @@ void	parse_envp(t_line *line, char **envp)
 	{
 		split = env_split(envp[idx]);
 		new_env(line, split[0], split[1]);
+		free(split[0]);
+		free(split[1]);
+		free(split);
 		idx++;
 	}
+}
+
+void	free_lines(t_line *line)
+{
+	free_env(line->env);
+	free(line);
 }

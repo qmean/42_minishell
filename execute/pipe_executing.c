@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:08:19 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:14:03 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 02:50:29 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	do_pipe_cmd(t_line *line, t_cmd *cur_cmd, t_cmd *prev_cmd)
 	pid = fork();
 	if (pid == 0)
 	{
+		if (cur_cmd->input_file == 0)
+			do_heredoc(cur_cmd);
 		dup_pipe(cur_cmd, prev_cmd);
 		do_redirect_cmd(cur_cmd);
 		exec_cmd_pipe(line, cur_cmd);

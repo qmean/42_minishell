@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 17:39:06 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:54:25 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 03:26:46 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void	new_env(t_line *line, char *key, char *value)
 		exit(1);
 	if (line->env == NULL)
 	{
+		new->next = NULL;
 		line->env = new;
 		return ;
 	}

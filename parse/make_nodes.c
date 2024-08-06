@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 23:55:18 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:16:26 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_cmd	*make_cmd(void)
 	new->output_file = -2;
 	new->tokens = make_token();
 	new->first_token = new->tokens;
-	new->env = NULL;
+	new->heredoc_str = NULL;
 	new->next = NULL;
 	return (new);
 }

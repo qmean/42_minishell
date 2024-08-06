@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 01:39:17 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:43 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:25:13 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void	do_change(t_line *line, char *arg)
 	if (env == NULL)
 	{
 		new_env(line, splited[0], splited[1]);
+		free(splited[0]);
+		free(splited[1]);
 	}
 	else
 	{

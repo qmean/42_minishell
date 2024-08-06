@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 01:12:05 by kyumkim           #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:28 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:31:02 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void	execute_bin(t_line *line, t_cmd *cmd, char **argv, char **envp)
 	}
 	if (path == NULL)
 	{
-		print_error(cmd->first_token->data, NULL, "command not found");
+		ft_putstr_fd("minishell: ", 2);
+		ft_putstr_fd(cmd->first_token->data, 2);
+		ft_putstr_fd(": command not found\n", 2);
 		exit(126);
 	}
 	execve(path, argv, envp);
-	print_error(cmd->first_token->data, NULL, "command not found");
-	exit(126);
 }
 
 char	*check_and_put_path(char *dir_path, char *cmd)

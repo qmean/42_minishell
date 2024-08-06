@@ -6,7 +6,7 @@
 /*   By: kyumkim <kyumkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 00:33:40 by jaemikim          #+#    #+#             */
-/*   Updated: 2024/08/07 01:13:35 by kyumkim          ###   ########.fr       */
+/*   Updated: 2024/08/07 04:05:41 by kyumkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,33 @@ void	add_token(t_cmd *cmd)
 
 void	add_cmd(t_line *lines)
 {
+	if (lines->cmds == NULL)
+	{
+		lines->cmds = make_cmd();
+		lines->first_cmd = lines->cmds;
+		lines->cmds->tokens = make_token();
+		lines->cmds->first_token = lines->cmds->tokens;
+		return ;
+	}
 	lines->cmds->next = make_cmd();
 	lines->cmds = lines->cmds->next;
-	lines->cmds->tokens = make_token();
-	lines->cmds->first_token = lines->cmds->tokens;
 }
 
 void	free_cmd(t_line *lines)
 {
 	t_cmd	*tmp;
+	t_cmd	*free_cmd;
 
-	lines->cmds = lines->first_cmd;
-	while (lines->cmds)
+	free_cmd = lines->first_cmd;
+	while (free_cmd)
 	{
-		tmp = lines->cmds->next;
-		free_token(lines->cmds->first_token);
-		free(lines->cmds);
-		lines->cmds = tmp;
+		tmp = free_cmd->next;
+		free_token(free_cmd->first_token);
+		free(free_cmd->buf);
+		if (free_cmd->heredoc_str != NULL)
+			free(free_cmd->heredoc_str);
+		free(free_cmd);
+		free_cmd = tmp;
 	}
 	lines->cmds = NULL;
 	lines->first_cmd = NULL;
@@ -59,12 +69,15 @@ void	free_cmd(t_line *lines)
 void	free_token(t_token *token)
 {
 	t_token	*tmp;
+	t_token	*free_token;
 
-	while (token)
+	tmp = token;
+	free_token = tmp;
+	while (free_token)
 	{
-		tmp = token->next;
-		free(token->data);
-		free(token);
-		token = tmp;
+		tmp = free_token->next;
+		free(free_token->data);
+		free(free_token);
+		free_token = tmp;
 	}
 }
