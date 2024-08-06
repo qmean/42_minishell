@@ -113,5 +113,7 @@ int	check_redir_syntax1(char *line, int i);
 int	check_redir_syntax2(char *line, int *i);
 int	check_redir_syntax3(char *line, int *i);
 int	check_redir_syntax4(char *line, int *i);
+void	remove_redir_token_move(t_token *tmp);
+int	check_redir_token(t_cmd *cmd, t_token *token);
 
 #endif
